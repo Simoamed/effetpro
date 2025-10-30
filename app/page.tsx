@@ -15,6 +15,7 @@ import {
   DEMO_VIDEOS,
   PRODUCT_MOCKUP,
   SITE_CONFIG,
+  TRUST_BADGES,
 } from "./constants/content";
 
 export default function Page() {
@@ -28,22 +29,53 @@ export default function Page() {
         <VideoBg src={DEMO_VIDEOS.hero} />
         <Container className="relative">
           <div className="text-center">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-300">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+              </span>
+              {SITE_CONFIG.customerCount} Wedding Filmmakers Already Creating Magic
+            </div>
             <h1 className="mt-4 bg-gradient-to-r from-amber-300 via-rose-300 to-amber-200 bg-clip-text text-4xl font-extrabold leading-tight text-transparent sm:text-6xl">
-              Upgrade your wedding films &#8212; without spending nights on color.
+              Stop Spending 4+ Hours On Color Grading
             </h1>
+            <p className="mx-auto mt-4 max-w-2xl text-xl text-white/90 sm:text-2xl">
+              Grade an <span className="font-bold text-rose-300">entire wedding in 15 minutes</span> with cinematic LUTs that make couples cry tears of joy
+            </p>
           </div>
 
           {/* Mockup centered */}
           <div className="relative mx-auto mt-10 w-full max-w-lg">
             <Image src={PRODUCT_MOCKUP} alt="Wedding LUTs 3D Mockup" width={600} height={600} className="h-auto w-full object-contain" priority />
-          </div>          {/* Subheadline + CTAs */}
+          </div>
+          {/* Subheadline + CTAs */}
           <div className="mt-8 text-center">
-            <p className="mx-auto max-w-3xl text-lg text-white/80">500+ Professional LUTs for Adobe Premiere Pro & Lightroom &#8212; designed for romantic films, love stories & cinematic storytelling.</p>
             <div className="mt-8 flex flex-col items-center gap-3">
-              <a href="#get-pack" className="w-full max-w-sm rounded-xl bg-rose-600 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-rose-500/30 transition hover:bg-rose-700">Get Instant Access for Only $27</a>
-              <a href="#why" className="w-full max-w-sm rounded-xl border border-white/15 px-6 py-3 text-center text-base font-semibold text-white/90 hover:bg-white/10">See Why 2,000+ Creators Love It</a>
+              <a href="#get-pack" className="group relative w-full max-w-sm overflow-hidden rounded-xl bg-gradient-to-r from-rose-600 to-pink-600 px-6 py-4 text-center text-lg font-bold text-white shadow-2xl shadow-rose-500/50 transition-all hover:scale-105 hover:shadow-rose-500/70">
+                <span className="relative z-10">Yes! Give Me Instant Access → Only $27</span>
+                <div className="absolute inset-0 -z-0 bg-gradient-to-r from-rose-500 to-pink-500 opacity-0 transition-opacity group-hover:opacity-100"></div>
+              </a>
+              <div className="flex items-center gap-2 text-sm text-white/70">
+                <svg className="h-4 w-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span>Downloaded by 347 creators in the last 7 days</span>
+              </div>
             </div>
-            <div className="mt-2 text-xs text-white/60">Limited-time offer &#8212; Lifetime Access included.</div>
+            <div className="mt-6 flex items-center justify-center gap-6 text-xs text-white/60">
+              <div className="flex items-center gap-1">
+                <span>⚡</span>
+                <span>Instant Download</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <span>🛡️</span>
+                <span>30-Day Guarantee</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <span>🔒</span>
+                <span>Secure Payment</span>
+              </div>
+            </div>
           </div>
         </Container>
       </section>
@@ -59,12 +91,33 @@ export default function Page() {
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {PRODUCT_FEATURES.map((feature) => (
               <div key={feature.id} className={`rounded-xl border border-${feature.color}-500/25 bg-${feature.color}-500/10 p-5`}>
-                {feature.title}
+                <div className="flex items-start justify-between gap-2">
+                  <span className="flex-1">{feature.title}</span>
+                  <span className="text-sm font-bold text-white/60 line-through">{feature.value}</span>
+                </div>
               </div>
             ))}
           </div>
+
+          {/* Value Stack */}
+          <div className="mx-auto mt-8 max-w-md rounded-2xl border border-amber-500/30 bg-gradient-to-br from-amber-500/10 to-orange-500/10 p-6">
+            <div className="text-center">
+              <div className="text-sm font-semibold uppercase tracking-wide text-amber-300">Total Value</div>
+              <div className="mt-2 text-4xl font-bold text-white line-through opacity-60">${SITE_CONFIG.originalPrice}</div>
+              <div className="mt-2 text-sm text-white/70">Today's Price:</div>
+              <div className="mt-1 text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-teal-300">
+                ${SITE_CONFIG.price}
+              </div>
+              <div className="mt-2 inline-flex rounded-full bg-rose-500/20 px-4 py-1 text-sm font-bold text-rose-300">
+                Save {SITE_CONFIG.discount} — Limited Time Only!
+              </div>
+            </div>
+          </div>
+
           <div className="mt-6 flex flex-col items-center">
-            <a href="#get-pack" className="w-full max-w-sm rounded-xl bg-rose-600 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-rose-500/30 transition hover:bg-rose-700">Download Everything Now &#8212; $27</a>
+            <a href="#get-pack" className="group relative w-full max-w-sm overflow-hidden rounded-xl bg-gradient-to-r from-rose-600 to-pink-600 px-6 py-4 text-center text-lg font-bold text-white shadow-2xl shadow-rose-500/50 transition-all hover:scale-105">
+              <span className="relative z-10">Claim Your {SITE_CONFIG.discount} Discount Now →</span>
+            </a>
           </div>
         </Container>
       </section>
@@ -72,20 +125,45 @@ export default function Page() {
       {/* Why */}
       <section id="why" className="border-t border-white/10 py-16 bg-gradient-to-b from-emerald-950/30 via-slate-950/20 to-black/10">
         <Container>
-          <SectionTitle title="Elevate Your Brand Quality" subtitle="Cinematic colors build your reputation." gradient="from-emerald-300 via-teal-200 to-emerald-400" />
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <SectionTitle
+            title="Why 2,000+ Wedding Filmmakers Choose EffetPro"
+            subtitle="See the real results you'll get — not just features."
+            gradient="from-emerald-300 via-teal-200 to-emerald-400"
+          />
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             {BENEFITS.map((benefit) => (
-              <div key={benefit.id} className={`flex items-start gap-3 rounded-xl border border-${benefit.color}-500/25 bg-${benefit.color}-500/10 p-5`}>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="mt-0.5 h-5 w-5 flex-shrink-0 text-emerald-400" aria-hidden="true">
-                  <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.28a.75.75 0 0 0-1.06-1.06l-4.22 4.22-1.53-1.53a.75.75 0 1 0-1.06 1.06l2.06 2.06a.75.75 0 0 0 1.06 0l4.75-4.75Z" clipRule="evenodd"/>
-                </svg>
-                <span>{benefit.title}</span>
+              <div key={benefit.id} className={`flex flex-col gap-3 rounded-xl border border-${benefit.color}-500/25 bg-${benefit.color}-500/10 p-6`}>
+                <div className="flex items-start gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="mt-0.5 h-6 w-6 flex-shrink-0 text-emerald-400" aria-hidden="true">
+                    <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.28a.75.75 0 0 0-1.06-1.06l-4.22 4.22-1.53-1.53a.75.75 0 1 0-1.06 1.06l2.06 2.06a.75.75 0 0 0 1.06 0l4.75-4.75Z" clipRule="evenodd"/>
+                  </svg>
+                  <div className="flex-1">
+                    <h3 className="font-bold text-white text-lg">{benefit.title}</h3>
+                    <p className="mt-2 text-sm text-white/70">{benefit.description}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
+
+          {/* Trust Badges */}
+          <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4">
+            {TRUST_BADGES.map((badge) => (
+              <div key={badge.id} className="flex flex-col items-center rounded-xl border border-white/10 bg-white/5 p-4 text-center">
+                <div className="text-3xl">{badge.icon}</div>
+                <div className="mt-2 text-sm font-bold text-white">{badge.title}</div>
+                <div className="mt-1 text-xs text-white/60">{badge.description}</div>
+              </div>
+            ))}
+          </div>
+
           <div className="mt-8 flex flex-col items-center">
-            <a href="#get-pack" className="w-full max-w-sm rounded-xl bg-rose-600 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-rose-500/30 transition hover:bg-rose-700">Get the Full Pack &#8212; $27 Today</a>
-            <div className="mt-2 text-center text-xs text-white/60">Promo visible here to reinforce purchase.</div>
+            <a href="#get-pack" className="group relative w-full max-w-sm overflow-hidden rounded-xl bg-gradient-to-r from-rose-600 to-pink-600 px-6 py-4 text-center text-lg font-bold text-white shadow-2xl shadow-rose-500/50 transition-all hover:scale-105">
+              <span className="relative z-10">Start Creating Magic Today →</span>
+            </a>
+            <div className="mt-3 text-center text-sm text-emerald-300">
+              ⚡ Instant access • No monthly fees • Lifetime updates
+            </div>
           </div>
         </Container>
       </section>

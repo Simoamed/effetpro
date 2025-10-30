@@ -8,67 +8,107 @@ export const SITE_CONFIG = {
   phone: "+33 0 000 000",
   location: "France - Remote",
   price: "27.00",
+  originalPrice: "497.00",
   currency: "USD",
   discount: "60%",
   rating: "4.9",
   reviewCount: "3200",
   customerCount: "2,000+",
+  guaranteeDays: "30",
 };
 
-// Product features
+// Product features with value
 export const PRODUCT_FEATURES = [
   {
     id: "luts",
     title: "500+ Wedding LUTs (cube, 3dl)",
+    value: "$197",
     color: "rose",
   },
   {
     id: "drone",
     title: "30 Drone LUTs (aerial friendly)",
+    value: "$97",
     color: "amber",
   },
   {
     id: "music",
     title: "120 Emotional Music Tracks",
+    value: "$87",
     color: "emerald",
   },
   {
     id: "presets",
     title: "Golden Love Lightroom Presets",
+    value: "$67",
     color: "indigo",
   },
   {
     id: "class",
     title: "Mini class: Cinematic Color (10 min)",
+    value: "$27",
     color: "fuchsia",
   },
   {
     id: "lifetime",
     title: "Lifetime access + free updates",
+    value: "$22",
     color: "cyan",
   },
 ];
 
-// Why choose benefits
+// Trust badges & guarantees
+export const TRUST_BADGES = [
+  {
+    id: "instant",
+    icon: "⚡",
+    title: "Instant Download",
+    description: "Get access in 60 seconds",
+  },
+  {
+    id: "guarantee",
+    icon: "🛡️",
+    title: "30-Day Money Back",
+    description: "100% satisfaction guaranteed",
+  },
+  {
+    id: "support",
+    icon: "💬",
+    title: "24/7 Support",
+    description: "We're here to help anytime",
+  },
+  {
+    id: "secure",
+    icon: "🔒",
+    title: "Secure Checkout",
+    description: "SSL encrypted payment",
+  },
+];
+
+// Why choose benefits (result-focused)
 export const BENEFITS = [
   {
     id: "handcrafted",
-    title: "500+ LUTs handcrafted for weddings, engagements & love stories.",
+    title: "Grade a full wedding in 15 minutes instead of 4 hours",
+    description: "500+ LUTs handcrafted specifically for weddings, engagements & romantic films.",
     color: "rose",
   },
   {
     id: "skin-tones",
-    title: "Optimized for natural skin tones & dreamy highlights.",
+    title: "Make every couple look flawless — automatically",
+    description: "Optimized for natural skin tones with dreamy, flattering highlights that brides love.",
     color: "amber",
   },
   {
     id: "compatible",
-    title: "Designed for both Adobe Premiere Pro & Lightroom.",
+    title: "Works with your favorite tools, right away",
+    description: "Drag & drop in Premiere Pro, Lightroom, DaVinci Resolve & Final Cut Pro.",
     color: "emerald",
   },
   {
     id: "cameras",
-    title: "Works perfectly with any camera (Sony, Canon, DJI, etc.).",
+    title: "Perfect results from any camera — Sony, Canon, DJI",
+    description: "Pre-calibrated for all major camera brands. No technical adjustments needed.",
     color: "indigo",
   },
 ];
