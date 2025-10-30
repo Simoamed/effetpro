@@ -51,6 +51,11 @@ export default function Page() {
       {/* What You Get (chips) */}
       <section className="border-t border-white/10 py-16 bg-gradient-to-b from-indigo-950/40 via-slate-950/30 to-black/10">
         <Container>
+          <SectionTitle
+            title="What's Inside The Pack?"
+            subtitle="Everything you need to create stunning wedding films — no experience required."
+            gradient="from-purple-300 via-blue-300 to-cyan-300"
+          />
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {PRODUCT_FEATURES.map((feature) => (
               <div key={feature.id} className={`rounded-xl border border-${feature.color}-500/25 bg-${feature.color}-500/10 p-5`}>
