@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <defs>
+    <radialGradient id="r" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#f8e7b5" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#0b0b0e" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#r)"/>
+  <text x="50%" y="55%" text-anchor="middle" fill="#ffffff" font-size="48" font-family="Arial, Helvetica, sans-serif" opacity="0.9">Wedding LUTs Master</text>
+</svg>
+
