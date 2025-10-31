@@ -52,7 +52,7 @@ export default function Page() {
           {/* Subheadline + CTAs */}
           <div className="mt-8 text-center">
             <div className="flex flex-col items-center gap-4">
-              <a href="#get-pack" className="group relative w-full max-w-md overflow-hidden rounded-2xl bg-gradient-to-r from-rose-600 to-pink-600 px-8 py-5 text-center text-xl font-bold text-white shadow-2xl shadow-rose-500/50 transition-all hover:scale-105 hover:shadow-rose-500/70">
+              <a href="#get-pack" className="group relative w-full max-w-md overflow-hidden rounded-xl bg-gradient-to-r from-rose-600 to-pink-600 px-6 py-3.5 text-center text-lg font-bold text-white shadow-2xl shadow-rose-500/50 transition-all hover:scale-105 hover:shadow-rose-500/70">
                 <span className="relative z-10">Yes! Give Me Instant Access → Only $27</span>
                 <div className="absolute inset-0 -z-0 bg-gradient-to-r from-rose-500 to-pink-500 opacity-0 transition-opacity group-hover:opacity-100"></div>
               </a>

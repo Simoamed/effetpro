@@ -180,8 +180,8 @@ export const FOOTER_LINKS = {
   ],
   resources: [
     { label: "Why This Pack", href: "#why" },
-    { label: "Install Guides (Premiere/Lightroom)", href: "#" },
-    { label: "Pricing & FAQ", href: "#" },
+    { label: "Install Guides (Premiere/Lightroom)", href: "#install-guides" },
+    { label: "Pricing & FAQ", href: "#faq" },
     { label: "Get the Pack", href: "#get-pack" },
   ],
   social: [
