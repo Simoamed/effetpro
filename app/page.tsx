@@ -263,22 +263,113 @@ export default function Page() {
       </section>
 
       {/* About */}
-      <section className="border-t border-white/10 py-16 bg-gradient-to-b from-purple-950/30 via-slate-950/20 to-black/10">
+      <section className="border-t border-white/10 py-20 bg-gradient-to-b from-purple-950/30 via-slate-950/20 to-black/10">
         <Container>
-          <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-3">
-            <div className="md:col-span-1">
-              <div className="aspect-square w-40 overflow-hidden rounded-full border border-white/10">
-                <Image src={AUTHOR.avatar} alt={AUTHOR.name} width={160} height={160} className="h-full w-full object-cover" />
-              </div>
+          {/* Section Title */}
+          <div className="mb-12 text-center">
+            <div className="inline-flex items-center gap-2 rounded-full border border-purple-500/30 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-300 mb-4">
+              <span>👋</span>
+              <span>Meet Your Instructor</span>
             </div>
-            <div className="md:col-span-2">
-              <h3 className="text-2xl font-bold text-white">About Me</h3>
-              <p className="mt-3 text-white/80">{AUTHOR.bio}</p>
-              <ul className="mt-3 text-white/70 list-disc pl-5 space-y-1">
-                {AUTHOR.highlights.map((highlight, index) => (
-                  <li key={index}>{highlight}</li>
-                ))}
-              </ul>
+            <h2 className="mt-4 bg-gradient-to-r from-purple-300 via-pink-300 to-purple-300 bg-clip-text text-3xl font-bold text-transparent sm:text-4xl">
+              The Creator Behind EffetPro
+            </h2>
+          </div>
+
+          <div className="mx-auto max-w-5xl">
+            <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-5">
+              {/* Profile Image - Enhanced with gradients and effects */}
+              <div className="lg:col-span-2 flex justify-center">
+                <div className="relative">
+                  {/* Gradient glow effect */}
+                  <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 opacity-75 blur-lg"></div>
+
+                  {/* Image container with gradient border */}
+                  <div className="relative">
+                    <div className="relative overflow-hidden rounded-full border-4 border-transparent bg-gradient-to-br from-purple-500 via-pink-500 to-purple-500 p-1">
+                      <div className="overflow-hidden rounded-full bg-slate-900">
+                        <Image
+                          src={AUTHOR.avatar}
+                          alt={AUTHOR.name}
+                          width={280}
+                          height={280}
+                          className="h-full w-full object-cover transition-transform duration-500 hover:scale-110"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Floating badge */}
+                    <div className="absolute -bottom-2 -right-2 rounded-full border-4 border-slate-950 bg-gradient-to-r from-amber-500 to-orange-500 px-4 py-2 shadow-xl">
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-white">7+</div>
+                        <div className="text-xs font-semibold text-white/90">Years</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Name badge on top */}
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-purple-500/30 bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-2 shadow-lg">
+                    <div className="text-center">
+                      <div className="text-xl font-black uppercase tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-400">
+                        SIMO
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="lg:col-span-3 space-y-6">
+                {/* Title */}
+                <div>
+                  <h3 className="text-3xl font-bold text-white">{AUTHOR.name}</h3>
+                  <p className="mt-1 text-lg text-purple-300">{AUTHOR.title}</p>
+                </div>
+
+                {/* Bio */}
+                <p className="text-lg leading-relaxed text-white/80">
+                  {AUTHOR.bio}
+                </p>
+
+                {/* Stats / Highlights as badges */}
+                <div className="flex flex-wrap gap-3">
+                  {AUTHOR.highlights.map((highlight, index) => (
+                    <div
+                      key={index}
+                      className="group relative overflow-hidden rounded-xl border border-purple-500/20 bg-purple-500/10 px-4 py-3 transition-all hover:border-purple-500/40 hover:bg-purple-500/20"
+                    >
+                      <div className="flex items-center gap-2">
+                        <svg className="h-5 w-5 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                        <span className="text-sm font-semibold text-white">{highlight}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Social proof numbers */}
+                <div className="grid grid-cols-3 gap-4 pt-4">
+                  <div className="rounded-xl border border-white/10 bg-white/5 p-4 text-center">
+                    <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-teal-300">
+                      2000+
+                    </div>
+                    <div className="mt-1 text-xs text-white/60">Happy Creators</div>
+                  </div>
+                  <div className="rounded-xl border border-white/10 bg-white/5 p-4 text-center">
+                    <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-300">
+                      500+
+                    </div>
+                    <div className="mt-1 text-xs text-white/60">LUTs Created</div>
+                  </div>
+                  <div className="rounded-xl border border-white/10 bg-white/5 p-4 text-center">
+                    <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-rose-300 to-pink-300">
+                      4.9
+                    </div>
+                    <div className="mt-1 text-xs text-white/60">Average Rating</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </Container>
