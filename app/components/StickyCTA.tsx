@@ -4,21 +4,22 @@ import React from "react";
 import { useCountdown } from "../hooks/useCountdown";
 
 export default function StickyCTA() {
-  const time = useCountdown(21, "promoEnd21");
+  const time = useCountdown(21, "promoEnd21v2");
 
   // Format time dynamically based on what's remaining
   const getTimeDisplay = () => {
     const totalMinutes = time.hours * 60 + time.minutes;
+    const formatSeconds = (s: number) => s.toString().padStart(2, '0');
 
     if (totalMinutes === 0 && time.seconds === 0) {
       return "EXPIRED";
     }
 
     if (totalMinutes > 0) {
-      return `${totalMinutes}min ${time.seconds}s`;
+      return `${totalMinutes}min ${formatSeconds(time.seconds)}s`;
     }
 
-    return `${time.seconds}s`;
+    return `${formatSeconds(time.seconds)}s`;
   };
 
   const timeDisplay = getTimeDisplay();
