@@ -45,33 +45,36 @@ export default function Page() {
           </div>
 
           {/* Mockup centered */}
-          <div className="relative mx-auto mt-10 w-full max-w-lg">
-            <Image src={PRODUCT_MOCKUP} alt="Wedding LUTs 3D Mockup" width={600} height={600} className="h-auto w-full object-contain" priority />
+          <div className="relative mx-auto mt-10 w-full max-w-2xl">
+            <Image src={PRODUCT_MOCKUP} alt="Wedding LUTs 3D Mockup" width={800} height={800} className="h-auto w-full object-contain" priority />
           </div>
+
           {/* Subheadline + CTAs */}
           <div className="mt-8 text-center">
-            <div className="mt-8 flex flex-col items-center gap-3">
-              <a href="#get-pack" className="group relative w-full max-w-sm overflow-hidden rounded-xl bg-gradient-to-r from-rose-600 to-pink-600 px-6 py-4 text-center text-lg font-bold text-white shadow-2xl shadow-rose-500/50 transition-all hover:scale-105 hover:shadow-rose-500/70">
+            <div className="flex flex-col items-center gap-4">
+              <a href="#get-pack" className="group relative w-full max-w-md overflow-hidden rounded-2xl bg-gradient-to-r from-rose-600 to-pink-600 px-8 py-5 text-center text-xl font-bold text-white shadow-2xl shadow-rose-500/50 transition-all hover:scale-105 hover:shadow-rose-500/70">
                 <span className="relative z-10">Yes! Give Me Instant Access → Only $27</span>
                 <div className="absolute inset-0 -z-0 bg-gradient-to-r from-rose-500 to-pink-500 opacity-0 transition-opacity group-hover:opacity-100"></div>
               </a>
-              <div className="flex items-center gap-2 text-sm text-white/70">
+
+              <div className="flex items-center gap-2 rounded-full bg-emerald-500/10 px-4 py-2 text-sm text-emerald-300">
                 <svg className="h-4 w-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
                 <span>Downloaded by 347 creators in the last 7 days</span>
               </div>
             </div>
-            <div className="mt-6 flex items-center justify-center gap-6 text-xs text-white/60">
-              <div className="flex items-center gap-1">
+
+            <div className="mt-5 flex flex-wrap items-center justify-center gap-3 text-xs">
+              <div className="flex items-center gap-1.5 rounded-full bg-white/5 px-3 py-1.5 text-white/70">
                 <span>⚡</span>
                 <span>Instant Download</span>
               </div>
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-1.5 rounded-full bg-white/5 px-3 py-1.5 text-white/70">
                 <span>🛡️</span>
                 <span>30-Day Guarantee</span>
               </div>
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-1.5 rounded-full bg-white/5 px-3 py-1.5 text-white/70">
                 <span>🔒</span>
                 <span>Secure Payment</span>
               </div>
