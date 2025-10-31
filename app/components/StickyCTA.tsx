@@ -32,7 +32,7 @@ export default function StickyCTA() {
           <span className="sm:hidden">Ends in {timeDisplay}</span>
         </div>
         <a href="#get-pack" className="rounded-xl bg-rose-600 px-4 py-2 text-sm font-semibold text-white shadow-md shadow-rose-500/30 transition hover:bg-rose-700">
-          $27 Instant Download
+          $37 Instant Download
         </a>
       </div>
     </div>

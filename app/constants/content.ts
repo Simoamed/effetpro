@@ -7,13 +7,13 @@ export const SITE_CONFIG = {
   email: "support@effetpro.com",
   phone: "+33 0 000 000",
   location: "France - Remote",
-  price: "27.00",
+  price: "37.00",
   originalPrice: "497.00",
   currency: "USD",
-  discount: "60%",
+  discount: "92%",
   rating: "4.9",
   reviewCount: "3200",
-  customerCount: "2,000+",
+  customerCount: "15,347+",
   guaranteeDays: "30",
 };
 
@@ -195,16 +195,46 @@ export const FOOTER_LINKS = {
 export const FAQ_DATA = [
   {
     question: "Is it compatible with CapCut / Premiere / DaVinci?",
-    answer: "Yes! Our LUTs work with Adobe Premiere Pro, DaVinci Resolve, Final Cut Pro, and Lightroom. They're in .cube and .3dl formats for maximum compatibility.",
+    answer: "Yes! Our LUTs work with Adobe Premiere Pro, DaVinci Resolve, Final Cut Pro, CapCut, and Lightroom. They're in .cube and .3dl formats for maximum compatibility across all major editing software.",
   },
   {
     question: "Can I use it commercially?",
-    answer: "Absolutely! You can use these LUTs for client work, weddings, commercial projects, and more. Full commercial license included.",
+    answer: "Absolutely! You can use these LUTs for client work, weddings, commercial projects, YouTube videos, and more. Full commercial license included with no restrictions.",
   },
   {
     question: "How do I get updates?",
-    answer: "All updates are free and lifetime. You'll receive an email whenever new LUTs or presets are added to the collection.",
+    answer: "All updates are free and lifetime. You'll receive an email whenever new LUTs or presets are added to the collection. No recurring fees ever.",
   },
+  {
+    question: "What's your refund policy?",
+    answer: "We offer a 30-day money-back guarantee. If you're not happy with your purchase, contact us and we'll issue a full refund. No questions asked.",
+  },
+  {
+    question: "How do I download the files?",
+    answer: "Instant download! After purchase, you'll get immediate access to download all 500+ LUTs, presets, and bonuses. Files are delivered as a ZIP file.",
+  },
+  {
+    question: "Do I need experience to use these?",
+    answer: "Not at all! Our LUTs are beginner-friendly. Just drag & drop into your editing software and apply with one click. Includes a 10-minute tutorial video.",
+  },
+  {
+    question: "Will these work on Log footage?",
+    answer: "Yes! We include LUTs specifically designed for Log profiles (S-Log, C-Log, V-Log) as well as LUTs for standard Rec.709 footage.",
+  },
+  {
+    question: "Can I re-download if I lose the files?",
+    answer: "Yes! You have lifetime access. Log into your account anytime to re-download all files, even years later.",
+  },
+];
+
+// Company logos for social proof
+export const COMPANY_LOGOS = [
+  { name: "Adobe", logo: "🎨" },
+  { name: "Netflix", logo: "🎬" },
+  { name: "Sony", logo: "📹" },
+  { name: "Canon", logo: "📷" },
+  { name: "Vimeo", logo: "▶️" },
+  { name: "YouTube", logo: "📺" },
 ];
 
 // Before/After demo images

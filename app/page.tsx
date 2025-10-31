@@ -16,6 +16,8 @@ import {
   PRODUCT_MOCKUP,
   SITE_CONFIG,
   TRUST_BADGES,
+  FAQ_DATA,
+  COMPANY_LOGOS,
 } from "./constants/content";
 
 export default function Page() {
@@ -53,7 +55,7 @@ export default function Page() {
           <div className="mt-8 text-center">
             <div className="flex flex-col items-center gap-4">
               <a href="#get-pack" className="group relative w-full max-w-md overflow-hidden rounded-xl bg-gradient-to-r from-rose-600 to-pink-600 px-6 py-3.5 text-center text-lg font-bold text-white shadow-2xl shadow-rose-500/50 transition-all hover:scale-105 hover:shadow-rose-500/70">
-                <span className="relative z-10">Yes! Give Me Instant Access → Only $27</span>
+                <span className="relative z-10">Yes! Give Me Instant Access → Only $37</span>
                 <div className="absolute inset-0 -z-0 bg-gradient-to-r from-rose-500 to-pink-500 opacity-0 transition-opacity group-hover:opacity-100"></div>
               </a>
 
@@ -208,7 +210,7 @@ export default function Page() {
             </div>
           </div>
           <div className="mt-6 flex flex-col items-center">
-            <a href="#get-pack" className="w-full max-w-sm rounded-xl bg-rose-600 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-rose-500/30 transition hover:bg-rose-700">Start Grading Like a Pro &#8212; $27</a>
+            <a href="#get-pack" className="w-full max-w-sm rounded-xl bg-rose-600 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-rose-500/30 transition hover:bg-rose-700">Start Grading Like a Pro &#8212; $37</a>
           </div>
         </Container>
       </section>
@@ -229,7 +231,24 @@ export default function Page() {
             ))}
           </div>
           <div className="mt-6 flex flex-col items-center">
-            <a href="#get-pack" className="w-full max-w-sm rounded-xl bg-rose-600 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-rose-500/30 transition hover:bg-rose-700">Get All 500+ Looks &#8212; $27</a>
+            <a href="#get-pack" className="w-full max-w-sm rounded-xl bg-rose-600 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-rose-500/30 transition hover:bg-rose-700">Get All 500+ Looks &#8212; $37</a>
+          </div>
+        </Container>
+      </section>
+
+      {/* Trusted By Companies */}
+      <section className="border-t border-white/10 py-12 bg-gradient-to-b from-violet-950/20 via-slate-950/10 to-black/5">
+        <Container>
+          <div className="text-center">
+            <p className="text-sm font-semibold uppercase tracking-wide text-violet-300/70 mb-6">Trusted by creators from</p>
+            <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+              {COMPANY_LOGOS.map((company) => (
+                <div key={company.name} className="flex flex-col items-center gap-2 opacity-70 hover:opacity-100 transition-opacity">
+                  <span className="text-4xl">{company.logo}</span>
+                  <span className="text-xs font-semibold text-white/60">{company.name}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </Container>
       </section>
@@ -261,6 +280,78 @@ export default function Page() {
                 <p className="mt-3 text-sm text-white/90">{testimonial.quote}</p>
               </div>
             ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* 30-Day Guarantee + FAQ */}
+      <section className="border-t border-white/10 py-16 bg-gradient-to-b from-emerald-950/30 via-slate-950/20 to-black/10">
+        <Container>
+          {/* 30-Day Guarantee - Prominent */}
+          <div className="mx-auto max-w-4xl mb-16">
+            <div className="relative overflow-hidden rounded-3xl border-2 border-emerald-500/30 bg-gradient-to-br from-emerald-500/10 via-teal-500/5 to-emerald-500/10 p-8 md:p-12 shadow-2xl">
+              <div className="absolute inset-0 bg-[url('/noise.png')] opacity-5"></div>
+              <div className="relative text-center">
+                <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-emerald-500/20 ring-4 ring-emerald-500/30">
+                  <svg className="h-10 w-10 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <h3 className="text-3xl font-bold text-white mb-3">30-Day Money-Back Guarantee</h3>
+                <p className="text-lg text-white/80 max-w-2xl mx-auto mb-6">
+                  Try EffetPro risk-free for 30 days. If you're not completely satisfied, we'll refund your purchase. <span className="font-bold text-emerald-300">No questions asked.</span>
+                </p>
+                <div className="flex flex-wrap justify-center gap-4 text-sm text-emerald-200">
+                  <div className="flex items-center gap-2">
+                    <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span>Full Refund</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span>No Questions</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span>Fast Processing</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* FAQ Section */}
+          <SectionTitle
+            title="Frequently Asked Questions"
+            subtitle="Everything you need to know about EffetPro LUTs"
+            gradient="from-cyan-300 via-blue-300 to-cyan-300"
+          />
+          <div className="mx-auto max-w-3xl">
+            <div className="space-y-4">
+              {FAQ_DATA.map((faq, index) => (
+                <details key={index} className="group rounded-xl border border-white/10 bg-white/5 p-6 transition-all hover:bg-white/10">
+                  <summary className="flex cursor-pointer items-center justify-between text-left font-semibold text-white">
+                    <span className="text-lg">{faq.question}</span>
+                    <svg className="h-5 w-5 flex-shrink-0 text-cyan-400 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <p className="mt-4 text-white/70 leading-relaxed">{faq.answer}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-10 flex flex-col items-center">
+            <a href="#get-pack" className="w-full max-w-sm rounded-xl bg-rose-600 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-rose-500/30 transition hover:bg-rose-700">Get EffetPro Now — $37</a>
+            <div className="mt-3 text-center text-sm text-emerald-300">
+              ✅ 30-Day Guarantee • 💳 Secure Checkout • ⚡ Instant Access
+            </div>
           </div>
         </Container>
       </section>
