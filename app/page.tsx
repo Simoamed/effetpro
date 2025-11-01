@@ -101,9 +101,9 @@ export default function Page() {
           />
 
           {/* Modern Cards Grid */}
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {PRODUCT_FEATURES.map((feature, index) => {
-              const icons = ["🎨", "🚁", "🎵", "💝", "🎓", "♾️"];
+              const icons = ["🎬", "✈️", "🎼", "💍", "📚", "🔄"];
               const gradients = [
                 "from-violet-500 to-purple-600",
                 "from-sky-500 to-blue-600",
@@ -116,30 +116,30 @@ export default function Page() {
               return (
                 <div
                   key={feature.id}
-                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] p-6 backdrop-blur-xl transition-all duration-300 hover:scale-[1.02] hover:border-white/20 hover:shadow-2xl hover:shadow-violet-500/20"
+                  className="group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] p-5 backdrop-blur-xl transition-all duration-300 hover:scale-[1.02] hover:border-white/20 hover:shadow-xl hover:shadow-violet-500/20"
                 >
                   {/* Gradient glow on hover */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index]} opacity-0 transition-opacity duration-300 group-hover:opacity-10`}></div>
 
                   {/* Icon */}
-                  <div className="relative mb-4 flex items-center justify-between">
-                    <div className={`flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br ${gradients[index]} shadow-lg`}>
-                      <span className="text-2xl">{icons[index]}</span>
+                  <div className="relative mb-3 flex items-center justify-between">
+                    <div className={`flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br ${gradients[index]} shadow-lg`}>
+                      <span className="text-xl">{icons[index]}</span>
                     </div>
                     <div className="flex flex-col items-end">
-                      <span className="text-xs font-semibold uppercase tracking-wider text-white/40">Value</span>
-                      <span className="text-lg font-bold text-white/30 line-through">{feature.value}</span>
+                      <span className="text-[10px] font-semibold uppercase tracking-wider text-white/40">Value</span>
+                      <span className="text-base font-bold text-white/30 line-through">{feature.value}</span>
                     </div>
                   </div>
 
                   {/* Title */}
-                  <h3 className="relative text-lg font-bold text-white leading-tight">
+                  <h3 className="relative text-base font-bold text-white leading-tight">
                     {feature.title}
                   </h3>
 
                   {/* Checkmark */}
-                  <div className="relative mt-4 flex items-center gap-2 text-sm text-emerald-400">
-                    <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                  <div className="relative mt-3 flex items-center gap-2 text-sm text-emerald-400">
+                    <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
                     <span className="font-medium">Included</span>
