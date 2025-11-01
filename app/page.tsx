@@ -131,7 +131,7 @@ export default function Page() {
       <section id="why" className="border-t border-white/10 py-16 bg-gradient-to-b from-emerald-950/30 via-slate-950/20 to-black/10">
         <Container>
           <SectionTitle
-            title="Why 2,000+ Wedding Filmmakers Choose EffetPro"
+            title={`Why ${SITE_CONFIG.customerCount} Wedding Filmmakers Choose EffetPro`}
             subtitle="See the real results you'll get — not just features."
             gradient="from-emerald-300 via-teal-200 to-emerald-400"
           />
