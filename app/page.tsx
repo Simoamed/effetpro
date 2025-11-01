@@ -466,8 +466,8 @@ export default function Page() {
                 {/* Social proof numbers */}
                 <div className="grid grid-cols-3 gap-4 pt-4">
                   <div className="rounded-xl border border-white/10 bg-white/5 p-4 text-center">
-                    <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-teal-300">
-                      2000+
+                    <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-teal-300">
+                      {SITE_CONFIG.customerCount}
                     </div>
                     <div className="mt-1 text-xs text-white/60">Happy Editors</div>
                   </div>
@@ -479,7 +479,7 @@ export default function Page() {
                   </div>
                   <div className="rounded-xl border border-white/10 bg-white/5 p-4 text-center">
                     <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-rose-300 to-pink-300">
-                      4.9
+                      {SITE_CONFIG.rating}
                     </div>
                     <div className="mt-1 text-xs text-white/60">Average Rating</div>
                   </div>
