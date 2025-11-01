@@ -103,7 +103,6 @@ export default function Page() {
           {/* Modern Cards Grid */}
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {PRODUCT_FEATURES.map((feature, index) => {
-              const icons = ["🎬", "✈️", "🎼", "💍", "📚", "🔄"];
               const gradients = [
                 "from-violet-500 to-purple-600",
                 "from-sky-500 to-blue-600",
@@ -121,11 +120,9 @@ export default function Page() {
                   {/* Gradient glow on hover */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index]} opacity-0 transition-opacity duration-300 group-hover:opacity-10`}></div>
 
-                  {/* Icon */}
+                  {/* Header with Value */}
                   <div className="relative mb-3 flex items-center justify-between">
-                    <div className={`flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br ${gradients[index]} shadow-lg`}>
-                      <span className="text-xl">{icons[index]}</span>
-                    </div>
+                    <div className={`h-1 w-12 rounded-full bg-gradient-to-r ${gradients[index]}`}></div>
                     <div className="flex flex-col items-end">
                       <span className="text-[10px] font-semibold uppercase tracking-wider text-white/40">Value</span>
                       <span className="text-base font-bold text-white/30 line-through">{feature.value}</span>
