@@ -149,95 +149,42 @@ export default function Page() {
             })}
           </div>
 
-          {/* Value Stack - SPECTACULAR Design */}
-          <div className="mx-auto mt-16 max-w-4xl">
-            <div className="relative">
-              {/* Multi-layer Glow Effects */}
-              <div className="absolute -inset-2 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 rounded-3xl opacity-30 blur-3xl animate-pulse"></div>
-              <div className="absolute -inset-1 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 rounded-3xl opacity-20 blur-xl"></div>
-
-              {/* Main Card */}
-              <div className="relative rounded-3xl border border-emerald-500/20 bg-gradient-to-br from-slate-900/95 via-teal-950/50 to-slate-900/95 backdrop-blur-2xl p-8 md:p-12 shadow-2xl overflow-hidden">
-                {/* Animated Background Orbs */}
-                <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl"></div>
-                <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl"></div>
-
-                {/* Content */}
-                <div className="relative z-10">
-                  {/* Top Stats Row */}
-                  <div className="grid grid-cols-2 gap-6 mb-10">
-                    <div className="text-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
-                      <div className="text-sm font-bold text-emerald-300 uppercase tracking-wider mb-2">Regular Price</div>
-                      <div className="text-4xl font-black text-white/40 line-through">${SITE_CONFIG.originalPrice}</div>
-                    </div>
-                    <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-teal-500/10 border border-emerald-500/30 backdrop-blur">
-                      <div className="text-sm font-bold text-teal-300 uppercase tracking-wider mb-2">You Save</div>
-                      <div className="text-4xl font-black bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">{SITE_CONFIG.discount}</div>
-                    </div>
+          {/* Value Stack - Mini Style like AIFastScale */}
+          <div className="mx-auto mt-8 max-w-xs">
+            <div className="rounded-lg border border-slate-600/30 bg-slate-900/50 p-3 shadow-sm">
+              <div className="space-y-2">
+                {/* Compact Stats */}
+                <div className="flex items-center justify-between text-xs">
+                  <div className="text-slate-400">
+                    <span className="uppercase text-[9px]">From </span>
+                    <span className="line-through">${SITE_CONFIG.originalPrice}</span>
                   </div>
-
-                  {/* Massive Price Display */}
-                  <div className="text-center mb-10">
-                    <div className="mb-4 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30">
-                      <svg className="h-5 w-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                      <span className="text-sm font-bold text-emerald-300 uppercase tracking-wider">Today's Special Price</span>
-                    </div>
-
-                    <div className="flex items-baseline justify-center gap-2 mb-4">
-                      <span className="text-4xl font-bold text-white/60">$</span>
-                      <span className="text-8xl md:text-9xl font-black bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent tracking-tight leading-none">
-                        {SITE_CONFIG.price}
-                      </span>
-                    </div>
-
-                    <div className="flex items-center justify-center gap-3 text-sm text-white/50">
-                      <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10">One-time payment</span>
-                      <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10">Lifetime access</span>
-                    </div>
+                  <div className="rounded bg-blue-500/10 px-2 py-0.5 text-blue-400 font-semibold">
+                    {SITE_CONFIG.discount} OFF
                   </div>
+                </div>
 
-                  {/* Mega CTA Button */}
-                  <a
-                    href="#get-pack"
-                    className="group relative block w-full overflow-hidden rounded-2xl bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 p-6 text-center transition-all hover:scale-[1.02] hover:shadow-2xl hover:shadow-emerald-500/50 mb-8"
-                  >
-                    {/* Animated Shine Effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
-
-                    <div className="relative flex items-center justify-center gap-4 text-white">
-                      <svg className="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                      </svg>
-                      <span className="text-2xl font-black">Get Instant Access Now</span>
-                      <svg className="h-7 w-7 transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                      </svg>
-                    </div>
-                  </a>
-
-                  {/* Trust Row with Icons */}
-                  <div className="grid grid-cols-3 gap-4">
-                    <div className="flex flex-col items-center gap-2 p-4 rounded-xl bg-white/5 border border-white/10">
-                      <svg className="h-8 w-8 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                      </svg>
-                      <span className="text-xs font-semibold text-white/80 text-center">30-Day Money-Back</span>
-                    </div>
-                    <div className="flex flex-col items-center gap-2 p-4 rounded-xl bg-white/5 border border-white/10">
-                      <svg className="h-8 w-8 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                      </svg>
-                      <span className="text-xs font-semibold text-white/80 text-center">Secure SSL Payment</span>
-                    </div>
-                    <div className="flex flex-col items-center gap-2 p-4 rounded-xl bg-white/5 border border-white/10">
-                      <svg className="h-8 w-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                      </svg>
-                      <span className="text-xs font-semibold text-white/80 text-center">{SITE_CONFIG.customerCount} Creators</span>
-                    </div>
+                {/* Price - Compact */}
+                <div className="text-center py-1">
+                  <div className="flex items-baseline justify-center gap-0.5">
+                    <span className="text-base text-white/60">US$</span>
+                    <span className="text-3xl font-black text-white">{SITE_CONFIG.price}</span>
                   </div>
+                  <p className="text-[9px] text-slate-400 mt-0.5">One-time payment • Lifetime access</p>
+                </div>
+
+                {/* CTA - Compact */}
+                <a
+                  href="#get-pack"
+                  className="block w-full rounded bg-gradient-to-r from-slate-600 to-blue-600 py-2 text-center text-xs font-bold text-white transition hover:opacity-90"
+                >
+                  Get Instant Access →
+                </a>
+
+                {/* Trust - Minimal */}
+                <div className="flex items-center justify-between border-t border-slate-700 pt-2 text-[8px] text-slate-400">
+                  <span>✓ 30-Day Guarantee</span>
+                  <span>✓ Secure Payment</span>
                 </div>
               </div>
             </div>
