@@ -243,6 +243,7 @@ export const SOFTWARE_LOGOS = [
   { name: "Premiere Pro", abbr: "Pr", color: "from-[#00005B] to-[#00005B]", bgColor: "bg-[#00005B]" },
   { name: "After Effects", abbr: "Ae", color: "from-[#00005B] to-[#00005B]", bgColor: "bg-[#00005B]" },
   { name: "Photoshop", abbr: "Ps", color: "from-[#001E36] to-[#001E36]", bgColor: "bg-[#001E36]" },
+  { name: "Lightroom", abbr: "Lr", color: "from-[#001E36] to-[#001E36]", bgColor: "bg-[#001E36]" },
   { name: "CapCut", abbr: "CC", color: "from-[#000000] to-[#000000]", bgColor: "bg-[#000000]" },
 ];
 
