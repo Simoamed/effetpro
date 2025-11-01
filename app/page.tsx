@@ -87,42 +87,122 @@ export default function Page() {
       </section>
 
       {/* What You Get (chips) */}
-      <section className="border-t border-white/10 py-16 bg-gradient-to-b from-indigo-950/40 via-slate-950/30 to-black/10">
-        <Container>
+      <section className="relative border-t border-white/10 py-20 overflow-hidden">
+        {/* Animated gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-violet-950/40 via-fuchsia-950/30 to-slate-950/40"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(139,92,246,0.1),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(236,72,153,0.1),transparent_50%)]"></div>
+
+        <Container className="relative">
           <SectionTitle
             title="What's Inside The Pack?"
             subtitle="Everything you need to create stunning wedding films — no experience required."
-            gradient="from-purple-300 via-blue-300 to-cyan-300"
+            gradient="from-violet-300 via-fuchsia-300 to-pink-300"
           />
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {PRODUCT_FEATURES.map((feature) => (
-              <div key={feature.id} className={`rounded-xl border border-${feature.color}-500/25 bg-${feature.color}-500/10 p-5`}>
-                <div className="flex items-start justify-between gap-2">
-                  <span className="flex-1">{feature.title}</span>
-                  <span className="text-sm font-bold text-white/60 line-through">{feature.value}</span>
+
+          {/* Modern Cards Grid */}
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {PRODUCT_FEATURES.map((feature, index) => {
+              const icons = ["🎨", "🚁", "🎵", "💝", "🎓", "♾️"];
+              const gradients = [
+                "from-violet-500 to-purple-600",
+                "from-sky-500 to-blue-600",
+                "from-emerald-500 to-teal-600",
+                "from-rose-500 to-pink-600",
+                "from-orange-500 to-amber-600",
+                "from-cyan-500 to-indigo-600"
+              ];
+
+              return (
+                <div
+                  key={feature.id}
+                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] p-6 backdrop-blur-xl transition-all duration-300 hover:scale-[1.02] hover:border-white/20 hover:shadow-2xl hover:shadow-violet-500/20"
+                >
+                  {/* Gradient glow on hover */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index]} opacity-0 transition-opacity duration-300 group-hover:opacity-10`}></div>
+
+                  {/* Icon */}
+                  <div className="relative mb-4 flex items-center justify-between">
+                    <div className={`flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br ${gradients[index]} shadow-lg`}>
+                      <span className="text-2xl">{icons[index]}</span>
+                    </div>
+                    <div className="flex flex-col items-end">
+                      <span className="text-xs font-semibold uppercase tracking-wider text-white/40">Value</span>
+                      <span className="text-lg font-bold text-white/30 line-through">{feature.value}</span>
+                    </div>
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="relative text-lg font-bold text-white leading-tight">
+                    {feature.title}
+                  </h3>
+
+                  {/* Checkmark */}
+                  <div className="relative mt-4 flex items-center gap-2 text-sm text-emerald-400">
+                    <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="font-medium">Included</span>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
-          {/* Value Stack */}
-          <div className="mx-auto mt-8 max-w-md rounded-2xl border border-amber-500/30 bg-gradient-to-br from-amber-500/10 to-orange-500/10 p-6">
-            <div className="text-center">
-              <div className="text-sm font-semibold uppercase tracking-wide text-amber-300">Total Value</div>
-              <div className="mt-2 text-4xl font-bold text-white line-through opacity-60">${SITE_CONFIG.originalPrice}</div>
-              <div className="mt-2 text-sm text-white/70">Today's Price:</div>
-              <div className="mt-1 text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-teal-300">
-                ${SITE_CONFIG.price}
-              </div>
-              <div className="mt-2 inline-flex rounded-full bg-rose-500/20 px-4 py-1 text-sm font-bold text-rose-300">
-                Save {SITE_CONFIG.discount} — Limited Time Only!
+          {/* Value Stack - Modern Design */}
+          <div className="mx-auto mt-12 max-w-2xl">
+            <div className="relative overflow-hidden rounded-3xl border-2 border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-white/[0.02] p-8 backdrop-blur-2xl shadow-2xl">
+              {/* Gradient orbs */}
+              <div className="absolute top-0 right-0 h-32 w-32 bg-gradient-to-br from-violet-500/30 to-fuchsia-500/30 blur-3xl"></div>
+              <div className="absolute bottom-0 left-0 h-32 w-32 bg-gradient-to-tr from-emerald-500/30 to-cyan-500/30 blur-3xl"></div>
+
+              <div className="relative text-center">
+                <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-4 py-2">
+                  <span className="text-xl">💎</span>
+                  <span className="text-sm font-bold uppercase tracking-wide text-amber-300">Total Package Value</span>
+                </div>
+
+                <div className="mt-4 text-5xl font-black text-white/40 line-through">
+                  ${SITE_CONFIG.originalPrice}
+                </div>
+
+                <div className="my-4 flex items-center justify-center gap-3">
+                  <div className="h-px w-16 bg-gradient-to-r from-transparent to-white/20"></div>
+                  <span className="text-sm font-semibold text-white/60">Your Price Today</span>
+                  <div className="h-px w-16 bg-gradient-to-l from-transparent to-white/20"></div>
+                </div>
+
+                <div className="mb-4 text-7xl font-black">
+                  <span className="bg-gradient-to-r from-emerald-300 via-teal-300 to-cyan-300 bg-clip-text text-transparent">
+                    ${SITE_CONFIG.price}
+                  </span>
+                </div>
+
+                <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-rose-600 to-pink-600 px-6 py-3 shadow-lg shadow-rose-500/30">
+                  <svg className="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
+                  </svg>
+                  <span className="text-base font-bold text-white">Save {SITE_CONFIG.discount} — Join {SITE_CONFIG.customerCount} Creators!</span>
+                </div>
+
+                <p className="mt-4 text-sm text-white/50">
+                  ⚡ Limited time offer • No recurring fees • Lifetime access
+                </p>
               </div>
             </div>
           </div>
 
-          <div className="mt-6 flex flex-col items-center">
-            <a href="#get-pack" className="group relative w-full max-w-sm overflow-hidden rounded-xl bg-gradient-to-r from-rose-600 to-pink-600 px-6 py-4 text-center text-lg font-bold text-white shadow-2xl shadow-rose-500/50 transition-all hover:scale-105">
-              <span className="relative z-10">Claim Your {SITE_CONFIG.discount} Discount Now →</span>
+          <div className="mt-8 flex flex-col items-center">
+            <a
+              href="#get-pack"
+              className="group relative w-full max-w-md overflow-hidden rounded-2xl bg-gradient-to-r from-rose-600 via-pink-600 to-rose-600 bg-size-200 bg-pos-0 px-8 py-5 text-center text-xl font-black text-white shadow-2xl shadow-rose-500/50 transition-all duration-300 hover:bg-pos-100 hover:scale-105 hover:shadow-rose-500/70"
+            >
+              <span className="relative z-10 flex items-center justify-center gap-2">
+                <span>Claim Your {SITE_CONFIG.discount} Discount Now</span>
+                <svg className="h-6 w-6 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </span>
             </a>
           </div>
         </Container>
