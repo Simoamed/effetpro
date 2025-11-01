@@ -135,11 +135,11 @@ export default function Page() {
             <p className="text-sm font-semibold uppercase tracking-wide text-slate-400 mb-2">Works seamlessly with</p>
             <h3 className="text-2xl font-bold text-white">All Major Editing Software</h3>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
+          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
             {SOFTWARE_LOGOS.map((software) => (
-              <div key={software.name} className="group flex flex-col items-center gap-3 transition-all hover:scale-110">
-                <div className={`flex h-20 w-20 items-center justify-center rounded-2xl ${software.bgColor} shadow-2xl transition-all group-hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] border border-white/10`}>
-                  <span className={`text-3xl font-black ${software.name === "Avid" ? "text-black" : "text-white"} tracking-tighter`}>{software.abbr}</span>
+              <div key={software.name} className="group flex flex-col items-center gap-2 transition-all hover:scale-110">
+                <div className={`flex h-16 w-16 items-center justify-center rounded-xl ${software.bgColor} shadow-2xl transition-all group-hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] border border-white/10`}>
+                  <span className={`text-2xl font-black ${software.name === "Avid" ? "text-black" : "text-white"} tracking-tighter`}>{software.abbr}</span>
                 </div>
                 <span className="text-xs font-medium text-slate-400 group-hover:text-white transition-colors">{software.name}</span>
               </div>
