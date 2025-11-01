@@ -151,7 +151,7 @@ export default function Page() {
 
           {/* Value Stack - Modern Design */}
           <div className="mx-auto mt-12 max-w-2xl">
-            <div className="relative overflow-hidden rounded-3xl border-2 border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-white/[0.02] p-8 backdrop-blur-2xl shadow-2xl">
+            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-white/[0.02] p-8 backdrop-blur-2xl shadow-2xl">
               {/* Gradient orbs */}
               <div className="absolute top-0 right-0 h-32 w-32 bg-gradient-to-br from-violet-500/30 to-fuchsia-500/30 blur-3xl"></div>
               <div className="absolute bottom-0 left-0 h-32 w-32 bg-gradient-to-tr from-emerald-500/30 to-cyan-500/30 blur-3xl"></div>
@@ -327,7 +327,7 @@ export default function Page() {
 
           <div className="mx-auto max-w-4xl">
             {/* Video Container */}
-            <div className="relative overflow-hidden rounded-2xl border-2 border-indigo-500/20 bg-gradient-to-br from-indigo-500/10 to-purple-500/10 p-2 shadow-2xl backdrop-blur">
+            <div className="relative overflow-hidden rounded-2xl border border-indigo-500/20 bg-gradient-to-br from-indigo-500/10 to-purple-500/10 p-2 shadow-2xl backdrop-blur">
               <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-black">
                 <video
                   className="absolute inset-0 h-full w-full object-cover"
@@ -450,10 +450,10 @@ export default function Page() {
         <Container>
           {/* 30-Day Guarantee - Prominent */}
           <div className="mx-auto max-w-4xl mb-16">
-            <div className="relative overflow-hidden rounded-3xl border-2 border-emerald-500/30 bg-gradient-to-br from-emerald-500/10 via-teal-500/5 to-emerald-500/10 p-8 md:p-12 shadow-2xl">
+            <div className="relative overflow-hidden rounded-3xl border border-emerald-500/30 bg-gradient-to-br from-emerald-500/10 via-teal-500/5 to-emerald-500/10 p-8 md:p-12 shadow-2xl">
               <div className="absolute inset-0 bg-[url('/noise.png')] opacity-5"></div>
               <div className="relative text-center">
-                <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-emerald-500/20 ring-4 ring-emerald-500/30">
+                <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-emerald-500/20 ring-2 ring-emerald-500/30">
                   <svg className="h-10 w-10 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
