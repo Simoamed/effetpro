@@ -32,11 +32,20 @@ export function useCountdown(durationMinutes: number, storageKey: string = "coun
         end = String(endTime);
       }
 
-      const remaining = Math.max(0, Number(end) - Date.now());
-      const days = Math.floor(remaining / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((remaining / (1000 * 60 * 60)) % 24);
-      const minutes = Math.floor((remaining / (1000 * 60)) % 60);
-      const seconds = Math.floor((remaining / 1000) % 60);
+      const remaining = Number(end) - Date.now();
+
+      // If expired, reset the countdown automatically
+      if (remaining <= 0) {
+        const newEndTime = Date.now() + durationMinutes * 60 * 1000;
+        localStorage.setItem(storageKey, String(newEndTime));
+        end = String(newEndTime);
+      }
+
+      const validRemaining = Math.max(0, Number(end) - Date.now());
+      const days = Math.floor(validRemaining / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((validRemaining / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((validRemaining / (1000 * 60)) % 60);
+      const seconds = Math.floor((validRemaining / 1000) % 60);
 
       setTime({ days, hours, minutes, seconds });
     };
