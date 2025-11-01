@@ -236,6 +236,66 @@ export default function Page() {
         </Container>
       </section>
 
+      {/* How to Use Tutorial */}
+      <section id="install-guides" className="border-t border-white/10 py-16 bg-gradient-to-b from-indigo-950/30 via-slate-950/20 to-black/10">
+        <Container>
+          <SectionTitle
+            title="How to Use Your LUTs in 60 Seconds"
+            subtitle="Simple drag-and-drop installation guide for all major editing software"
+            gradient="from-indigo-300 via-purple-300 to-indigo-300"
+          />
+
+          <div className="mx-auto max-w-4xl">
+            {/* Video Container */}
+            <div className="relative overflow-hidden rounded-2xl border-2 border-indigo-500/20 bg-gradient-to-br from-indigo-500/10 to-purple-500/10 p-2 shadow-2xl backdrop-blur">
+              <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-black">
+                <video
+                  className="absolute inset-0 h-full w-full object-cover"
+                  controls
+                  preload="metadata"
+                  poster="/video-poster.jpg"
+                  aria-label="Step-by-step tutorial on how to install and use wedding LUTs"
+                >
+                  <source src={DEMO_VIDEOS.howToUse} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+
+            {/* Quick Steps */}
+            <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
+              {[
+                { step: "1", title: "Download", desc: "Get your LUTs pack instantly after purchase", icon: "📥" },
+                { step: "2", title: "Install", desc: "Drag & drop into your editing software", icon: "🎬" },
+                { step: "3", title: "Apply", desc: "One-click color grading magic", icon: "✨" },
+              ].map((item) => (
+                <div key={item.step} className="group rounded-xl border border-indigo-500/20 bg-gradient-to-br from-indigo-500/10 to-purple-500/5 p-6 transition-all hover:border-indigo-500/40 hover:shadow-lg hover:shadow-indigo-500/20">
+                  <div className="mb-3 flex items-center gap-3">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-indigo-500/20 text-2xl">{item.icon}</div>
+                    <div className="text-2xl font-bold text-indigo-400">Step {item.step}</div>
+                  </div>
+                  <h3 className="mb-2 text-lg font-bold text-white">{item.title}</h3>
+                  <p className="text-sm text-white/70">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Support Note */}
+            <div className="mt-8 rounded-xl border border-purple-500/20 bg-purple-500/10 p-6 text-center">
+              <p className="text-white/90">
+                📚 <span className="font-semibold text-purple-300">Detailed PDF guides included</span> for Premiere Pro, Lightroom, DaVinci Resolve & Final Cut Pro
+              </p>
+            </div>
+
+            <div className="mt-6 flex justify-center">
+              <a href="#get-pack" className="w-full max-w-sm rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-indigo-500/30 transition-all hover:scale-105 hover:shadow-indigo-500/50">
+                Get Started Now — $37
+              </a>
+            </div>
+          </div>
+        </Container>
+      </section>
+
       {/* Looks Gallery */}
       <section className="border-t border-white/10 py-16 bg-gradient-to-b from-rose-950/30 via-slate-950/20 to-black/10">
         <Container>
