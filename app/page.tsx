@@ -149,61 +149,97 @@ export default function Page() {
             })}
           </div>
 
-          {/* Value Stack - Modern Design */}
-          <div className="mx-auto mt-12 max-w-2xl">
-            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-white/[0.02] p-8 backdrop-blur-2xl shadow-2xl">
-              {/* Gradient orbs */}
-              <div className="absolute top-0 right-0 h-32 w-32 bg-gradient-to-br from-violet-500/30 to-fuchsia-500/30 blur-3xl"></div>
-              <div className="absolute bottom-0 left-0 h-32 w-32 bg-gradient-to-tr from-emerald-500/30 to-cyan-500/30 blur-3xl"></div>
+          {/* Value Stack - Clean Minimal Design */}
+          <div className="mx-auto mt-16 max-w-3xl">
+            {/* Price Box */}
+            <div className="relative">
+              {/* Glow Effect */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 rounded-3xl opacity-20 blur-2xl"></div>
 
-              <div className="relative text-center">
-                <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-4 py-2">
-                  <span className="text-xl">💎</span>
-                  <span className="text-sm font-bold uppercase tracking-wide text-amber-300">Total Package Value</span>
+              <div className="relative rounded-3xl border border-white/10 bg-slate-900/90 backdrop-blur-xl p-10 md:p-12 shadow-2xl">
+                {/* Top Badge */}
+                <div className="flex items-center justify-center gap-8 mb-8">
+                  <div className="text-center">
+                    <div className="text-sm font-semibold text-white/50 uppercase tracking-wider mb-1">Regular Price</div>
+                    <div className="text-3xl font-bold text-white/30 line-through">${SITE_CONFIG.originalPrice}</div>
+                  </div>
+
+                  <div className="h-12 w-px bg-white/10"></div>
+
+                  <div className="text-center">
+                    <div className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-1">You Save</div>
+                    <div className="text-3xl font-bold text-emerald-400">{SITE_CONFIG.discount}</div>
+                  </div>
                 </div>
 
-                <div className="mt-4 text-5xl font-black text-white/40 line-through">
-                  ${SITE_CONFIG.originalPrice}
+                {/* Main Price */}
+                <div className="text-center mb-8">
+                  <div className="mb-2 text-sm font-medium text-white/60 uppercase tracking-wide">Your Price Today</div>
+                  <div className="flex items-center justify-center gap-3">
+                    <span className="text-3xl font-bold text-white/80">$</span>
+                    <span className="text-7xl md:text-8xl font-black bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent leading-none">
+                      {SITE_CONFIG.price}
+                    </span>
+                  </div>
+                  <div className="mt-3 text-sm text-white/50">One-time payment • Lifetime access</div>
                 </div>
 
-                <div className="my-4 flex items-center justify-center gap-3">
-                  <div className="h-px w-16 bg-gradient-to-r from-transparent to-white/20"></div>
-                  <span className="text-sm font-semibold text-white/60">Your Price Today</span>
-                  <div className="h-px w-16 bg-gradient-to-l from-transparent to-white/20"></div>
+                {/* Included Items */}
+                <div className="grid grid-cols-3 gap-3 mb-8">
+                  {[
+                    { icon: "🎨", text: "500+ LUTs" },
+                    { icon: "🎵", text: "120 Tracks" },
+                    { icon: "💝", text: "Presets" },
+                    { icon: "🚁", text: "30 Drone" },
+                    { icon: "🎓", text: "Mini Class" },
+                    { icon: "♾️", text: "Lifetime" },
+                  ].map((item, i) => (
+                    <div key={i} className="flex flex-col items-center gap-2 p-3 rounded-xl bg-white/5 border border-white/10">
+                      <span className="text-2xl">{item.icon}</span>
+                      <span className="text-xs font-medium text-white/70 text-center">{item.text}</span>
+                    </div>
+                  ))}
                 </div>
 
-                <div className="mb-4 text-5xl font-black">
-                  <span className="bg-gradient-to-r from-emerald-300 via-teal-300 to-cyan-300 bg-clip-text text-transparent">
-                    ${SITE_CONFIG.price}
-                  </span>
-                </div>
+                {/* CTA Button */}
+                <a
+                  href="#get-pack"
+                  className="group relative block w-full overflow-hidden rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 p-5 text-center transition-all hover:scale-[1.02] hover:shadow-2xl hover:shadow-emerald-500/50"
+                >
+                  <div className="relative flex items-center justify-center gap-3 text-white">
+                    <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-xl font-black">Get Instant Access — $37</span>
+                    <svg className="h-6 w-6 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </div>
+                </a>
 
-                <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-rose-600 to-pink-600 px-6 py-3 shadow-lg shadow-rose-500/30">
-                  <svg className="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
-                  </svg>
-                  <span className="text-base font-bold text-white">Save {SITE_CONFIG.discount} — Join {SITE_CONFIG.customerCount} Creators!</span>
+                {/* Trust Indicators */}
+                <div className="mt-6 flex flex-wrap items-center justify-center gap-4 text-xs text-white/50">
+                  <div className="flex items-center gap-1">
+                    <svg className="h-4 w-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span>30-Day Guarantee</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <svg className="h-4 w-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span>Secure Payment</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <svg className="h-4 w-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span>{SITE_CONFIG.customerCount} Happy Creators</span>
+                  </div>
                 </div>
-
-                <p className="mt-4 text-sm text-white/50">
-                  ⚡ Limited time offer • No recurring fees • Lifetime access
-                </p>
               </div>
             </div>
-          </div>
-
-          <div className="mt-8 flex flex-col items-center">
-            <a
-              href="#get-pack"
-              className="group relative w-full max-w-md overflow-hidden rounded-2xl bg-gradient-to-r from-rose-600 via-pink-600 to-rose-600 bg-size-200 bg-pos-0 px-8 py-5 text-center text-xl font-black text-white shadow-2xl shadow-rose-500/50 transition-all duration-300 hover:bg-pos-100 hover:scale-105 hover:shadow-rose-500/70"
-            >
-              <span className="relative z-10 flex items-center justify-center gap-2">
-                <span>Claim Your {SITE_CONFIG.discount} Discount Now</span>
-                <svg className="h-6 w-6 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </span>
-            </a>
           </div>
         </Container>
       </section>
