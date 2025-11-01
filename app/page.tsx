@@ -172,7 +172,7 @@ export default function Page() {
                   <div className="h-px w-16 bg-gradient-to-l from-transparent to-white/20"></div>
                 </div>
 
-                <div className="mb-4 text-7xl font-black">
+                <div className="mb-4 text-5xl font-black">
                   <span className="bg-gradient-to-r from-emerald-300 via-teal-300 to-cyan-300 bg-clip-text text-transparent">
                     ${SITE_CONFIG.price}
                   </span>
