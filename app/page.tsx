@@ -36,7 +36,7 @@ export default function Page() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
               </span>
-              {SITE_CONFIG.customerCount} Wedding Filmmakers Already Creating Magic
+              {SITE_CONFIG.customerCount} Wedding Editors & Filmmakers Already Creating Magic
             </div>
             <h1 className="mt-4 bg-gradient-to-r from-amber-300 via-rose-300 to-amber-200 bg-clip-text text-4xl font-extrabold leading-tight text-transparent sm:text-6xl">
               Stop Spending 4+ Hours On Color Grading
@@ -63,7 +63,7 @@ export default function Page() {
                 <svg className="h-4 w-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span>Downloaded by 347 creators in the last 7 days</span>
+                <span>Downloaded by 347 wedding editors in the last 7 days</span>
               </div>
             </div>
 
@@ -131,7 +131,7 @@ export default function Page() {
       <section id="why" className="border-t border-white/10 py-16 bg-gradient-to-b from-emerald-950/30 via-slate-950/20 to-black/10">
         <Container>
           <SectionTitle
-            title={`Why ${SITE_CONFIG.customerCount} Wedding Filmmakers Choose EffetPro`}
+            title={`Why ${SITE_CONFIG.customerCount} Wedding Editors & Filmmakers Choose EffetPro`}
             subtitle="See the real results you'll get — not just features."
             gradient="from-emerald-300 via-teal-200 to-emerald-400"
           />
@@ -240,7 +240,7 @@ export default function Page() {
       <section className="border-t border-white/10 py-12 bg-gradient-to-b from-violet-950/20 via-slate-950/10 to-black/5">
         <Container>
           <div className="text-center">
-            <p className="text-sm font-semibold uppercase tracking-wide text-violet-300/70 mb-6">Trusted by creators from</p>
+            <p className="text-sm font-semibold uppercase tracking-wide text-violet-300/70 mb-6">Trusted by wedding editors from</p>
             <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
               {COMPANY_LOGOS.map((company) => (
                 <div key={company.name} className="flex flex-col items-center gap-2 opacity-70 hover:opacity-100 transition-opacity">
@@ -256,7 +256,7 @@ export default function Page() {
       {/* Reviews */}
       <section className="border-t border-white/10 py-16 bg-gradient-to-b from-amber-950/30 via-slate-950/20 to-black/10">
         <Container>
-          <SectionTitle title={`Loved by ${SITE_CONFIG.customerCount} Creators`} subtitle={`${SITE_CONFIG.rating}/5 average rating`} gradient="from-amber-300 via-rose-300 to-amber-200" />
+          <SectionTitle title={`Loved by ${SITE_CONFIG.customerCount} Wedding Editors & Filmmakers`} subtitle={`${SITE_CONFIG.rating}/5 average rating`} gradient="from-amber-300 via-rose-300 to-amber-200" />
           <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
             {TESTIMONIALS.map((testimonial) => (
               <div key={testimonial.id} className="rounded-2xl border border-white/10 bg-white/5 p-6 text-white/90">
@@ -448,7 +448,7 @@ export default function Page() {
                     <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-teal-300">
                       2000+
                     </div>
-                    <div className="mt-1 text-xs text-white/60">Happy Creators</div>
+                    <div className="mt-1 text-xs text-white/60">Happy Editors</div>
                   </div>
                   <div className="rounded-xl border border-white/10 bg-white/5 p-4 text-center">
                     <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-300">

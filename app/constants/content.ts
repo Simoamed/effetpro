@@ -14,6 +14,7 @@ export const SITE_CONFIG = {
   rating: "4.9",
   reviewCount: "3200",
   customerCount: "15,347+",
+  targetAudience: "Wedding Editors & Filmmakers",
   guaranteeDays: "30",
 };
 
@@ -134,7 +135,7 @@ export const TESTIMONIALS = [
   {
     id: "emma",
     name: "Emma L.",
-    role: "Wedding Videographer",
+    role: "Wedding Editor",
     avatar: "/imgs/pexels-mlkbnl-12737998.jpg",
     rating: 5,
     quote: "These LUTs changed my editing workflow! My clients keep saying: it feels like a movie!",
@@ -142,7 +143,7 @@ export const TESTIMONIALS = [
   {
     id: "marco",
     name: "Marco V.",
-    role: "Photographer",
+    role: "Wedding Filmmaker",
     avatar: "/imgs/pexels-olcayertem06-13841073.jpg",
     rating: 5,
     quote: "Golden Love presets are incredible for skin tones. I use them for every couple session now.",
@@ -150,7 +151,7 @@ export const TESTIMONIALS = [
   {
     id: "james",
     name: "James K.",
-    role: "Filmmaker",
+    role: "Video Editor",
     avatar: "/imgs/pexels-thegenner-11102875.jpg",
     rating: 5,
     quote: "The Drone LUTs are unreal. My aerial shots finally look cinematic!",
@@ -160,13 +161,13 @@ export const TESTIMONIALS = [
 // About author
 export const AUTHOR = {
   name: "Simo Ahmada",
-  title: "Photographer & Videographer",
+  title: "Wedding Filmmaker & Colorist",
   avatar: "/portrait/portrait.jpg.JPG",
-  bio: "Hey, I'm Simo Ahmada — Photographer & Videographer specialized in weddings & cinematic storytelling. I've spent years crafting emotional visuals for couples around the world. These LUTs and presets are the same ones I use for my professional projects — now available for you.",
+  bio: "Hey, I'm Simo Ahmada — Wedding Filmmaker & Colorist specialized in weddings & cinematic storytelling. I've spent years crafting emotional visuals for couples around the world. These LUTs and presets are the same ones I use for my professional projects — now available for wedding editors and filmmakers.",
   highlights: [
     "Founder of Ahmada Photography",
     "7+ years experience in color grading & storytelling",
-    "Trusted by 2000+ creators worldwide",
+    "Trusted by 15,347+ wedding editors & filmmakers worldwide",
   ],
 };
 
