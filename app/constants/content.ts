@@ -238,6 +238,17 @@ export const COMPANY_LOGOS = [
   { name: "YouTube", logo: "📺" },
 ];
 
+// Software compatibility logos
+export const SOFTWARE_LOGOS = [
+  { name: "Premiere Pro", abbr: "Pr", color: "from-[#9999FF] to-[#00005B]" },
+  { name: "Final Cut Pro", abbr: "FCP", color: "from-gray-200 to-gray-500" },
+  { name: "DaVinci Resolve", abbr: "DR", color: "from-red-500 to-orange-600" },
+  { name: "After Effects", abbr: "Ae", color: "from-[#9999FF] to-[#00005B]" },
+  { name: "Avid", abbr: "MC", color: "from-yellow-500 to-orange-600" },
+  { name: "Photoshop", abbr: "Ps", color: "from-[#31A8FF] to-[#001E36]" },
+  { name: "CapCut", abbr: "CC", color: "from-black to-gray-800" },
+];
+
 // Before/After demo images
 export const DEMO_IMAGES = {
   before: "/before-after/wed-6.jpg",
