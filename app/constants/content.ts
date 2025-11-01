@@ -240,13 +240,13 @@ export const COMPANY_LOGOS = [
 
 // Software compatibility logos
 export const SOFTWARE_LOGOS = [
-  { name: "Premiere Pro", abbr: "Pr", color: "from-[#9999FF] to-[#00005B]" },
-  { name: "Final Cut Pro", abbr: "FCP", color: "from-gray-200 to-gray-500" },
-  { name: "DaVinci Resolve", abbr: "DR", color: "from-red-500 to-orange-600" },
-  { name: "After Effects", abbr: "Ae", color: "from-[#9999FF] to-[#00005B]" },
-  { name: "Avid", abbr: "MC", color: "from-yellow-500 to-orange-600" },
-  { name: "Photoshop", abbr: "Ps", color: "from-[#31A8FF] to-[#001E36]" },
-  { name: "CapCut", abbr: "CC", color: "from-black to-gray-800" },
+  { name: "Premiere Pro", abbr: "Pr", color: "from-[#00005B] to-[#00005B]", bgColor: "bg-[#00005B]" },
+  { name: "Final Cut Pro", abbr: "FCP", color: "from-[#1E1E1E] to-[#1E1E1E]", bgColor: "bg-[#1E1E1E]" },
+  { name: "DaVinci Resolve", abbr: "DR", color: "from-[#E32636] to-[#E32636]", bgColor: "bg-[#E32636]" },
+  { name: "After Effects", abbr: "Ae", color: "from-[#00005B] to-[#00005B]", bgColor: "bg-[#00005B]" },
+  { name: "Avid", abbr: "MC", color: "from-[#FFD700] to-[#FFD700]", bgColor: "bg-[#FFD700]" },
+  { name: "Photoshop", abbr: "Ps", color: "from-[#001E36] to-[#001E36]", bgColor: "bg-[#001E36]" },
+  { name: "CapCut", abbr: "CC", color: "from-[#000000] to-[#000000]", bgColor: "bg-[#000000]" },
 ];
 
 // Before/After demo images
