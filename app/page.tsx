@@ -25,7 +25,7 @@ import {
 export default function Page() {
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-black text-white">
+    <main className="min-h-screen bg-gradient-to-b from-neutral-950 via-neutral-900 to-black text-white">
       <StickyCTA />
 
       {/* Hero */}
@@ -33,18 +33,18 @@ export default function Page() {
         <VideoBg src={DEMO_VIDEOS.hero} />
         <Container className="relative">
           <div className="text-center">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-300">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-amber-600/30 bg-amber-600/10 px-4 py-2 text-sm font-semibold text-amber-300">
               <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-75"></span>
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-amber-500"></span>
               </span>
               {SITE_CONFIG.customerCount} Wedding Editors & Filmmakers Already Creating Magic
             </div>
-            <h1 className="mt-4 bg-gradient-to-r from-amber-300 via-rose-300 to-amber-200 bg-clip-text text-4xl font-extrabold leading-tight text-transparent sm:text-6xl">
+            <h1 className="mt-4 bg-gradient-to-r from-amber-200 via-orange-200 to-amber-200 bg-clip-text text-4xl font-extrabold leading-tight text-transparent sm:text-6xl">
               Stop Spending 4+ Hours On Color Grading
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-xl text-white/90 sm:text-2xl">
-              Grade an <span className="font-bold text-rose-300">entire wedding in 15 minutes</span> with cinematic LUTs that make couples cry tears of joy
+              Grade an <span className="font-bold text-amber-300">entire wedding in 15 minutes</span> with cinematic LUTs that make couples cry tears of joy
             </p>
           </div>
 
@@ -56,13 +56,13 @@ export default function Page() {
           {/* Subheadline + CTAs */}
           <div className="mt-8 text-center">
             <div className="flex flex-col items-center gap-4">
-              <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="group relative w-full max-w-md overflow-hidden rounded-xl bg-gradient-to-r from-rose-600 to-pink-600 px-6 py-3.5 text-center text-lg font-bold text-white shadow-2xl shadow-rose-500/50 transition-all hover:scale-105 hover:shadow-rose-500/70">
+              <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="group relative w-full max-w-md overflow-hidden rounded-xl bg-gradient-to-r from-orange-600 to-red-600 px-6 py-3.5 text-center text-lg font-bold text-white shadow-2xl shadow-orange-500/50 transition-all hover:scale-105 hover:shadow-orange-500/70">
                 <span className="relative z-10">Yes! Give Me Instant Access → Only $37</span>
-                <div className="absolute inset-0 -z-0 bg-gradient-to-r from-rose-500 to-pink-500 opacity-0 transition-opacity group-hover:opacity-100"></div>
+                <div className="absolute inset-0 -z-0 bg-gradient-to-r from-orange-700 to-red-700 opacity-0 transition-opacity group-hover:opacity-100"></div>
               </a>
 
-              <div className="flex items-center gap-2 rounded-full bg-emerald-500/10 px-4 py-2 text-sm text-emerald-300">
-                <svg className="h-4 w-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+              <div className="flex items-center gap-2 rounded-full bg-amber-600/10 px-4 py-2 text-sm text-amber-300">
+                <svg className="h-4 w-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
                 <span>Downloaded by 347 wedding editors in the last 7 days</span>
@@ -90,33 +90,33 @@ export default function Page() {
       {/* What You Get (chips) */}
       <section className="relative border-t border-white/10 py-20 overflow-hidden">
         {/* Animated gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-violet-950/40 via-fuchsia-950/30 to-slate-950/40"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(139,92,246,0.1),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(236,72,153,0.1),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-950/30 via-amber-950/20 to-neutral-950/40"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(251,146,60,0.08),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(245,158,11,0.08),transparent_50%)]"></div>
 
         <Container className="relative">
           <SectionTitle
             title="What's Inside The Pack?"
             subtitle="Everything you need to create stunning wedding films — no experience required."
-            gradient="from-violet-300 via-fuchsia-300 to-pink-300"
+            gradient="from-amber-200 via-orange-200 to-amber-200"
           />
 
           {/* Modern Cards Grid */}
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {PRODUCT_FEATURES.map((feature, index) => {
               const gradients = [
-                "from-violet-500 to-purple-600",
-                "from-sky-500 to-blue-600",
-                "from-emerald-500 to-teal-600",
-                "from-rose-500 to-pink-600",
-                "from-orange-500 to-amber-600",
-                "from-cyan-500 to-indigo-600"
+                "from-orange-500 to-red-600",
+                "from-amber-500 to-orange-600",
+                "from-yellow-500 to-amber-600",
+                "from-red-500 to-orange-600",
+                "from-orange-600 to-amber-700",
+                "from-amber-600 to-yellow-600"
               ];
 
               return (
                 <div
                   key={feature.id}
-                  className="group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] p-5 backdrop-blur-xl transition-all duration-300 hover:scale-[1.02] hover:border-white/20 hover:shadow-xl hover:shadow-violet-500/20"
+                  className="group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] p-5 backdrop-blur-xl transition-all duration-300 hover:scale-[1.02] hover:border-white/20 hover:shadow-xl hover:shadow-orange-500/20"
                 >
                   {/* Gradient glow on hover */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index]} opacity-0 transition-opacity duration-300 group-hover:opacity-10`}></div>
@@ -246,7 +246,7 @@ export default function Page() {
           </div>
 
           <div className="mt-8 flex flex-col items-center">
-            <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="group relative w-full max-w-sm overflow-hidden rounded-xl bg-gradient-to-r from-rose-600 to-pink-600 px-6 py-4 text-center text-lg font-bold text-white shadow-2xl shadow-rose-500/50 transition-all hover:scale-105">
+            <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="group relative w-full max-w-sm overflow-hidden rounded-xl bg-gradient-to-r from-orange-600 to-red-600 px-6 py-4 text-center text-lg font-bold text-white shadow-2xl shadow-orange-500/50 transition-all hover:scale-105">
               <span className="relative z-10">Start Creating Magic Today →</span>
             </a>
             <div className="mt-3 text-center text-sm text-emerald-300">
@@ -259,10 +259,10 @@ export default function Page() {
       {/* Before / After + Videos */}
       <section className="border-t border-white/10 py-16 bg-gradient-to-b from-sky-950/30 via-slate-950/20 to-black/10">
         <Container>
-          <SectionTitle title="Before / After" subtitle="Watch the transformation happen in seconds." gradient="from-indigo-300 via-sky-300 to-indigo-200" />
+          <SectionTitle title="Before / After" subtitle="Watch the transformation happen in seconds." gradient="from-amber-300 via-orange-300 to-amber-200" />
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             <div className="rounded-2xl border border-white/10 bg-black/30 p-4 md:order-2">
-              <div className="mb-2 text-sm font-serif font-semibold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-sky-300 to-indigo-300 uppercase">Before</div>
+              <div className="mb-2 text-sm font-serif font-semibold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-300 uppercase">Before</div>
               <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-slate-900">
                 <Image src={DEMO_IMAGES.before} alt="Before applying wedding LUT" width={800} height={450} className="h-full w-full object-cover" style={{ filter: "grayscale(60%) saturate(0.6) brightness(0.85)" }} />
               </div>
@@ -276,7 +276,7 @@ export default function Page() {
           </div>
           <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
             <div className="rounded-2xl border border-white/10 bg-black/30 p-4">
-              <div className="mb-2 text-sm font-semibold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-sky-300 to-indigo-300">Raw Footage</div>
+              <div className="mb-2 text-sm font-semibold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-300">Raw Footage</div>
               <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-slate-900">
                 <video className="absolute inset-0 h-full w-full object-cover" playsInline muted loop autoPlay preload="metadata" aria-label="Raw wedding footage before color grading">
                   <source src={DEMO_VIDEOS.raw} type="video/mp4" />
@@ -293,23 +293,23 @@ export default function Page() {
             </div>
           </div>
           <div className="mt-6 flex flex-col items-center">
-            <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="w-full max-w-sm rounded-xl bg-rose-600 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-rose-500/30 transition hover:bg-rose-700">Start Grading Like a Pro &#8212; $37</a>
+            <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="w-full max-w-sm rounded-xl bg-orange-600 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-orange-500/30 transition hover:bg-orange-700">Start Grading Like a Pro &#8212; $37</a>
           </div>
         </Container>
       </section>
 
       {/* How to Use Tutorial */}
-      <section id="install-guides" className="border-t border-white/10 py-16 bg-gradient-to-b from-indigo-950/30 via-slate-950/20 to-black/10">
+      <section id="install-guides" className="border-t border-white/10 py-16 bg-gradient-to-b from-orange-950/20 via-neutral-950/20 to-black/10">
         <Container>
           <SectionTitle
             title="How to Use Your LUTs in 60 Seconds"
             subtitle="Simple drag-and-drop installation guide for all major editing software"
-            gradient="from-indigo-300 via-purple-300 to-indigo-300"
+            gradient="from-amber-200 via-orange-200 to-amber-200"
           />
 
           <div className="mx-auto max-w-4xl">
             {/* Video Container */}
-            <div className="relative overflow-hidden rounded-2xl border border-indigo-500/20 bg-gradient-to-br from-indigo-500/10 to-purple-500/10 p-2 shadow-2xl backdrop-blur">
+            <div className="relative overflow-hidden rounded-2xl border border-orange-500/20 bg-gradient-to-br from-orange-500/10 to-amber-500/10 p-2 shadow-2xl backdrop-blur">
               <VideoPlayer
                 src={DEMO_VIDEOS.howToUse}
                 thumbnail="/imgs/miniature 2.jpg"
@@ -324,10 +324,10 @@ export default function Page() {
                 { step: "2", title: "Install", desc: "Drag & drop into your editing software", icon: "🎬" },
                 { step: "3", title: "Apply", desc: "One-click color grading magic", icon: "✨" },
               ].map((item) => (
-                <div key={item.step} className="group rounded-xl border border-indigo-500/20 bg-gradient-to-br from-indigo-500/10 to-purple-500/5 p-6 transition-all hover:border-indigo-500/40 hover:shadow-lg hover:shadow-indigo-500/20">
+                <div key={item.step} className="group rounded-xl border border-orange-500/20 bg-gradient-to-br from-orange-500/10 to-amber-500/5 p-6 transition-all hover:border-orange-500/40 hover:shadow-lg hover:shadow-orange-500/20">
                   <div className="mb-3 flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-indigo-500/20 text-2xl">{item.icon}</div>
-                    <div className="text-2xl font-bold text-indigo-400">Step {item.step}</div>
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-500/20 text-2xl">{item.icon}</div>
+                    <div className="text-2xl font-bold text-orange-400">Step {item.step}</div>
                   </div>
                   <h3 className="mb-2 text-lg font-bold text-white">{item.title}</h3>
                   <p className="text-sm text-white/70">{item.desc}</p>
@@ -336,14 +336,14 @@ export default function Page() {
             </div>
 
             {/* Support Note */}
-            <div className="mt-8 rounded-xl border border-purple-500/20 bg-purple-500/10 p-6 text-center">
+            <div className="mt-8 rounded-xl border border-amber-500/20 bg-amber-500/10 p-6 text-center">
               <p className="text-white/90">
-                📚 <span className="font-semibold text-purple-300">Detailed PDF guides included</span> for Premiere Pro, Lightroom, DaVinci Resolve & Final Cut Pro
+                📚 <span className="font-semibold text-amber-300">Detailed PDF guides included</span> for Premiere Pro, Lightroom, DaVinci Resolve & Final Cut Pro
               </p>
             </div>
 
             <div className="mt-6 flex justify-center">
-              <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="w-full max-w-sm rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-indigo-500/30 transition-all hover:scale-105 hover:shadow-indigo-500/50">
+              <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="w-full max-w-sm rounded-xl bg-gradient-to-r from-orange-600 to-red-600 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-orange-500/30 transition-all hover:scale-105 hover:shadow-orange-500/50">
                 Get Started Now — $37
               </a>
             </div>
@@ -352,9 +352,9 @@ export default function Page() {
       </section>
 
       {/* Looks Gallery */}
-      <section className="border-t border-white/10 py-16 bg-gradient-to-b from-rose-950/30 via-slate-950/20 to-black/10">
+      <section className="border-t border-white/10 py-16 bg-gradient-to-b from-red-950/25 via-neutral-950/20 to-black/10">
         <Container>
-          <SectionTitle title="Signature Looks Gallery" subtitle="Preview a few of the included wedding LUT styles." gradient="from-fuchsia-300 via-pink-300 to-rose-300" />
+          <SectionTitle title="Signature Looks Gallery" subtitle="Preview a few of the included wedding LUT styles." gradient="from-amber-200 via-orange-200 to-red-200" />
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {SIGNATURE_LOOKS.map((look) => (
               <div key={look.src} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-black/30">
@@ -367,16 +367,16 @@ export default function Page() {
             ))}
           </div>
           <div className="mt-6 flex flex-col items-center">
-            <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="w-full max-w-sm rounded-xl bg-rose-600 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-rose-500/30 transition hover:bg-rose-700">Get All 500+ Looks &#8212; $37</a>
+            <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="w-full max-w-sm rounded-xl bg-orange-600 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-orange-500/30 transition hover:bg-orange-700">Get All 500+ Looks &#8212; $37</a>
           </div>
         </Container>
       </section>
 
       {/* Trusted By Companies */}
-      <section className="border-t border-white/10 py-12 bg-gradient-to-b from-violet-950/20 via-slate-950/10 to-black/5">
+      <section className="border-t border-white/10 py-12 bg-gradient-to-b from-orange-950/15 via-neutral-950/10 to-black/5">
         <Container>
           <div className="text-center">
-            <p className="text-sm font-semibold uppercase tracking-wide text-violet-300/70 mb-6">Trusted by wedding editors from</p>
+            <p className="text-sm font-semibold uppercase tracking-wide text-amber-300/70 mb-6">Trusted by wedding editors from</p>
             <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
               {COMPANY_LOGOS.map((company) => (
                 <div key={company.name} className="flex flex-col items-center gap-2 opacity-70 hover:opacity-100 transition-opacity">
@@ -484,7 +484,7 @@ export default function Page() {
           </div>
 
           <div className="mt-10 flex flex-col items-center">
-            <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="w-full max-w-sm rounded-xl bg-rose-600 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-rose-500/30 transition hover:bg-rose-700">Get EffetPro Now — $37</a>
+            <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="w-full max-w-sm rounded-xl bg-orange-600 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-orange-500/30 transition hover:bg-orange-700">Get EffetPro Now — $37</a>
             <div className="mt-3 text-center text-sm text-emerald-300">
               ✅ 30-Day Guarantee • 💳 Secure Checkout • ⚡ Instant Access
             </div>
@@ -493,15 +493,15 @@ export default function Page() {
       </section>
 
       {/* About */}
-      <section className="border-t border-white/10 py-20 bg-gradient-to-b from-purple-950/30 via-slate-950/20 to-black/10">
+      <section className="border-t border-white/10 py-20 bg-gradient-to-b from-orange-950/25 via-neutral-950/20 to-black/10">
         <Container>
           {/* Section Title */}
           <div className="mb-12 text-center">
-            <div className="inline-flex items-center gap-2 rounded-full border border-purple-500/30 bg-purple-500/10 px-4 py-2 text-sm font-semibold text-purple-300 mb-4">
+            <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-4 py-2 text-sm font-semibold text-amber-300 mb-4">
               <span>👋</span>
               <span>Meet Your Instructor</span>
             </div>
-            <h2 className="mt-4 bg-gradient-to-r from-purple-300 via-pink-300 to-purple-300 bg-clip-text text-3xl font-bold text-transparent sm:text-4xl">
+            <h2 className="mt-4 bg-gradient-to-r from-amber-200 via-orange-200 to-amber-200 bg-clip-text text-3xl font-bold text-transparent sm:text-4xl">
               The Creator Behind EffetPro
             </h2>
           </div>
@@ -512,12 +512,12 @@ export default function Page() {
               <div className="lg:col-span-2 flex justify-center">
                 <div className="relative">
                   {/* Gradient glow effect */}
-                  <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 opacity-75 blur-lg"></div>
+                  <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-orange-600 via-red-600 to-orange-600 opacity-75 blur-lg"></div>
 
                   {/* Image container with gradient border */}
                   <div className="relative">
-                    <div className="relative overflow-hidden rounded-full border-4 border-transparent bg-gradient-to-br from-purple-500 via-pink-500 to-purple-500 p-1">
-                      <div className="overflow-hidden rounded-full bg-slate-900">
+                    <div className="relative overflow-hidden rounded-full border-4 border-transparent bg-gradient-to-br from-orange-500 via-red-500 to-orange-500 p-1">
+                      <div className="overflow-hidden rounded-full bg-neutral-900">
                         <Image
                           src={AUTHOR.avatar}
                           alt={AUTHOR.name}
@@ -529,7 +529,7 @@ export default function Page() {
                     </div>
 
                     {/* Floating badge */}
-                    <div className="absolute -bottom-2 -right-2 rounded-full border-4 border-slate-950 bg-gradient-to-r from-amber-500 to-orange-500 px-4 py-2 shadow-xl">
+                    <div className="absolute -bottom-2 -right-2 rounded-full border-4 border-neutral-950 bg-gradient-to-r from-amber-500 to-orange-500 px-4 py-2 shadow-xl">
                       <div className="text-center">
                         <div className="text-2xl font-bold text-white">7+</div>
                         <div className="text-xs font-semibold text-white/90">Years</div>
@@ -538,7 +538,7 @@ export default function Page() {
                   </div>
 
                   {/* Name badge on top */}
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-purple-500/30 bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-2 shadow-lg">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-amber-500/30 bg-gradient-to-r from-orange-600 to-red-600 px-6 py-2 shadow-lg">
                     <div className="text-center">
                       <div className="text-xl font-black uppercase tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-400">
                         SIMO
@@ -553,7 +553,7 @@ export default function Page() {
                 {/* Title */}
                 <div>
                   <h3 className="text-3xl font-bold text-white">{AUTHOR.name}</h3>
-                  <p className="mt-1 text-lg text-purple-300">{AUTHOR.title}</p>
+                  <p className="mt-1 text-lg text-amber-300">{AUTHOR.title}</p>
                 </div>
 
                 {/* Bio */}
@@ -566,10 +566,10 @@ export default function Page() {
                   {AUTHOR.highlights.map((highlight, index) => (
                     <div
                       key={index}
-                      className="group relative overflow-hidden rounded-xl border border-purple-500/20 bg-purple-500/10 px-4 py-3 transition-all hover:border-purple-500/40 hover:bg-purple-500/20"
+                      className="group relative overflow-hidden rounded-xl border border-orange-500/20 bg-orange-500/10 px-4 py-3 transition-all hover:border-orange-500/40 hover:bg-orange-500/20"
                     >
                       <div className="flex items-center gap-2">
-                        <svg className="h-5 w-5 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                        <svg className="h-5 w-5 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                         </svg>
                         <span className="text-sm font-semibold text-white">{highlight}</span>
@@ -593,7 +593,7 @@ export default function Page() {
                     <div className="mt-1 text-xs text-white/60">LUTs Created</div>
                   </div>
                   <div className="rounded-xl border border-white/10 bg-white/5 p-4 text-center">
-                    <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-rose-300 to-pink-300">
+                    <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-300">
                       {SITE_CONFIG.rating}
                     </div>
                     <div className="mt-1 text-xs text-white/60">Average Rating</div>
@@ -610,7 +610,7 @@ export default function Page() {
         <Container>
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold text-white">Ready to Create Cinematic Wedding Films That Clients Will Never Forget?</h2>
-            <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="mt-6 inline-flex rounded-xl bg-rose-600 px-7 py-3 text-base font-semibold text-white shadow-lg shadow-rose-500/30 transition hover:bg-rose-700">
+            <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="mt-6 inline-flex rounded-xl bg-orange-600 px-7 py-3 text-base font-semibold text-white shadow-lg shadow-orange-500/30 transition hover:bg-orange-700">
               Get The Full Pack Now &#8212; Only ${SITE_CONFIG.price} ({SITE_CONFIG.discount} OFF)
             </a>
             <div className="mt-3 text-sm text-white/70">Instant Download &bull; Lifetime Access &bull; Limited Offer</div>
