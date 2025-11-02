@@ -3,6 +3,7 @@ import StickyCTA from "./components/StickyCTA";
 import Container from "./components/UI/Container";
 import SectionTitle from "./components/UI/SectionTitle";
 import VideoBg from "./components/UI/VideoBg";
+import VideoPlayer from "./components/VideoPlayer";
 import Image from "next/image";
 import {
   PRODUCT_FEATURES,
@@ -309,18 +310,11 @@ export default function Page() {
           <div className="mx-auto max-w-4xl">
             {/* Video Container */}
             <div className="relative overflow-hidden rounded-2xl border border-indigo-500/20 bg-gradient-to-br from-indigo-500/10 to-purple-500/10 p-2 shadow-2xl backdrop-blur">
-              <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-black">
-                <video
-                  className="absolute inset-0 h-full w-full object-cover"
-                  controls
-                  preload="metadata"
-                  poster="/video-poster.jpg"
-                  aria-label="Step-by-step tutorial on how to install and use wedding LUTs"
-                >
-                  <source src={DEMO_VIDEOS.howToUse} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
+              <VideoPlayer
+                src={DEMO_VIDEOS.howToUse}
+                thumbnail="/imgs/miniature .jpg"
+                ariaLabel="Step-by-step tutorial on how to install and use wedding LUTs"
+              />
             </div>
 
             {/* Quick Steps */}
