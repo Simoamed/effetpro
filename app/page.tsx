@@ -512,11 +512,11 @@ export default function Page() {
               <div className="lg:col-span-2 flex justify-center">
                 <div className="relative">
                   {/* Gradient glow effect */}
-                  <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-orange-600 via-red-600 to-orange-600 opacity-75 blur-lg"></div>
+                  <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-amber-500 via-orange-500 to-amber-500 opacity-75 blur-lg"></div>
 
                   {/* Image container with gradient border */}
                   <div className="relative">
-                    <div className="relative overflow-hidden rounded-full border-4 border-transparent bg-gradient-to-br from-orange-500 via-red-500 to-orange-500 p-1">
+                    <div className="relative overflow-hidden rounded-full border-4 border-transparent bg-gradient-to-br from-amber-500 via-orange-500 to-amber-500 p-1">
                       <div className="overflow-hidden rounded-full bg-neutral-900">
                         <Image
                           src={AUTHOR.avatar}
@@ -538,7 +538,7 @@ export default function Page() {
                   </div>
 
                   {/* Name badge on top */}
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-amber-500/30 bg-gradient-to-r from-orange-600 to-red-600 px-6 py-2 shadow-lg">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-amber-500/30 bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-2 shadow-lg">
                     <div className="text-center">
                       <div className="text-xl font-black uppercase tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-400">
                         SIMO
