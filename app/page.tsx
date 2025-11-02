@@ -312,7 +312,7 @@ export default function Page() {
             <div className="relative overflow-hidden rounded-2xl border border-indigo-500/20 bg-gradient-to-br from-indigo-500/10 to-purple-500/10 p-2 shadow-2xl backdrop-blur">
               <VideoPlayer
                 src={DEMO_VIDEOS.howToUse}
-                thumbnail="/imgs/miniature .jpg"
+                thumbnail="/imgs/miniature 2.jpg"
                 ariaLabel="Step-by-step tutorial on how to install and use wedding LUTs"
               />
             </div>
