@@ -55,7 +55,7 @@ export default function Page() {
           {/* Subheadline + CTAs */}
           <div className="mt-8 text-center">
             <div className="flex flex-col items-center gap-4">
-              <a href="#get-pack" className="group relative w-full max-w-md overflow-hidden rounded-xl bg-gradient-to-r from-rose-600 to-pink-600 px-6 py-3.5 text-center text-lg font-bold text-white shadow-2xl shadow-rose-500/50 transition-all hover:scale-105 hover:shadow-rose-500/70">
+              <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="group relative w-full max-w-md overflow-hidden rounded-xl bg-gradient-to-r from-rose-600 to-pink-600 px-6 py-3.5 text-center text-lg font-bold text-white shadow-2xl shadow-rose-500/50 transition-all hover:scale-105 hover:shadow-rose-500/70">
                 <span className="relative z-10">Yes! Give Me Instant Access → Only $37</span>
                 <div className="absolute inset-0 -z-0 bg-gradient-to-r from-rose-500 to-pink-500 opacity-0 transition-opacity group-hover:opacity-100"></div>
               </a>
@@ -172,7 +172,7 @@ export default function Page() {
 
                 {/* CTA - Compact */}
                 <a
-                  href="#get-pack"
+                  href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00"
                   className="block w-full rounded bg-gradient-to-r from-slate-600 to-blue-600 py-2 text-center text-xs font-bold text-white transition hover:opacity-90"
                 >
                   Get Instant Access →
@@ -245,7 +245,7 @@ export default function Page() {
           </div>
 
           <div className="mt-8 flex flex-col items-center">
-            <a href="#get-pack" className="group relative w-full max-w-sm overflow-hidden rounded-xl bg-gradient-to-r from-rose-600 to-pink-600 px-6 py-4 text-center text-lg font-bold text-white shadow-2xl shadow-rose-500/50 transition-all hover:scale-105">
+            <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="group relative w-full max-w-sm overflow-hidden rounded-xl bg-gradient-to-r from-rose-600 to-pink-600 px-6 py-4 text-center text-lg font-bold text-white shadow-2xl shadow-rose-500/50 transition-all hover:scale-105">
               <span className="relative z-10">Start Creating Magic Today →</span>
             </a>
             <div className="mt-3 text-center text-sm text-emerald-300">
@@ -292,7 +292,7 @@ export default function Page() {
             </div>
           </div>
           <div className="mt-6 flex flex-col items-center">
-            <a href="#get-pack" className="w-full max-w-sm rounded-xl bg-rose-600 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-rose-500/30 transition hover:bg-rose-700">Start Grading Like a Pro &#8212; $37</a>
+            <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="w-full max-w-sm rounded-xl bg-rose-600 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-rose-500/30 transition hover:bg-rose-700">Start Grading Like a Pro &#8212; $37</a>
           </div>
         </Container>
       </section>
@@ -349,7 +349,7 @@ export default function Page() {
             </div>
 
             <div className="mt-6 flex justify-center">
-              <a href="#get-pack" className="w-full max-w-sm rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-indigo-500/30 transition-all hover:scale-105 hover:shadow-indigo-500/50">
+              <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="w-full max-w-sm rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-indigo-500/30 transition-all hover:scale-105 hover:shadow-indigo-500/50">
                 Get Started Now — $37
               </a>
             </div>
@@ -373,7 +373,7 @@ export default function Page() {
             ))}
           </div>
           <div className="mt-6 flex flex-col items-center">
-            <a href="#get-pack" className="w-full max-w-sm rounded-xl bg-rose-600 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-rose-500/30 transition hover:bg-rose-700">Get All 500+ Looks &#8212; $37</a>
+            <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="w-full max-w-sm rounded-xl bg-rose-600 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-rose-500/30 transition hover:bg-rose-700">Get All 500+ Looks &#8212; $37</a>
           </div>
         </Container>
       </section>
@@ -490,7 +490,7 @@ export default function Page() {
           </div>
 
           <div className="mt-10 flex flex-col items-center">
-            <a href="#get-pack" className="w-full max-w-sm rounded-xl bg-rose-600 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-rose-500/30 transition hover:bg-rose-700">Get EffetPro Now — $37</a>
+            <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="w-full max-w-sm rounded-xl bg-rose-600 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-rose-500/30 transition hover:bg-rose-700">Get EffetPro Now — $37</a>
             <div className="mt-3 text-center text-sm text-emerald-300">
               ✅ 30-Day Guarantee • 💳 Secure Checkout • ⚡ Instant Access
             </div>
@@ -616,7 +616,7 @@ export default function Page() {
         <Container>
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold text-white">Ready to Create Cinematic Wedding Films That Clients Will Never Forget?</h2>
-            <a href="#" className="mt-6 inline-flex rounded-xl bg-rose-600 px-7 py-3 text-base font-semibold text-white shadow-lg shadow-rose-500/30 transition hover:bg-rose-700">
+            <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="mt-6 inline-flex rounded-xl bg-rose-600 px-7 py-3 text-base font-semibold text-white shadow-lg shadow-rose-500/30 transition hover:bg-rose-700">
               Get The Full Pack Now &#8212; Only ${SITE_CONFIG.price} ({SITE_CONFIG.discount} OFF)
             </a>
             <div className="mt-3 text-sm text-white/70">Instant Download &bull; Lifetime Access &bull; Limited Offer</div>
