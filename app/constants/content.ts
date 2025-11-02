@@ -7,7 +7,7 @@ export const SITE_CONFIG = {
   email: "support@effetpro.com",
   phone: "+33 0 000 000",
   location: "France - Remote",
-  price: "37.00",
+  price: "37",
   originalPrice: "497.00",
   currency: "USD",
   discount: "92%",
@@ -42,19 +42,19 @@ export const PRODUCT_FEATURES = [
     id: "presets",
     title: "Golden Love Lightroom Presets",
     value: "$67",
-    color: "indigo",
+    color: "amber",
   },
   {
     id: "class",
     title: "Mini class: Cinematic Color (10 min)",
     value: "$27",
-    color: "fuchsia",
+    color: "orange",
   },
   {
     id: "lifetime",
     title: "Lifetime access + free updates",
     value: "$22",
-    color: "cyan",
+    color: "amber",
   },
 ];
 
@@ -110,7 +110,7 @@ export const BENEFITS = [
     id: "cameras",
     title: "Perfect results from any camera — Sony, Canon, DJI",
     description: "Pre-calibrated for all major camera brands. No technical adjustments needed.",
-    color: "indigo",
+    color: "orange",
   },
 ];
 
