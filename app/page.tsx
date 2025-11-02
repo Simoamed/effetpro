@@ -50,7 +50,9 @@ export default function Page() {
 
           {/* Mockup centered */}
           <div className="relative mx-auto mt-10 w-full max-w-2xl">
-            <Image src={PRODUCT_MOCKUP} alt="Wedding LUTs 3D Mockup" width={800} height={800} className="h-auto w-full object-contain" priority />
+            <div className="relative overflow-hidden rounded-2xl border border-amber-500/20 bg-gradient-to-br from-amber-500/5 to-orange-500/5 p-2 shadow-2xl shadow-amber-500/20 backdrop-blur">
+              <Image src={PRODUCT_MOCKUP} alt="Wedding LUTs 3D Mockup" width={800} height={800} className="h-auto w-full rounded-xl object-contain" priority />
+            </div>
           </div>
 
           {/* Subheadline + CTAs */}
