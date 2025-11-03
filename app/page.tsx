@@ -2,6 +2,7 @@ export { metadata } from "./wedding-luts/metadata";
 import StickyCTA from "./components/StickyCTA";
 import ScrollColorTransition from "./components/ScrollColorTransition";
 import ReviewsSection from "./components/ReviewsSection";
+import BeforeAfterSlider from "./components/BeforeAfterSlider";
 import Container from "./components/UI/Container";
 import SectionTitle from "./components/UI/SectionTitle";
 import VideoBg from "./components/UI/VideoBg";
@@ -458,6 +459,18 @@ export default function Page() {
               </div>
             </div>
           </div>
+
+          {/* Interactive Before/After Slider */}
+          <div className="mt-10">
+            <div className="mx-auto max-w-4xl">
+              <BeforeAfterSlider
+                beforeImage="/imgs/pexels-khezez-15524745.jpg"
+                afterImage="/imgs/pexels-khezez-15524745.jpg"
+                alt="Wedding LUT before and after comparison"
+              />
+            </div>
+          </div>
+
           <div className="mt-6 flex flex-col items-center">
             <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="w-full max-w-sm rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-amber-500/30 transition hover:from-amber-600 hover:to-orange-600">Start Grading Like a Pro &#8212; $37</a>
           </div>
