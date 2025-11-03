@@ -33,14 +33,7 @@ export default function Page() {
         <VideoBg src={DEMO_VIDEOS.hero} />
         <Container className="relative">
           <div className="text-center">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-amber-600/30 bg-amber-600/10 px-4 py-2 text-sm font-semibold text-amber-300">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-75"></span>
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-amber-500"></span>
-              </span>
-              {SITE_CONFIG.customerCount} Wedding Editors & Filmmakers Already Creating Magic
-            </div>
-            <h1 className="mt-4 bg-gradient-to-r from-amber-200 via-orange-200 to-amber-200 bg-clip-text text-4xl font-extrabold leading-tight text-transparent sm:text-6xl">
+            <h1 className="bg-gradient-to-r from-amber-200 via-orange-200 to-amber-200 bg-clip-text text-4xl font-extrabold leading-tight text-transparent sm:text-6xl">
               Stop Spending 4+ Hours On Color Grading
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-xl text-white/90 sm:text-2xl">
