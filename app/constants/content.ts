@@ -280,7 +280,7 @@ export const DEMO_IMAGES = {
 export const DEMO_VIDEOS = {
   raw: "/video/lut-wedding-before-after-2.mp4",
   graded: "/video/video3.mp4",
-  hero: "/video/video3.mp4",
+  hero: "/video/lut-wedding-before-after-2.mp4",
   howToUse: "/video/how to use 1.mp4",
 };
 
