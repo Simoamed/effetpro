@@ -185,6 +185,76 @@ export default function Page() {
         </Container>
       </section>
 
+      {/* 30-Day Money-Back Guarantee */}
+      <section className="border-t border-white/10 py-16 bg-gradient-to-b from-emerald-950/20 via-teal-950/10 to-neutral-950/20">
+        <Container>
+          <div className="mx-auto max-w-4xl">
+            <div className="relative overflow-hidden rounded-3xl border border-emerald-500/30 bg-gradient-to-br from-emerald-950/40 via-teal-950/30 to-neutral-950/40 p-8 md:p-12 backdrop-blur-sm">
+              {/* Decorative gradient overlay */}
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.1),transparent_70%)]"></div>
+
+              <div className="relative">
+                {/* Icon */}
+                <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full border-4 border-emerald-500/30 bg-emerald-500/20">
+                  <svg className="h-10 w-10 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                  </svg>
+                </div>
+
+                {/* Title */}
+                <h2 className="mb-4 text-center text-3xl font-bold text-white md:text-4xl">
+                  30-Day Money-Back Guarantee
+                </h2>
+
+                {/* Description */}
+                <p className="mx-auto mb-8 max-w-2xl text-center text-lg leading-relaxed text-white/80">
+                  Try EffetPro risk-free for 30 days. If you're not completely satisfied, we'll refund your purchase. <span className="font-bold text-emerald-400">No questions asked.</span>
+                </p>
+
+                {/* Features Grid */}
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+                  <div className="flex items-center gap-3 rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-4">
+                    <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-emerald-500/20">
+                      <svg className="h-5 w-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div className="font-bold text-white">Full Refund</div>
+                      <div className="text-sm text-white/70">100% money back</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-3 rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-4">
+                    <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-emerald-500/20">
+                      <svg className="h-5 w-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div className="font-bold text-white">No Questions</div>
+                      <div className="text-sm text-white/70">Hassle-free process</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-3 rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-4">
+                    <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-emerald-500/20">
+                      <svg className="h-5 w-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div className="font-bold text-white">Fast Processing</div>
+                      <div className="text-sm text-white/70">3-5 business days</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
       {/* Compatible Software */}
       <section className="border-t border-white/10 py-12 bg-gradient-to-b from-slate-950/40 via-slate-900/30 to-black/10">
         <Container>
