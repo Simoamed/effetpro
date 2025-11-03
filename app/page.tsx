@@ -37,7 +37,7 @@ export default function Page() {
               Transform Raw Footage Into Cinema-Grade Wedding Films
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-xl text-white/90 sm:text-2xl">
-              Professional color grading in <span className="font-bold text-amber-300">one click</span> — 500+ cinematic LUTs trusted by wedding filmmakers worldwide
+              Professional color grading in <span className="font-bold text-amber-300">one click</span> — 500+ cinematic LUTs trusted by editors worldwide
             </p>
           </div>
 
