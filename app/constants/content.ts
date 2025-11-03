@@ -272,8 +272,8 @@ export const SOFTWARE_LOGOS = [
 
 // Before/After demo images
 export const DEMO_IMAGES = {
-  before: "/before-after/wed-6.jpg",
-  after: "/before-after/wed-6.jpg",
+  before: "/imgs/miniature 2.jpg",
+  after: "/imgs/miniature .jpg",
 };
 
 // Demo videos

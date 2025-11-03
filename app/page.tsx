@@ -426,13 +426,13 @@ export default function Page() {
         <Container>
           <SectionTitle title="Before / After" subtitle="See the transformation in seconds." gradient="from-amber-300 via-orange-300 to-amber-200" />
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            <div className="rounded-2xl border border-white/10 bg-black/30 p-4 md:order-2">
+            <div className="rounded-2xl border border-white/10 bg-black/30 p-4">
               <div className="mb-2 text-sm font-serif font-semibold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-300 uppercase">Before</div>
               <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-slate-900">
-                <Image src={DEMO_IMAGES.before} alt="Before applying wedding LUT" width={800} height={450} className="h-full w-full object-cover" style={{ filter: "grayscale(60%) saturate(0.6) brightness(0.85)" }} />
+                <Image src={DEMO_IMAGES.before} alt="Before applying wedding LUT" width={800} height={450} className="h-full w-full object-cover" />
               </div>
             </div>
-            <div className="rounded-2xl border border-white/10 bg-black/30 p-4 md:order-1">
+            <div className="rounded-2xl border border-white/10 bg-black/30 p-4">
               <div className="mb-2 text-sm font-serif font-semibold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-teal-300 uppercase">After</div>
               <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-slate-900">
                 <Image src={DEMO_IMAGES.after} alt="After applying wedding LUT" width={800} height={450} className="h-full w-full object-cover" />
