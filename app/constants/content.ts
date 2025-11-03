@@ -262,4 +262,4 @@ export const DEMO_VIDEOS = {
 };
 
 // Product mockup
-export const PRODUCT_MOCKUP = "/imgs/for sire 4.jpg";
+export const PRODUCT_MOCKUP = "/imgs/for site 5.png";
