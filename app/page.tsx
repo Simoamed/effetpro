@@ -142,42 +142,55 @@ export default function Page() {
             })}
           </div>
 
-          {/* Value Stack - Mini Style like AIFastScale */}
-          <div className="mx-auto mt-8 max-w-xs">
-            <div className="rounded-lg border border-slate-600/30 bg-slate-900/50 p-3 shadow-sm">
-              <div className="space-y-2">
-                {/* Compact Stats */}
-                <div className="flex items-center justify-between text-xs">
-                  <div className="text-slate-400">
-                    <span className="uppercase text-[9px]">From </span>
+          {/* Value Stack - Pricing Card */}
+          <div className="mx-auto mt-8 max-w-sm">
+            <div className="relative overflow-hidden rounded-2xl border border-amber-500/30 bg-gradient-to-br from-neutral-950/80 via-amber-950/20 to-neutral-950/80 p-6 shadow-2xl backdrop-blur-sm">
+              {/* Decorative gradient overlay */}
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(251,146,60,0.15),transparent_60%)]"></div>
+
+              <div className="relative space-y-4">
+                {/* Header with discount badge */}
+                <div className="flex items-center justify-between">
+                  <div className="text-sm text-white/60">
+                    <span className="uppercase text-xs tracking-wide">FROM </span>
                     <span className="line-through">${SITE_CONFIG.originalPrice}</span>
                   </div>
-                  <div className="rounded bg-blue-500/10 px-2 py-0.5 text-blue-400 font-semibold">
+                  <div className="rounded-full bg-gradient-to-r from-blue-500 to-blue-600 px-3 py-1 text-sm font-bold text-white shadow-lg shadow-blue-500/30">
                     {SITE_CONFIG.discount} OFF
                   </div>
                 </div>
 
-                {/* Price - Compact */}
-                <div className="text-center py-1">
-                  <div className="flex items-baseline justify-center gap-0.5">
-                    <span className="text-base text-white/60">US$</span>
-                    <span className="text-3xl font-black text-white">{SITE_CONFIG.price}</span>
+                {/* Price */}
+                <div className="text-center py-2">
+                  <div className="flex items-baseline justify-center gap-1">
+                    <span className="text-xl font-semibold text-white/70">US$</span>
+                    <span className="text-5xl font-black text-white">{SITE_CONFIG.price}</span>
                   </div>
-                  <p className="text-[9px] text-slate-400 mt-0.5">One-time payment • Lifetime access</p>
+                  <p className="mt-2 text-sm text-white/60">One-time payment • Lifetime access</p>
                 </div>
 
-                {/* CTA - Compact */}
+                {/* CTA Button */}
                 <a
                   href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00"
-                  className="block w-full rounded bg-gradient-to-r from-slate-600 to-blue-600 py-2 text-center text-xs font-bold text-white transition hover:opacity-90"
+                  className="block w-full rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 py-3 text-center text-sm font-bold text-white shadow-xl shadow-blue-500/30 transition-all hover:scale-[1.02] hover:shadow-blue-500/50"
                 >
                   Get Instant Access →
                 </a>
 
-                {/* Trust - Minimal */}
-                <div className="flex items-center justify-between border-t border-slate-700 pt-2 text-[8px] text-slate-400">
-                  <span>✓ 30-Day Guarantee</span>
-                  <span>✓ Secure Payment</span>
+                {/* Trust badges */}
+                <div className="flex items-center justify-between border-t border-white/10 pt-3 text-xs text-white/60">
+                  <span className="flex items-center gap-1">
+                    <svg className="h-3 w-3 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    30-Day Guarantee
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <svg className="h-3 w-3 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    Secure Payment
+                  </span>
                 </div>
               </div>
             </div>
