@@ -442,19 +442,15 @@ export default function Page() {
           </div>
           <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
             <div className="rounded-2xl border border-white/10 bg-black/30 p-4">
-              <div className="mb-2 text-sm font-semibold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-300">Raw Footage</div>
+              <div className="mb-2 text-sm font-semibold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-300">Before/After</div>
               <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-slate-900">
-                <video className="absolute inset-0 h-full w-full object-cover" playsInline muted loop autoPlay preload="metadata" aria-label="Raw wedding footage before color grading">
-                  <source src={DEMO_VIDEOS.raw} type="video/mp4" />
-                </video>
+                <Image src="/imgs/600.png" alt="Before/After wedding LUT comparison" width={800} height={450} className="h-full w-full object-cover" />
               </div>
             </div>
             <div className="rounded-2xl border border-white/10 bg-black/30 p-4">
-              <div className="mb-2 text-sm font-semibold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-teal-300">Drone Graded Result</div>
+              <div className="mb-2 text-sm font-semibold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-teal-300">Before/After</div>
               <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-slate-900">
-                <video className="absolute inset-0 h-full w-full object-cover" playsInline muted loop autoPlay preload="metadata" aria-label="Drone footage with wedding LUT applied">
-                  <source src={DEMO_VIDEOS.graded} type="video/mp4" />
-                </video>
+                <Image src="/imgs/601.png" alt="Before/After wedding LUT comparison" width={800} height={450} className="h-full w-full object-cover" />
               </div>
             </div>
           </div>
