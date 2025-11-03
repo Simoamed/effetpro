@@ -100,8 +100,8 @@ export default function Page() {
             gradient="from-amber-200 via-orange-200 to-amber-200"
           />
 
-          {/* Main Offer - 3 columns */}
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-3 mb-12">
+          {/* Main Offer - 2 columns for LUTs only */}
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 mb-12">
             {MAIN_OFFER.map((item, index) => {
               const gradients = [
                 "from-rose-500 to-pink-600",
@@ -152,9 +152,10 @@ export default function Page() {
               <h3 className="text-2xl font-bold text-white">En plus, vous recevez gratuitement</h3>
             </div>
 
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
               {EXCLUSIVE_BONUSES.map((bonus, index) => {
                 const gradients = [
+                  "from-emerald-500 to-teal-600",
                   "from-purple-500 to-fuchsia-600",
                   "from-amber-500 to-yellow-600",
                   "from-blue-500 to-cyan-600"

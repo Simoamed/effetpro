@@ -18,33 +18,34 @@ export const SITE_CONFIG = {
   guaranteeDays: "30",
 };
 
-// Main Product Offer
+// Main Product Offer (LUTs only)
 export const MAIN_OFFER = [
   {
     id: "luts",
     title: "500+ Wedding LUTs (cube, 3dl)",
-    description: "Pour Adobe Premiere Pro & Lightroom",
+    description: "Pour Adobe Premiere Pro & Lightroom — Formats universels compatibles avec tous les logiciels de montage",
     value: "$197",
     color: "rose",
   },
   {
     id: "drone",
     title: "30 Drone LUTs (aerial friendly)",
-    description: "Parfaits pour les vidéos aériennes de mariage",
+    description: "Spécialement calibrés pour les vidéos aériennes de mariage et paysages romantiques",
     value: "$97",
     color: "amber",
-  },
-  {
-    id: "lifetime",
-    title: "Lifetime access + free updates",
-    description: "Accès à vie + mises à jour gratuites",
-    value: "$22",
-    color: "emerald",
   },
 ];
 
 // Exclusive Bonuses
 export const EXCLUSIVE_BONUSES = [
+  {
+    id: "lifetime",
+    title: "Accès à vie + mises à jour gratuites",
+    description: "Toutes les futures LUTs ajoutées au pack sans frais supplémentaires",
+    value: "$22",
+    color: "emerald",
+    icon: "🔄",
+  },
   {
     id: "music",
     title: "🎶 120 Musiques émotionnelles libres de droits",
