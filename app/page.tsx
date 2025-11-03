@@ -38,10 +38,10 @@ export default function Page() {
         <Container className="relative">
           <div className="text-center">
             <h1 className="bg-gradient-to-r from-amber-200 via-orange-200 to-amber-200 bg-clip-text text-4xl font-extrabold leading-tight text-transparent sm:text-6xl">
-              Wedding LUTs Master Collection
+              Transformez vos vidéos de mariage en films de cinéma en 1 clic
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-xl text-white/90 sm:text-2xl">
-              +500 LUTs professionnels pour <span className="font-bold text-amber-300">Adobe Premiere Pro & Lightroom</span> — conçus spécialement pour les mariages, films romantiques et clips cinématiques
+              +500 LUTs professionnels pour <span className="font-bold text-amber-300">Adobe Premiere Pro & Lightroom</span> — Économisez des heures de color grading et impressionnez vos clients
             </p>
           </div>
 
