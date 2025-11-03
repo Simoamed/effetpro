@@ -70,7 +70,7 @@ export const EXCLUSIVE_BONUSES = [
   {
     id: "class",
     title: "\"Cinematic Color Mastery Session\"",
-    description: "10-minute masterclass on cinematic color grading",
+    description: "Masterclass on cinematic color grading",
     value: "$27",
     color: "blue",
     icon: "🎥",
