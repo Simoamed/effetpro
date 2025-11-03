@@ -444,6 +444,20 @@ export default function Page() {
               </div>
             </div>
           </div>
+          <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
+            <div className="rounded-2xl border border-white/10 bg-black/30 p-4">
+              <div className="mb-2 text-sm font-semibold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-300">Before/After</div>
+              <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-slate-900">
+                <Image src="/imgs/600.png" alt="Before/After wedding LUT comparison" width={800} height={450} className="h-full w-full object-cover" />
+              </div>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-black/30 p-4">
+              <div className="mb-2 text-sm font-semibold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-teal-300">Before/After</div>
+              <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-slate-900">
+                <Image src="/imgs/601.png" alt="Before/After wedding LUT comparison" width={800} height={450} className="h-full w-full object-cover" />
+              </div>
+            </div>
+          </div>
           <div className="mt-6 flex flex-col items-center">
             <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="w-full max-w-sm rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-amber-500/30 transition hover:from-amber-600 hover:to-orange-600">Start Grading Like a Pro &#8212; $37</a>
           </div>
