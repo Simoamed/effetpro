@@ -155,7 +155,7 @@ export default function Page() {
                     <span className="uppercase text-xs tracking-wide">FROM </span>
                     <span className="line-through">${SITE_CONFIG.originalPrice}</span>
                   </div>
-                  <div className="rounded-full bg-gradient-to-r from-blue-500 to-blue-600 px-3 py-1 text-sm font-bold text-white shadow-lg shadow-blue-500/30">
+                  <div className="rounded-full bg-gradient-to-r from-amber-500 to-orange-500 px-3 py-1 text-sm font-bold text-white shadow-lg shadow-amber-500/30">
                     {SITE_CONFIG.discount} OFF
                   </div>
                 </div>
@@ -172,7 +172,7 @@ export default function Page() {
                 {/* CTA Button */}
                 <a
                   href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00"
-                  className="block w-full rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 py-3 text-center text-sm font-bold text-white shadow-xl shadow-blue-500/30 transition-all hover:scale-[1.02] hover:shadow-blue-500/50"
+                  className="block w-full rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 py-3 text-center text-sm font-bold text-white shadow-xl shadow-amber-500/30 transition-all hover:scale-[1.02] hover:shadow-amber-500/50"
                 >
                   Get Instant Access →
                 </a>
@@ -186,7 +186,7 @@ export default function Page() {
                     30-Day Guarantee
                   </span>
                   <span className="flex items-center gap-1">
-                    <svg className="h-3 w-3 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="h-3 w-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
                     Secure Payment
