@@ -95,8 +95,8 @@ export default function Page() {
 
         <Container className="relative">
           <SectionTitle
-            title="L'offre complète"
-            subtitle="Tout ce dont vous avez besoin pour créer des films de mariage cinématiques"
+            title="The Complete Package"
+            subtitle="Everything you need to create cinematic wedding films"
             gradient="from-amber-200 via-orange-200 to-amber-200"
           />
 
@@ -117,10 +117,27 @@ export default function Page() {
                   <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index]} opacity-0 transition-opacity duration-300 group-hover:opacity-10`}></div>
 
                   <div className="relative">
+                    {/* Mockup Image */}
+                    {item.mockup && (
+                      <div className="mb-4 -mt-2 relative">
+                        <Image
+                          src={item.mockup}
+                          alt={item.title}
+                          width={300}
+                          height={300}
+                          className="w-full h-auto object-contain"
+                          style={{
+                            filter: 'drop-shadow(0 10px 40px rgba(0,0,0,0.5))',
+                            mixBlendMode: 'screen',
+                          }}
+                        />
+                      </div>
+                    )}
+
                     <div className="flex items-center justify-between mb-4">
                       <div className={`h-1.5 w-16 rounded-full bg-gradient-to-r ${gradients[index]}`}></div>
                       <div className="flex flex-col items-end">
-                        <span className="text-[10px] font-semibold uppercase tracking-wider text-white/40">Valeur</span>
+                        <span className="text-[10px] font-semibold uppercase tracking-wider text-white/40">Value</span>
                         <span className="text-lg font-bold text-white/30 line-through">{item.value}</span>
                       </div>
                     </div>
@@ -134,7 +151,7 @@ export default function Page() {
                       <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
-                      <span className="font-semibold">Inclus</span>
+                      <span className="font-semibold">Included</span>
                     </div>
                   </div>
                 </div>
@@ -147,9 +164,9 @@ export default function Page() {
             <div className="text-center mb-8">
               <div className="inline-flex items-center gap-2 rounded-full border border-purple-500/30 bg-purple-500/10 px-6 py-2.5 mb-4">
                 <span className="text-2xl">🎁</span>
-                <span className="text-sm font-bold uppercase tracking-wider text-purple-300">Bonus Exclusifs</span>
+                <span className="text-sm font-bold uppercase tracking-wider text-purple-300">Exclusive Bonuses</span>
               </div>
-              <h3 className="text-2xl font-bold text-white">En plus, vous recevez gratuitement</h3>
+              <h3 className="text-2xl font-bold text-white">Plus, you receive for free</h3>
             </div>
 
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -169,6 +186,23 @@ export default function Page() {
                     <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index]} opacity-0 transition-opacity duration-300 group-hover:opacity-10`}></div>
 
                     <div className="relative">
+                      {/* Mockup Image */}
+                      {bonus.mockup && (
+                        <div className="mb-4 -mt-2 relative">
+                          <Image
+                            src={bonus.mockup}
+                            alt={bonus.title}
+                            width={200}
+                            height={200}
+                            className="w-full h-auto object-contain"
+                            style={{
+                              filter: 'drop-shadow(0 8px 30px rgba(0,0,0,0.4))',
+                              mixBlendMode: 'screen',
+                            }}
+                          />
+                        </div>
+                      )}
+
                       <div className="flex items-center justify-between mb-4">
                         <div className="text-3xl">{bonus.icon}</div>
                         <div className="flex flex-col items-end">
@@ -186,7 +220,7 @@ export default function Page() {
                         <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                         </svg>
-                        <span className="font-semibold">Offert 🎁</span>
+                        <span className="font-semibold">Free Gift 🎁</span>
                       </div>
                     </div>
                   </div>
@@ -345,8 +379,8 @@ export default function Page() {
       <section id="why" className="border-t border-white/5 py-16 bg-gradient-to-b from-teal-900/20 via-cyan-950/15 to-teal-950/25">
         <Container>
           <SectionTitle
-            title={`Pourquoi ${SITE_CONFIG.customerCount} éditeurs vidéo choisissent EffetPro`}
-            subtitle="Les vrais résultats que vous obtiendrez — pas seulement des fonctionnalités."
+            title={`Why ${SITE_CONFIG.customerCount} Video Editors Choose EffetPro`}
+            subtitle="Real results you'll get — not just features."
             gradient="from-emerald-300 via-teal-200 to-emerald-400"
           />
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -390,7 +424,7 @@ export default function Page() {
       {/* Before / After + Videos */}
       <section id="before-after" className="border-t border-white/5 py-16 bg-gradient-to-b from-blue-950/20 via-indigo-950/15 to-violet-950/25">
         <Container>
-          <SectionTitle title="Avant / Après" subtitle="Voyez la transformation en quelques secondes." gradient="from-amber-300 via-orange-300 to-amber-200" />
+          <SectionTitle title="Before / After" subtitle="See the transformation in seconds." gradient="from-amber-300 via-orange-300 to-amber-200" />
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             <div className="rounded-2xl border border-white/10 bg-black/30 p-4 md:order-2">
               <div className="mb-2 text-sm font-serif font-semibold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-300 uppercase">Before</div>
@@ -433,8 +467,8 @@ export default function Page() {
       <section id="how-to-use" className="border-t border-white/5 py-16 bg-gradient-to-b from-pink-950/20 via-rose-950/15 to-purple-950/25">
         <Container>
           <SectionTitle
-            title="Comment utiliser vos LUTs en 60 secondes"
-            subtitle="Guide d'installation simple par glisser-déposer pour tous les logiciels de montage"
+            title="How to Use Your LUTs in 60 Seconds"
+            subtitle="Simple drag-and-drop installation guide for all editing software"
             gradient="from-amber-200 via-orange-200 to-amber-200"
           />
 
@@ -485,7 +519,7 @@ export default function Page() {
       {/* Looks Gallery */}
       <section id="looks" className="border-t border-white/5 py-16 bg-gradient-to-b from-purple-950/25 via-fuchsia-950/15 to-violet-950/30">
         <Container>
-          <SectionTitle title="Galerie de looks signature" subtitle="Aperçu de quelques-uns des styles LUT inclus pour mariages." gradient="from-amber-200 via-orange-200 to-red-200" />
+          <SectionTitle title="Signature Looks Gallery" subtitle="Preview of some of the wedding LUT styles included." gradient="from-amber-200 via-orange-200 to-red-200" />
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {SIGNATURE_LOOKS.map((look) => (
               <div key={look.src} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-black/30">
@@ -523,7 +557,7 @@ export default function Page() {
       {/* Reviews */}
       <section id="reviews" className="border-t border-white/5 py-16 bg-gradient-to-b from-amber-950/20 via-orange-950/15 to-rose-950/25">
         <Container>
-          <SectionTitle title={`Approuvé par ${SITE_CONFIG.customerCount} éditeurs vidéo`} subtitle={`${SITE_CONFIG.rating}/5 note moyenne`} gradient="from-amber-300 via-rose-300 to-amber-200" />
+          <SectionTitle title={`Loved by ${SITE_CONFIG.customerCount} Video Editors`} subtitle={`${SITE_CONFIG.rating}/5 average rating`} gradient="from-amber-300 via-rose-300 to-amber-200" />
           <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
             {TESTIMONIALS.map((testimonial) => (
               <div key={testimonial.id} className="rounded-2xl border border-white/10 bg-white/5 p-6 text-white/90">
@@ -594,8 +628,8 @@ export default function Page() {
 
           {/* FAQ Section */}
           <SectionTitle
-            title="Questions fréquentes"
-            subtitle="Tout ce que vous devez savoir sur les LUTs EffetPro"
+            title="Frequently Asked Questions"
+            subtitle="Everything you need to know about EffetPro LUTs"
             gradient="from-cyan-300 via-blue-300 to-cyan-300"
           />
           <div className="mx-auto max-w-3xl">
@@ -745,7 +779,7 @@ export default function Page() {
               Get The Full Pack Now &#8212; Only ${SITE_CONFIG.price} ({SITE_CONFIG.discount} OFF)
             </a>
             <div className="mt-3 text-sm text-white/70">Instant Download &bull; Lifetime Access &bull; Limited Offer</div>
-            <div className="mt-4 text-xs text-white/60">&#169; {new Date().getFullYear()} {SITE_CONFIG.name}. Tous droits réservés.</div>
+            <div className="mt-4 text-xs text-white/60">&#169; {new Date().getFullYear()} {SITE_CONFIG.name}. All rights reserved.</div>
           </div>
         </Container>
       </section>
@@ -808,7 +842,7 @@ export default function Page() {
             </div>
           </div>
           <div className="mt-8 border-t border-white/10 pt-4 text-center text-xs text-white/60">
-            &#169; {new Date().getFullYear()} {SITE_CONFIG.name}. Tous droits réservés.
+            &#169; {new Date().getFullYear()} {SITE_CONFIG.name}. All rights reserved.
           </div>
         </Container>
       </footer>

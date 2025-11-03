@@ -23,16 +23,18 @@ export const MAIN_OFFER = [
   {
     id: "luts",
     title: "500+ Wedding LUTs (cube, 3dl)",
-    description: "Pour Adobe Premiere Pro & Lightroom — Formats universels compatibles avec tous les logiciels de montage",
+    description: "For Adobe Premiere Pro & Lightroom — Universal formats compatible with all editing software",
     value: "$197",
     color: "rose",
+    mockup: "/imgs/Generated Image November 03, 2025 - 8_44PM.png",
   },
   {
     id: "drone",
     title: "30 Drone LUTs (aerial friendly)",
-    description: "Spécialement calibrés pour les vidéos aériennes de mariage et paysages romantiques",
+    description: "Specially calibrated for wedding aerial footage and romantic landscapes",
     value: "$97",
     color: "amber",
+    mockup: "/imgs/Generated Image November 03, 2025 - 2_17PM.png",
   },
 ];
 
@@ -40,35 +42,39 @@ export const MAIN_OFFER = [
 export const EXCLUSIVE_BONUSES = [
   {
     id: "lifetime",
-    title: "Accès à vie + mises à jour gratuites",
-    description: "Toutes les futures LUTs ajoutées au pack sans frais supplémentaires",
+    title: "Lifetime Access + Free Updates",
+    description: "All future LUTs added to the pack at no extra cost",
     value: "$22",
     color: "emerald",
     icon: "🔄",
+    mockup: "/imgs/Generated Image November 03, 2025 - 8_44PM.png",
   },
   {
     id: "music",
-    title: "🎶 120 Musiques émotionnelles libres de droits",
-    description: "Parfaites pour vidéos de mariage, storytelling, love moments",
+    title: "120 Emotional Royalty-Free Music Tracks",
+    description: "Perfect for wedding videos, storytelling, and romantic moments",
     value: "$87",
     color: "purple",
     icon: "🎶",
+    mockup: "/imgs/Generated Image November 03, 2025 - 2_16PM (1).png",
   },
   {
     id: "presets",
-    title: "💛 Pack Presets Lightroom \"Golden Love\"",
-    description: "30 presets pour sublimer les tons de peau et l'ambiance dorée",
+    title: "Lightroom Presets Pack \"Golden Love\"",
+    description: "30 presets to enhance skin tones and golden ambiance",
     value: "$67",
     color: "amber",
     icon: "💛",
+    mockup: "/imgs/Generated Image November 03, 2025 - 2_15PM (1).png",
   },
   {
     id: "class",
-    title: "🎥 \"Cinematic Color Mastery Session\"",
-    description: "Mini masterclass de 10 minutes sur le color grading cinématique",
+    title: "\"Cinematic Color Mastery Session\"",
+    description: "10-minute masterclass on cinematic color grading",
     value: "$27",
     color: "blue",
     icon: "🎥",
+    mockup: "/imgs/Generated Image November 03, 2025 - 2_23PM.png",
   },
 ];
 
@@ -107,26 +113,26 @@ export const TRUST_BADGES = [
 export const BENEFITS = [
   {
     id: "handcrafted",
-    title: "Gradez un mariage complet en 15 minutes au lieu de 4 heures",
-    description: "500+ LUTs créés spécifiquement pour les mariages, fiançailles et films romantiques.",
+    title: "Grade an Entire Wedding in 15 Minutes Instead of 4 Hours",
+    description: "500+ LUTs created specifically for weddings, engagements, and romantic films.",
     color: "rose",
   },
   {
     id: "skin-tones",
-    title: "Des tons de peau parfaits automatiquement",
-    description: "Optimisés pour des tons naturels avec des reflets flatteurs que les mariés adorent.",
+    title: "Perfect Skin Tones Automatically",
+    description: "Optimized for natural tones with flattering highlights that couples love.",
     color: "amber",
   },
   {
     id: "compatible",
-    title: "Compatible avec vos outils favoris immédiatement",
-    description: "Drag & drop dans Premiere Pro, Lightroom, DaVinci Resolve & Final Cut Pro.",
+    title: "Compatible with Your Favorite Tools Instantly",
+    description: "Drag & drop in Premiere Pro, Lightroom, DaVinci Resolve & Final Cut Pro.",
     color: "emerald",
   },
   {
     id: "cameras",
-    title: "Résultats parfaits peu importe la caméra — Sony, Canon, DJI",
-    description: "Pré-calibrés pour toutes les grandes marques. Aucun ajustement technique nécessaire.",
+    title: "Perfect Results No Matter the Camera — Sony, Canon, DJI",
+    description: "Pre-calibrated for all major brands. No technical adjustments needed.",
     color: "orange",
   },
 ];
