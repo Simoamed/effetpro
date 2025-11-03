@@ -34,10 +34,10 @@ export default function Page() {
         <Container className="relative">
           <div className="text-center">
             <h1 className="bg-gradient-to-r from-amber-200 via-orange-200 to-amber-200 bg-clip-text text-4xl font-extrabold leading-tight text-transparent sm:text-6xl">
-              Stop Spending 4+ Hours On Color Grading
+              Transform Raw Footage Into Cinema-Grade Wedding Films
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-xl text-white/90 sm:text-2xl">
-              Grade an <span className="font-bold text-amber-300">entire wedding in 15 minutes</span> with cinematic LUTs that make couples cry tears of joy
+              Professional color grading in <span className="font-bold text-amber-300">one click</span> — 500+ cinematic LUTs trusted by wedding filmmakers worldwide
             </p>
           </div>
 
