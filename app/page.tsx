@@ -120,13 +120,13 @@ export default function Page() {
                   <div className="relative">
                     {/* Mockup Image */}
                     {item.mockup && (
-                      <div className="mb-4 -mt-2 relative">
+                      <div className="mb-4 -mt-2 relative flex justify-center">
                         <Image
                           src={item.mockup}
                           alt={item.title}
-                          width={300}
-                          height={300}
-                          className="w-full h-auto object-contain"
+                          width={150}
+                          height={150}
+                          className="w-1/2 h-auto object-contain"
                           style={{
                             filter: 'drop-shadow(0 10px 40px rgba(0,0,0,0.5))',
                             mixBlendMode: 'screen',
