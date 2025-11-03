@@ -1,8 +1,8 @@
 // Site configuration
 export const SITE_CONFIG = {
   name: "EffetPro",
-  tagline: "Wedding LUTs Master Collection — 500+ Cinematic LUTs",
-  description: "Turn every wedding into a cinematic masterpiece with 500+ professional LUTs",
+  tagline: "Wedding LUTs Master Collection",
+  description: "+500 LUTs professionnels pour Adobe Premiere Pro & Lightroom — conçus spécialement pour les mariages, films romantiques et clips cinématiques",
   url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   email: "support@effetpro.com",
   phone: "+33 0 000 000",
@@ -18,45 +18,61 @@ export const SITE_CONFIG = {
   guaranteeDays: "30",
 };
 
-// Product features with value
-export const PRODUCT_FEATURES = [
+// Main Product Offer
+export const MAIN_OFFER = [
   {
     id: "luts",
     title: "500+ Wedding LUTs (cube, 3dl)",
+    description: "Pour Adobe Premiere Pro & Lightroom",
     value: "$197",
     color: "rose",
   },
   {
     id: "drone",
     title: "30 Drone LUTs (aerial friendly)",
+    description: "Parfaits pour les vidéos aériennes de mariage",
     value: "$97",
     color: "amber",
   },
   {
-    id: "music",
-    title: "120 Emotional Music Tracks",
-    value: "$87",
+    id: "lifetime",
+    title: "Lifetime access + free updates",
+    description: "Accès à vie + mises à jour gratuites",
+    value: "$22",
     color: "emerald",
+  },
+];
+
+// Exclusive Bonuses
+export const EXCLUSIVE_BONUSES = [
+  {
+    id: "music",
+    title: "🎶 120 Musiques émotionnelles libres de droits",
+    description: "Parfaites pour vidéos de mariage, storytelling, love moments",
+    value: "$87",
+    color: "purple",
+    icon: "🎶",
   },
   {
     id: "presets",
-    title: "Golden Love Lightroom Presets",
+    title: "💛 Pack Presets Lightroom \"Golden Love\"",
+    description: "30 presets pour sublimer les tons de peau et l'ambiance dorée",
     value: "$67",
     color: "amber",
+    icon: "💛",
   },
   {
     id: "class",
-    title: "Mini class: Cinematic Color (10 min)",
+    title: "🎥 \"Cinematic Color Mastery Session\"",
+    description: "Mini masterclass de 10 minutes sur le color grading cinématique",
     value: "$27",
-    color: "orange",
-  },
-  {
-    id: "lifetime",
-    title: "Lifetime access + free updates",
-    value: "$22",
-    color: "amber",
+    color: "blue",
+    icon: "🎥",
   },
 ];
+
+// Legacy export for compatibility
+export const PRODUCT_FEATURES = [...MAIN_OFFER, ...EXCLUSIVE_BONUSES];
 
 // Trust badges & guarantees
 export const TRUST_BADGES = [
@@ -90,26 +106,26 @@ export const TRUST_BADGES = [
 export const BENEFITS = [
   {
     id: "handcrafted",
-    title: "Grade a full wedding in 15 minutes instead of 4 hours",
-    description: "500+ LUTs handcrafted specifically for weddings, engagements & romantic films.",
+    title: "Gradez un mariage complet en 15 minutes au lieu de 4 heures",
+    description: "500+ LUTs créés spécifiquement pour les mariages, fiançailles et films romantiques.",
     color: "rose",
   },
   {
     id: "skin-tones",
-    title: "Make every couple look flawless — automatically",
-    description: "Optimized for natural skin tones with dreamy, flattering highlights that brides love.",
+    title: "Des tons de peau parfaits automatiquement",
+    description: "Optimisés pour des tons naturels avec des reflets flatteurs que les mariés adorent.",
     color: "amber",
   },
   {
     id: "compatible",
-    title: "Works with your favorite tools, right away",
-    description: "Drag & drop in Premiere Pro, Lightroom, DaVinci Resolve & Final Cut Pro.",
+    title: "Compatible avec vos outils favoris immédiatement",
+    description: "Drag & drop dans Premiere Pro, Lightroom, DaVinci Resolve & Final Cut Pro.",
     color: "emerald",
   },
   {
     id: "cameras",
-    title: "Perfect results from any camera — Sony, Canon, DJI",
-    description: "Pre-calibrated for all major camera brands. No technical adjustments needed.",
+    title: "Résultats parfaits peu importe la caméra — Sony, Canon, DJI",
+    description: "Pré-calibrés pour toutes les grandes marques. Aucun ajustement technique nécessaire.",
     color: "orange",
   },
 ];

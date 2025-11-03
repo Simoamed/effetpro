@@ -8,6 +8,8 @@ import VideoPlayer from "./components/VideoPlayer";
 import Image from "next/image";
 import {
   PRODUCT_FEATURES,
+  MAIN_OFFER,
+  EXCLUSIVE_BONUSES,
   BENEFITS,
   SIGNATURE_LOOKS,
   TESTIMONIALS,
@@ -36,10 +38,10 @@ export default function Page() {
         <Container className="relative">
           <div className="text-center">
             <h1 className="bg-gradient-to-r from-amber-200 via-orange-200 to-amber-200 bg-clip-text text-4xl font-extrabold leading-tight text-transparent sm:text-6xl">
-              Transform Raw Footage Into Cinema-Grade Wedding Films
+              Wedding LUTs Master Collection
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-xl text-white/90 sm:text-2xl">
-              Professional color grading in <span className="font-bold text-amber-300">one click</span> — 500+ cinematic LUTs trusted by video editors worldwide
+              +500 LUTs professionnels pour <span className="font-bold text-amber-300">Adobe Premiere Pro & Lightroom</span> — conçus spécialement pour les mariages, films romantiques et clips cinématiques
             </p>
           </div>
 
@@ -93,55 +95,103 @@ export default function Page() {
 
         <Container className="relative">
           <SectionTitle
-            title="What's Inside The Pack?"
-            subtitle="Everything you need to create stunning wedding films — no experience required."
+            title="L'offre complète"
+            subtitle="Tout ce dont vous avez besoin pour créer des films de mariage cinématiques"
             gradient="from-amber-200 via-orange-200 to-amber-200"
           />
 
-          {/* Modern Cards Grid */}
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {PRODUCT_FEATURES.map((feature, index) => {
+          {/* Main Offer - 3 columns */}
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-3 mb-12">
+            {MAIN_OFFER.map((item, index) => {
               const gradients = [
-                "from-orange-500 to-red-600",
+                "from-rose-500 to-pink-600",
                 "from-amber-500 to-orange-600",
-                "from-yellow-500 to-amber-600",
-                "from-red-500 to-orange-600",
-                "from-orange-600 to-amber-700",
-                "from-amber-600 to-yellow-600"
+                "from-emerald-500 to-teal-600"
               ];
 
               return (
                 <div
-                  key={feature.id}
-                  className="group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] p-5 backdrop-blur-xl transition-all duration-300 hover:scale-[1.02] hover:border-white/20 hover:shadow-xl hover:shadow-orange-500/20"
+                  key={item.id}
+                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] p-6 backdrop-blur-xl transition-all duration-300 hover:scale-[1.02] hover:border-white/20 hover:shadow-2xl hover:shadow-orange-500/20"
                 >
-                  {/* Gradient glow on hover */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index]} opacity-0 transition-opacity duration-300 group-hover:opacity-10`}></div>
 
-                  {/* Header with Value */}
-                  <div className="relative mb-3 flex items-center justify-between">
-                    <div className={`h-1 w-12 rounded-full bg-gradient-to-r ${gradients[index]}`}></div>
-                    <div className="flex flex-col items-end">
-                      <span className="text-[10px] font-semibold uppercase tracking-wider text-white/40">Value</span>
-                      <span className="text-base font-bold text-white/30 line-through">{feature.value}</span>
+                  <div className="relative">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className={`h-1.5 w-16 rounded-full bg-gradient-to-r ${gradients[index]}`}></div>
+                      <div className="flex flex-col items-end">
+                        <span className="text-[10px] font-semibold uppercase tracking-wider text-white/40">Valeur</span>
+                        <span className="text-lg font-bold text-white/30 line-through">{item.value}</span>
+                      </div>
                     </div>
-                  </div>
 
-                  {/* Title */}
-                  <h3 className="relative text-base font-bold text-white leading-tight">
-                    {feature.title}
-                  </h3>
+                    <h3 className="text-lg font-bold text-white leading-tight mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-white/60 mb-4">{item.description}</p>
 
-                  {/* Checkmark */}
-                  <div className="relative mt-3 flex items-center gap-2 text-sm text-emerald-400">
-                    <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="font-medium">Included</span>
+                    <div className="flex items-center gap-2 text-sm text-emerald-400">
+                      <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span className="font-semibold">Inclus</span>
+                    </div>
                   </div>
                 </div>
               );
             })}
+          </div>
+
+          {/* Exclusive Bonuses Section */}
+          <div className="mt-16">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center gap-2 rounded-full border border-purple-500/30 bg-purple-500/10 px-6 py-2.5 mb-4">
+                <span className="text-2xl">🎁</span>
+                <span className="text-sm font-bold uppercase tracking-wider text-purple-300">Bonus Exclusifs</span>
+              </div>
+              <h3 className="text-2xl font-bold text-white">En plus, vous recevez gratuitement</h3>
+            </div>
+
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+              {EXCLUSIVE_BONUSES.map((bonus, index) => {
+                const gradients = [
+                  "from-purple-500 to-fuchsia-600",
+                  "from-amber-500 to-yellow-600",
+                  "from-blue-500 to-cyan-600"
+                ];
+
+                return (
+                  <div
+                    key={bonus.id}
+                    className="group relative overflow-hidden rounded-2xl border border-purple-500/20 bg-gradient-to-br from-purple-500/10 to-purple-500/5 p-6 backdrop-blur-xl transition-all duration-300 hover:scale-[1.02] hover:border-purple-500/40 hover:shadow-2xl hover:shadow-purple-500/20"
+                  >
+                    <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index]} opacity-0 transition-opacity duration-300 group-hover:opacity-10`}></div>
+
+                    <div className="relative">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="text-3xl">{bonus.icon}</div>
+                        <div className="flex flex-col items-end">
+                          <span className="text-[10px] font-semibold uppercase tracking-wider text-purple-300/60">Bonus</span>
+                          <span className="text-lg font-bold text-purple-300/50 line-through">{bonus.value}</span>
+                        </div>
+                      </div>
+
+                      <h3 className="text-base font-bold text-white leading-tight mb-2">
+                        {bonus.title}
+                      </h3>
+                      <p className="text-sm text-white/60 mb-4">{bonus.description}</p>
+
+                      <div className="flex items-center gap-2 text-sm text-purple-400">
+                        <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                        <span className="font-semibold">Offert 🎁</span>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
 
           {/* Value Stack - Pricing Card */}
@@ -294,8 +344,8 @@ export default function Page() {
       <section id="why" className="border-t border-white/5 py-16 bg-gradient-to-b from-teal-900/20 via-cyan-950/15 to-teal-950/25">
         <Container>
           <SectionTitle
-            title={`Why ${SITE_CONFIG.customerCount} Video Editors Choose EffetPro`}
-            subtitle="See the real results you'll get — not just features."
+            title={`Pourquoi ${SITE_CONFIG.customerCount} éditeurs vidéo choisissent EffetPro`}
+            subtitle="Les vrais résultats que vous obtiendrez — pas seulement des fonctionnalités."
             gradient="from-emerald-300 via-teal-200 to-emerald-400"
           />
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -339,7 +389,7 @@ export default function Page() {
       {/* Before / After + Videos */}
       <section id="before-after" className="border-t border-white/5 py-16 bg-gradient-to-b from-blue-950/20 via-indigo-950/15 to-violet-950/25">
         <Container>
-          <SectionTitle title="Before / After" subtitle="Watch the transformation happen in seconds." gradient="from-amber-300 via-orange-300 to-amber-200" />
+          <SectionTitle title="Avant / Après" subtitle="Voyez la transformation en quelques secondes." gradient="from-amber-300 via-orange-300 to-amber-200" />
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             <div className="rounded-2xl border border-white/10 bg-black/30 p-4 md:order-2">
               <div className="mb-2 text-sm font-serif font-semibold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-300 uppercase">Before</div>
@@ -382,8 +432,8 @@ export default function Page() {
       <section id="how-to-use" className="border-t border-white/5 py-16 bg-gradient-to-b from-pink-950/20 via-rose-950/15 to-purple-950/25">
         <Container>
           <SectionTitle
-            title="How to Use Your LUTs in 60 Seconds"
-            subtitle="Simple drag-and-drop installation guide for all major editing software"
+            title="Comment utiliser vos LUTs en 60 secondes"
+            subtitle="Guide d'installation simple par glisser-déposer pour tous les logiciels de montage"
             gradient="from-amber-200 via-orange-200 to-amber-200"
           />
 
@@ -434,7 +484,7 @@ export default function Page() {
       {/* Looks Gallery */}
       <section id="looks" className="border-t border-white/5 py-16 bg-gradient-to-b from-purple-950/25 via-fuchsia-950/15 to-violet-950/30">
         <Container>
-          <SectionTitle title="Signature Looks Gallery" subtitle="Preview a few of the included wedding LUT styles." gradient="from-amber-200 via-orange-200 to-red-200" />
+          <SectionTitle title="Galerie de looks signature" subtitle="Aperçu de quelques-uns des styles LUT inclus pour mariages." gradient="from-amber-200 via-orange-200 to-red-200" />
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {SIGNATURE_LOOKS.map((look) => (
               <div key={look.src} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-black/30">
@@ -472,7 +522,7 @@ export default function Page() {
       {/* Reviews */}
       <section id="reviews" className="border-t border-white/5 py-16 bg-gradient-to-b from-amber-950/20 via-orange-950/15 to-rose-950/25">
         <Container>
-          <SectionTitle title={`Loved by ${SITE_CONFIG.customerCount} Video Editors`} subtitle={`${SITE_CONFIG.rating}/5 average rating`} gradient="from-amber-300 via-rose-300 to-amber-200" />
+          <SectionTitle title={`Approuvé par ${SITE_CONFIG.customerCount} éditeurs vidéo`} subtitle={`${SITE_CONFIG.rating}/5 note moyenne`} gradient="from-amber-300 via-rose-300 to-amber-200" />
           <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
             {TESTIMONIALS.map((testimonial) => (
               <div key={testimonial.id} className="rounded-2xl border border-white/10 bg-white/5 p-6 text-white/90">
@@ -543,8 +593,8 @@ export default function Page() {
 
           {/* FAQ Section */}
           <SectionTitle
-            title="Frequently Asked Questions"
-            subtitle="Everything you need to know about EffetPro LUTs"
+            title="Questions fréquentes"
+            subtitle="Tout ce que vous devez savoir sur les LUTs EffetPro"
             gradient="from-cyan-300 via-blue-300 to-cyan-300"
           />
           <div className="mx-auto max-w-3xl">
