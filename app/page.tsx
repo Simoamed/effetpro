@@ -1,5 +1,6 @@
 export { metadata } from "./wedding-luts/metadata";
 import StickyCTA from "./components/StickyCTA";
+import ScrollColorTransition from "./components/ScrollColorTransition";
 import Container from "./components/UI/Container";
 import SectionTitle from "./components/UI/SectionTitle";
 import VideoBg from "./components/UI/VideoBg";
@@ -25,11 +26,12 @@ import {
 export default function Page() {
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-neutral-950 via-neutral-900 to-black text-white">
+    <main className="min-h-screen text-white relative">
+      <ScrollColorTransition />
       <StickyCTA />
 
       {/* Hero */}
-      <section className="relative overflow-hidden py-20 sm:py-28">
+      <section id="hero" className="relative overflow-hidden py-20 sm:py-28">
         <VideoBg src={DEMO_VIDEOS.hero} />
         <Container className="relative">
           <div className="text-center">
@@ -37,7 +39,7 @@ export default function Page() {
               Transform Raw Footage Into Cinema-Grade Wedding Films
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-xl text-white/90 sm:text-2xl">
-              Professional color grading in <span className="font-bold text-amber-300">one click</span> — 500+ cinematic LUTs trusted by editors worldwide
+              Professional color grading in <span className="font-bold text-amber-300">one click</span> — 500+ cinematic LUTs trusted by video editors worldwide
             </p>
           </div>
 
@@ -60,7 +62,7 @@ export default function Page() {
                 <svg className="h-4 w-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span>Downloaded by 347 wedding editors in the last 7 days</span>
+                <span>Downloaded by 347 video editors in the last 7 days</span>
               </div>
             </div>
 
@@ -83,11 +85,11 @@ export default function Page() {
       </section>
 
       {/* What You Get (chips) */}
-      <section className="relative border-t border-white/10 py-20 overflow-hidden">
-        {/* Animated gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-950/30 via-amber-950/20 to-neutral-950/40"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(251,146,60,0.08),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(245,158,11,0.08),transparent_50%)]"></div>
+      <section id="what-you-get" className="relative border-t border-white/5 py-20 overflow-hidden">
+        {/* Soft gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-violet-900/15 to-purple-950/25"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(168,85,247,0.06),transparent_60%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.06),transparent_60%)]"></div>
 
         <Container className="relative">
           <SectionTitle
@@ -199,7 +201,7 @@ export default function Page() {
       </section>
 
       {/* 30-Day Money-Back Guarantee */}
-      <section className="border-t border-white/10 py-16 bg-gradient-to-b from-emerald-950/20 via-teal-950/10 to-neutral-950/20">
+      <section id="guarantee" className="border-t border-white/5 py-16 bg-gradient-to-b from-emerald-900/15 via-teal-900/10 to-emerald-950/20">
         <Container>
           <div className="mx-auto max-w-4xl">
             <div className="relative overflow-hidden rounded-3xl border border-emerald-500/30 bg-gradient-to-br from-emerald-950/40 via-teal-950/30 to-neutral-950/40 p-8 md:p-12 backdrop-blur-sm">
@@ -269,7 +271,7 @@ export default function Page() {
       </section>
 
       {/* Compatible Software */}
-      <section className="border-t border-white/10 py-12 bg-gradient-to-b from-slate-950/40 via-slate-900/30 to-black/10">
+      <section id="software" className="border-t border-white/5 py-12 bg-gradient-to-b from-indigo-950/25 via-blue-950/20 to-slate-950/30">
         <Container>
           <div className="text-center mb-8">
             <p className="text-sm font-semibold uppercase tracking-wide text-slate-400 mb-2">Works seamlessly with</p>
@@ -289,10 +291,10 @@ export default function Page() {
       </section>
 
       {/* Why */}
-      <section id="why" className="border-t border-white/10 py-16 bg-gradient-to-b from-emerald-950/30 via-slate-950/20 to-black/10">
+      <section id="why" className="border-t border-white/5 py-16 bg-gradient-to-b from-teal-900/20 via-cyan-950/15 to-teal-950/25">
         <Container>
           <SectionTitle
-            title={`Why ${SITE_CONFIG.customerCount} Wedding Editors & Filmmakers Choose EffetPro`}
+            title={`Why ${SITE_CONFIG.customerCount} Video Editors Choose EffetPro`}
             subtitle="See the real results you'll get — not just features."
             gradient="from-emerald-300 via-teal-200 to-emerald-400"
           />
@@ -335,7 +337,7 @@ export default function Page() {
       </section>
 
       {/* Before / After + Videos */}
-      <section className="border-t border-white/10 py-16 bg-gradient-to-b from-sky-950/30 via-slate-950/20 to-black/10">
+      <section id="before-after" className="border-t border-white/5 py-16 bg-gradient-to-b from-blue-950/20 via-indigo-950/15 to-violet-950/25">
         <Container>
           <SectionTitle title="Before / After" subtitle="Watch the transformation happen in seconds." gradient="from-amber-300 via-orange-300 to-amber-200" />
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -377,7 +379,7 @@ export default function Page() {
       </section>
 
       {/* How to Use Tutorial */}
-      <section id="install-guides" className="border-t border-white/10 py-16 bg-gradient-to-b from-orange-950/20 via-neutral-950/20 to-black/10">
+      <section id="how-to-use" className="border-t border-white/5 py-16 bg-gradient-to-b from-pink-950/20 via-rose-950/15 to-purple-950/25">
         <Container>
           <SectionTitle
             title="How to Use Your LUTs in 60 Seconds"
@@ -430,7 +432,7 @@ export default function Page() {
       </section>
 
       {/* Looks Gallery */}
-      <section className="border-t border-white/10 py-16 bg-gradient-to-b from-red-950/25 via-neutral-950/20 to-black/10">
+      <section id="looks" className="border-t border-white/5 py-16 bg-gradient-to-b from-purple-950/25 via-fuchsia-950/15 to-violet-950/30">
         <Container>
           <SectionTitle title="Signature Looks Gallery" subtitle="Preview a few of the included wedding LUT styles." gradient="from-amber-200 via-orange-200 to-red-200" />
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -451,10 +453,10 @@ export default function Page() {
       </section>
 
       {/* Trusted By Companies */}
-      <section className="border-t border-white/10 py-12 bg-gradient-to-b from-orange-950/15 via-neutral-950/10 to-black/5">
+      <section id="trusted" className="border-t border-white/5 py-12 bg-gradient-to-b from-slate-900/20 via-gray-900/15 to-slate-950/25">
         <Container>
           <div className="text-center">
-            <p className="text-sm font-semibold uppercase tracking-wide text-amber-300/70 mb-6">Trusted by wedding editors from</p>
+            <p className="text-sm font-semibold uppercase tracking-wide text-amber-300/70 mb-6">Trusted by video editors from</p>
             <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
               {COMPANY_LOGOS.map((company) => (
                 <div key={company.name} className="flex flex-col items-center gap-2 opacity-70 hover:opacity-100 transition-opacity">
@@ -468,9 +470,9 @@ export default function Page() {
       </section>
 
       {/* Reviews */}
-      <section className="border-t border-white/10 py-16 bg-gradient-to-b from-amber-950/30 via-slate-950/20 to-black/10">
+      <section id="reviews" className="border-t border-white/5 py-16 bg-gradient-to-b from-amber-950/20 via-orange-950/15 to-rose-950/25">
         <Container>
-          <SectionTitle title={`Loved by ${SITE_CONFIG.customerCount} Wedding Editors & Filmmakers`} subtitle={`${SITE_CONFIG.rating}/5 average rating`} gradient="from-amber-300 via-rose-300 to-amber-200" />
+          <SectionTitle title={`Loved by ${SITE_CONFIG.customerCount} Video Editors`} subtitle={`${SITE_CONFIG.rating}/5 average rating`} gradient="from-amber-300 via-rose-300 to-amber-200" />
           <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
             {TESTIMONIALS.map((testimonial) => (
               <div key={testimonial.id} className="rounded-2xl border border-white/10 bg-white/5 p-6 text-white/90">
@@ -499,7 +501,7 @@ export default function Page() {
       </section>
 
       {/* 30-Day Guarantee + FAQ */}
-      <section className="border-t border-white/10 py-16 bg-gradient-to-b from-emerald-950/30 via-slate-950/20 to-black/10">
+      <section id="faq" className="border-t border-white/5 py-16 bg-gradient-to-b from-cyan-950/20 via-teal-950/15 to-emerald-950/25">
         <Container>
           {/* 30-Day Guarantee - Prominent */}
           <div className="mx-auto max-w-4xl mb-16">
@@ -571,7 +573,7 @@ export default function Page() {
       </section>
 
       {/* About */}
-      <section className="border-t border-white/10 py-20 bg-gradient-to-b from-orange-950/25 via-neutral-950/20 to-black/10">
+      <section id="about" className="border-t border-white/5 py-20 bg-gradient-to-b from-violet-950/25 via-purple-950/20 to-fuchsia-950/30">
         <Container>
           {/* Section Title */}
           <div className="mb-12 text-center">
@@ -684,7 +686,7 @@ export default function Page() {
       </section>
 
       {/* Final CTA */}
-      <section id="get-pack" className="border-t border-white/10 py-16 bg-gradient-to-b from-amber-950/30 via-slate-950/20 to-black/10">
+      <section id="final-cta" className="border-t border-white/5 py-16 bg-gradient-to-b from-purple-950/25 via-indigo-950/20 to-violet-950/30">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold text-white">Ready to Create Cinematic Wedding Films That Clients Will Never Forget?</h2>
@@ -698,7 +700,7 @@ export default function Page() {
       </section>
 
       {/* Site Footer */}
-      <footer className="border-t border-white/10 bg-gradient-to-b from-slate-950 via-slate-900 to-black py-14">
+      <footer className="border-t border-white/5 bg-gradient-to-b from-slate-950/80 via-gray-950/60 to-black/80 py-14">
         <Container>
           <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
             <div>

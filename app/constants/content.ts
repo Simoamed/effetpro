@@ -14,7 +14,7 @@ export const SITE_CONFIG = {
   rating: "4.9",
   reviewCount: "3200",
   customerCount: "15,347+",
-  targetAudience: "Wedding Editors & Filmmakers",
+  targetAudience: "Video Editors",
   guaranteeDays: "30",
 };
 
@@ -143,7 +143,7 @@ export const TESTIMONIALS = [
   {
     id: "marco",
     name: "Marco V.",
-    role: "Wedding Filmmaker",
+    role: "Video Editor",
     avatar: "/imgs/pexels-olcayertem06-13841073.jpg",
     rating: 5,
     quote: "Golden Love presets are incredible for skin tones. I use them for every couple session now.",
@@ -161,13 +161,13 @@ export const TESTIMONIALS = [
 // About author
 export const AUTHOR = {
   name: "Simo Ahmada",
-  title: "Wedding Filmmaker & Colorist",
+  title: "Professional Video Editor & Colorist",
   avatar: "/portrait/portrait.jpg.JPG",
-  bio: "Hey, I'm Simo Ahmada — Wedding Filmmaker & Colorist specialized in weddings & cinematic storytelling. I've spent years crafting emotional visuals for couples around the world. These LUTs and presets are the same ones I use for my professional projects — now available for wedding editors and filmmakers.",
+  bio: "Hey, I'm Simo Ahmada — Professional Video Editor & Colorist specialized in weddings & cinematic storytelling. I've spent years crafting emotional visuals for couples around the world. These LUTs and presets are the same ones I use for my professional projects — now available for video editors worldwide.",
   highlights: [
     "Founder of Ahmada Photography",
     "7+ years experience in color grading & storytelling",
-    "Trusted by 15,347+ wedding editors & filmmakers worldwide",
+    "Trusted by 15,347+ video editors worldwide",
   ],
 };
 
