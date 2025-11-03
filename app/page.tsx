@@ -444,13 +444,17 @@ export default function Page() {
             <div className="rounded-2xl border border-white/10 bg-black/30 p-4">
               <div className="mb-2 text-sm font-semibold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-300">Before/After</div>
               <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-slate-900">
-                <Image src="/imgs/600.png" alt="Before/After wedding LUT comparison" width={800} height={450} className="h-full w-full object-cover" />
+                <video className="absolute inset-0 h-full w-full object-cover" playsInline muted loop autoPlay preload="metadata" aria-label="Before/After wedding LUT comparison">
+                  <source src="/video/video3.mp4" type="video/mp4" />
+                </video>
               </div>
             </div>
             <div className="rounded-2xl border border-white/10 bg-black/30 p-4">
               <div className="mb-2 text-sm font-semibold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-teal-300">Before/After</div>
               <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-slate-900">
-                <Image src="/imgs/601.png" alt="Before/After wedding LUT comparison" width={800} height={450} className="h-full w-full object-cover" />
+                <video className="absolute inset-0 h-full w-full object-cover" playsInline muted loop autoPlay preload="metadata" aria-label="Before/After wedding LUT comparison">
+                  <source src="/video/video4.mp4" type="video/mp4" />
+                </video>
               </div>
             </div>
           </div>
