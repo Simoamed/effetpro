@@ -34,38 +34,30 @@ export default function ScrollColorTransition() {
       const windowHeight = window.innerHeight;
 
       // Trouver la section actuelle basée sur la position de scroll
-      const sections = document.querySelectorAll("section, footer");
-      let currentSection: Element | null = null;
-      let currentIndex = 0;
+      const sections = Array.from(document.querySelectorAll<HTMLElement>("section, footer"));
 
-      sections.forEach((section, index) => {
+      for (let i = 0; i < sections.length; i++) {
+        const section = sections[i];
         const rect = section.getBoundingClientRect();
         const sectionTop = rect.top + scrollPosition;
         const sectionBottom = sectionTop + rect.height;
 
         if (scrollPosition >= sectionTop - windowHeight / 2 && scrollPosition < sectionBottom) {
-          currentSection = section;
-          currentIndex = index;
+          const scrollWithinSection = scrollPosition - sectionTop + windowHeight / 2;
+          const progress = Math.max(0, Math.min(1, scrollWithinSection / rect.height));
+
+          const colorConfig = SECTION_COLORS[Math.min(i, SECTION_COLORS.length - 1)];
+
+          // Interpoler entre la couleur sombre et la couleur claire en fonction de la progression
+          const color = interpolateColors(
+            colorConfig.darkColor,
+            colorConfig.lightColor,
+            progress
+          );
+
+          setBackgroundColor(color);
+          break;
         }
-      });
-
-      if (currentSection) {
-        const rect = currentSection.getBoundingClientRect();
-        const sectionTop = rect.top + scrollPosition;
-        const sectionHeight = rect.height;
-        const scrollWithinSection = scrollPosition - sectionTop + windowHeight / 2;
-        const progress = Math.max(0, Math.min(1, scrollWithinSection / sectionHeight));
-
-        const colorConfig = SECTION_COLORS[Math.min(currentIndex, SECTION_COLORS.length - 1)];
-
-        // Interpoler entre la couleur sombre et la couleur claire en fonction de la progression
-        const color = interpolateColors(
-          colorConfig.darkColor,
-          colorConfig.lightColor,
-          progress
-        );
-
-        setBackgroundColor(color);
       }
     };
 
