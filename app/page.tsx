@@ -41,7 +41,7 @@ export default function Page() {
               Grade an Entire Wedding in 15 Minutes Instead of 4 Hours
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-xl text-white/90 sm:text-2xl">
-              500+ Professional Wedding LUTs for <span className="font-bold text-amber-300">Premiere Pro & Lightroom</span> — Save hours of color grading and wow your clients
+              500+ Professional Wedding LUTs for <span className="font-bold text-amber-300">Premiere Pro & Lightroom</span> — Deliver stunning results that make clients cry happy tears
             </p>
           </div>
 
