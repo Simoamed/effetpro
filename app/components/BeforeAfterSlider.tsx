@@ -109,6 +109,9 @@ export default function BeforeAfterSlider({ beforeImage, afterImage, alt = "Befo
             alt={`${alt} - Before`}
             fill
             className="object-cover"
+            style={{
+              filter: 'saturate(0.3) contrast(0.8) brightness(1.1) sepia(0.15)',
+            }}
           />
         </div>
 
