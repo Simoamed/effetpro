@@ -360,9 +360,9 @@ export const DEMO_IMAGES = {
 export const DEMO_VIDEOS = {
   raw: "/video/lut-wedding-before-after-2.mp4",
   graded: "/video/video3.mp4",
-  hero: "/video/lut-wedding-before-after-2.mp4",
+  hero: "/video/video4.mp4",
   howToUse: "/video/how to use 1.mp4",
 };
 
 // Product mockup
-export const PRODUCT_MOCKUP = "/imgs/for site 8.png";
+export const PRODUCT_MOCKUP = "/imgs/for site 9.png";

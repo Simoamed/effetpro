@@ -9,20 +9,20 @@ interface SectionColor {
 }
 
 const SECTION_COLORS: SectionColor[] = [
-  { id: "hero", darkColor: "rgb(15, 15, 20)", lightColor: "rgb(25, 25, 35)" }, // Bleu nuit soft
-  { id: "what-you-get", darkColor: "rgb(45, 35, 50)", lightColor: "rgb(55, 45, 65)" }, // Violet doux
-  { id: "guarantee", darkColor: "rgb(20, 50, 45)", lightColor: "rgb(30, 65, 60)" }, // Vert émeraude soft
-  { id: "software", darkColor: "rgb(30, 35, 55)", lightColor: "rgb(40, 50, 70)" }, // Bleu indigo soft
-  { id: "why", darkColor: "rgb(25, 45, 50)", lightColor: "rgb(35, 60, 65)" }, // Teal doux
-  { id: "before-after", darkColor: "rgb(35, 40, 60)", lightColor: "rgb(45, 55, 75)" }, // Bleu lavande
-  { id: "how-to-use", darkColor: "rgb(50, 35, 40)", lightColor: "rgb(65, 45, 55)" }, // Rose brun doux
-  { id: "looks", darkColor: "rgb(45, 30, 50)", lightColor: "rgb(60, 40, 65)" }, // Prune soft
-  { id: "trusted", darkColor: "rgb(40, 40, 45)", lightColor: "rgb(50, 50, 60)" }, // Gris bleuté
-  { id: "reviews", darkColor: "rgb(50, 40, 35)", lightColor: "rgb(65, 55, 50)" }, // Brun chaud
-  { id: "faq", darkColor: "rgb(25, 50, 50)", lightColor: "rgb(35, 65, 65)" }, // Cyan doux
-  { id: "about", darkColor: "rgb(45, 40, 50)", lightColor: "rgb(60, 55, 65)" }, // Violet grisé
-  { id: "final-cta", darkColor: "rgb(40, 35, 50)", lightColor: "rgb(55, 50, 65)" }, // Violet profond soft
-  { id: "footer", darkColor: "rgb(20, 20, 30)", lightColor: "rgb(30, 30, 45)" }, // Bleu nuit profond
+  { id: "hero", darkColor: "rgb(10, 10, 10)", lightColor: "rgb(18, 18, 18)" }, // Pure black
+  { id: "what-you-get", darkColor: "rgb(15, 15, 15)", lightColor: "rgb(22, 22, 22)" }, // Dark gray
+  { id: "guarantee", darkColor: "rgb(18, 18, 18)", lightColor: "rgb(25, 25, 25)" }, // Charcoal
+  { id: "software", darkColor: "rgb(12, 12, 12)", lightColor: "rgb(20, 20, 20)" }, // Deep black
+  { id: "why", darkColor: "rgb(20, 20, 20)", lightColor: "rgb(28, 28, 28)" }, // Dark slate
+  { id: "before-after", darkColor: "rgb(22, 20, 18)", lightColor: "rgb(30, 28, 26)" }, // Dark warm gray
+  { id: "how-to-use", darkColor: "rgb(16, 16, 16)", lightColor: "rgb(24, 24, 24)" }, // Near black
+  { id: "looks", darkColor: "rgb(18, 16, 14)", lightColor: "rgb(26, 24, 22)" }, // Dark brown gray
+  { id: "trusted", darkColor: "rgb(14, 14, 14)", lightColor: "rgb(22, 22, 22)" }, // Graphite
+  { id: "reviews", darkColor: "rgb(20, 18, 16)", lightColor: "rgb(28, 26, 24)" }, // Warm charcoal
+  { id: "faq", darkColor: "rgb(16, 16, 16)", lightColor: "rgb(24, 24, 24)" }, // Deep gray
+  { id: "about", darkColor: "rgb(18, 18, 18)", lightColor: "rgb(26, 26, 26)" }, // Dark neutral
+  { id: "final-cta", darkColor: "rgb(12, 12, 12)", lightColor: "rgb(20, 20, 20)" }, // Almost black
+  { id: "footer", darkColor: "rgb(8, 8, 8)", lightColor: "rgb(15, 15, 15)" }, // Deepest black
 ];
 
 export default function ScrollColorTransition() {

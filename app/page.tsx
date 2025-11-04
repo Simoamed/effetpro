@@ -50,15 +50,12 @@ export default function Page() {
                 — in Minutes, Not Hours.
               </span>
             </h1>
-            <p className="mx-auto mt-4 max-w-2xl text-xl text-white/90 sm:text-2xl">
-              500+ Professional Wedding LUTs for <span className="font-bold text-amber-300">Premiere Pro & Lightroom</span> — The exact same LUTs pro editors use to deliver jaw-dropping wedding films 10x faster
-            </p>
           </div>
 
           {/* Mockup centered */}
-          <div className="relative mx-auto mt-10 w-full max-w-2xl">
+          <div className="relative mx-auto mt-10 w-full max-w-4xl">
             <div className="relative overflow-hidden rounded-2xl border border-amber-500/20 bg-gradient-to-br from-amber-500/5 to-orange-500/5 p-2 shadow-2xl shadow-amber-500/20 backdrop-blur">
-              <Image src={PRODUCT_MOCKUP} alt="Wedding LUTs 3D Mockup" width={800} height={800} className="h-auto w-full rounded-xl object-contain" priority />
+              <Image src={PRODUCT_MOCKUP} alt="Wedding LUTs 3D Mockup" width={1456} height={1456} className="h-auto w-full rounded-xl object-contain" priority />
             </div>
           </div>
 
@@ -122,46 +119,47 @@ export default function Page() {
               return (
                 <div
                   key={item.id}
-                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] p-6 backdrop-blur-xl transition-all duration-300 hover:scale-[1.02] hover:border-white/20 hover:shadow-2xl hover:shadow-orange-500/20"
+                  className="group relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] p-8 backdrop-blur-xl transition-all duration-500 hover:scale-[1.03] hover:border-amber-500/30 hover:shadow-2xl hover:shadow-amber-500/30"
                 >
-                  <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index]} opacity-0 transition-opacity duration-300 group-hover:opacity-10`}></div>
+                  <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index]} opacity-0 transition-opacity duration-500 group-hover:opacity-10`}></div>
 
                   <div className="relative">
                     {/* Mockup Image */}
                     {item.mockup && (
-                      <div className="mb-4 -mt-2 relative flex justify-center">
+                      <div className="mb-6 -mt-4 relative flex justify-center">
                         <Image
                           src={item.mockup}
                           alt={item.title}
-                          width={150}
-                          height={150}
-                          className="w-1/2 h-auto object-contain"
+                          width={336}
+                          height={336}
+                          className="w-auto h-80 object-contain transition-transform duration-500 group-hover:scale-105"
                           style={{
-                            filter: 'drop-shadow(0 10px 40px rgba(0,0,0,0.5))',
-                            mixBlendMode: 'screen',
+                            filter: 'drop-shadow(0 20px 60px rgba(0,0,0,0.7))',
                           }}
                         />
                       </div>
                     )}
 
-                    <div className="flex items-center justify-between mb-4">
-                      <div className={`h-1.5 w-16 rounded-full bg-gradient-to-r ${gradients[index]}`}></div>
+                    <div className="flex items-center justify-between mb-6">
+                      <div className={`h-2 w-20 rounded-full bg-gradient-to-r ${gradients[index]} shadow-lg`}></div>
                       <div className="flex flex-col items-end">
-                        <span className="text-[10px] font-semibold uppercase tracking-wider text-white/40">Value</span>
-                        <span className="text-lg font-bold text-white/30 line-through">{item.value}</span>
+                        <span className="text-[11px] font-bold uppercase tracking-wider text-white/50">Value</span>
+                        <span className="text-xl font-extrabold text-white/40 line-through">{item.value}</span>
                       </div>
                     </div>
 
-                    <h3 className="text-lg font-bold text-white leading-tight mb-2">
+                    <h3 className="text-xl font-extrabold text-white leading-tight mb-3 group-hover:text-amber-200 transition-colors duration-300">
                       {item.title}
                     </h3>
-                    <p className="text-sm text-white/60 mb-4">{item.description}</p>
+                    <p className="text-sm text-white/70 leading-relaxed mb-6">{item.description}</p>
 
-                    <div className="flex items-center gap-2 text-sm text-emerald-400">
-                      <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
-                      <span className="font-semibold">Included</span>
+                    <div className="flex items-center gap-2.5 text-sm">
+                      <div className="flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-emerald-400 to-teal-500 shadow-lg shadow-emerald-500/30">
+                        <svg className="h-3.5 w-3.5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      <span className="font-bold text-emerald-300">Included</span>
                     </div>
                   </div>
                 </div>
