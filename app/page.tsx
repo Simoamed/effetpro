@@ -39,11 +39,19 @@ export default function Page() {
         <VideoBg src={DEMO_VIDEOS.hero} />
         <Container className="relative">
           <div className="text-center">
-            <h1 className="bg-gradient-to-r from-amber-200 via-orange-200 to-amber-200 bg-clip-text text-4xl font-extrabold leading-tight text-transparent sm:text-6xl">
-              Grade an Entire Wedding in 15 Minutes Instead of 4 Hours
+            <h1 className="text-4xl font-black leading-tight sm:text-6xl">
+              <span className="block bg-gradient-to-r from-white via-amber-50 to-white bg-clip-text text-transparent drop-shadow-[0_2px_20px_rgba(251,191,36,0.3)]">
+                Transform Ordinary Wedding Footage
+              </span>
+              <span className="block bg-gradient-to-r from-amber-300 via-orange-300 to-amber-400 bg-clip-text text-transparent drop-shadow-[0_2px_30px_rgba(251,146,60,0.5)] mt-2">
+                into Cinematic Magic
+              </span>
+              <span className="block text-white/90 text-3xl sm:text-4xl mt-3 font-bold">
+                — in Minutes, Not Hours.
+              </span>
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-xl text-white/90 sm:text-2xl">
-              500+ Professional Wedding LUTs for <span className="font-bold text-amber-300">Premiere Pro & Lightroom</span> — Deliver stunning results that make clients cry happy tears
+              500+ Professional Wedding LUTs for <span className="font-bold text-amber-300">Premiere Pro & Lightroom</span> — The exact same LUTs pro editors use to deliver jaw-dropping wedding films 10x faster
             </p>
           </div>
 
