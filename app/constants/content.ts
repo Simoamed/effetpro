@@ -7,7 +7,7 @@ export const SITE_CONFIG = {
   email: "support@effetpro.com",
   phone: "+33 0 000 000",
   location: "France - Remote",
-  price: "37",
+  price: "27",
   originalPrice: "497.00",
   currency: "USD",
   discount: "92%",

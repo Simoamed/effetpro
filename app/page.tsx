@@ -53,7 +53,7 @@ export default function Page() {
           </div>
 
           {/* Mockup centered */}
-          <div className="relative mx-auto mt-10 w-full max-w-4xl">
+          <div className="relative mx-auto mt-10 w-full max-w-6xl px-4 sm:px-6">
             <div className="relative overflow-hidden rounded-2xl border border-amber-500/20 bg-gradient-to-br from-amber-500/5 to-orange-500/5 p-2 shadow-2xl shadow-amber-500/20 backdrop-blur">
               <Image src={PRODUCT_MOCKUP} alt="Wedding LUTs 3D Mockup" width={1456} height={1456} className="h-auto w-full rounded-xl object-contain" priority />
             </div>
@@ -63,7 +63,7 @@ export default function Page() {
           <div className="mt-8 text-center">
             <div className="flex flex-col items-center gap-4">
               <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="group relative w-full max-w-md overflow-hidden rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3.5 text-center text-lg font-bold text-white shadow-2xl shadow-amber-500/40 transition-all hover:scale-105 hover:shadow-amber-500/60">
-                <span className="relative z-10">Yes! Give Me Instant Access → Only $37</span>
+                <span className="relative z-10">Yes! Give Me Instant Access → Only $27</span>
                 <div className="absolute inset-0 -z-0 bg-gradient-to-r from-amber-600 to-orange-600 opacity-0 transition-opacity group-hover:opacity-100"></div>
               </a>
 
@@ -478,7 +478,7 @@ export default function Page() {
           </div>
 
           <div className="mt-6 flex flex-col items-center">
-            <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="w-full max-w-sm rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-amber-500/30 transition hover:from-amber-600 hover:to-orange-600">Start Grading Like a Pro &#8212; $37</a>
+            <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="w-full max-w-sm rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-amber-500/30 transition hover:from-amber-600 hover:to-orange-600">Start Grading Like a Pro &#8212; $27</a>
           </div>
         </Container>
       </section>
@@ -529,7 +529,7 @@ export default function Page() {
 
             <div className="mt-6 flex justify-center">
               <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="w-full max-w-sm rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-amber-500/30 transition-all hover:scale-105 hover:shadow-amber-500/50">
-                Get Started Now — $37
+                Get Started Now — $27
               </a>
             </div>
           </div>
@@ -552,7 +552,7 @@ export default function Page() {
             ))}
           </div>
           <div className="mt-6 flex flex-col items-center">
-            <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="w-full max-w-sm rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-amber-500/30 transition hover:from-amber-600 hover:to-orange-600">Get All 500+ Looks &#8212; $37</a>
+            <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="w-full max-w-sm rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-amber-500/30 transition hover:from-amber-600 hover:to-orange-600">Get All 500+ Looks &#8212; $27</a>
           </div>
         </Container>
       </section>
@@ -641,7 +641,7 @@ export default function Page() {
           </div>
 
           <div className="mt-10 flex flex-col items-center">
-            <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="w-full max-w-sm rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-amber-500/30 transition hover:from-amber-600 hover:to-orange-600">Get EffetPro Now — $37</a>
+            <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="w-full max-w-sm rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-amber-500/30 transition hover:from-amber-600 hover:to-orange-600">Get EffetPro Now — $27</a>
             <div className="mt-3 text-center text-sm text-emerald-300">
               ✅ 30-Day Guarantee • 💳 Secure Checkout • ⚡ Instant Access
             </div>
