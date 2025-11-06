@@ -822,14 +822,6 @@ export default function Page() {
                   <span className="text-white/60">Email:</span>
                   <a className="hover:underline" href={`mailto:${SITE_CONFIG.email}`}>{SITE_CONFIG.email}</a>
                 </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-white/60">Tel:</span>
-                  <span>{SITE_CONFIG.phone}</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-white/60">Location:</span>
-                  <span>{SITE_CONFIG.location}</span>
-                </li>
               </ul>
             </div>
           </div>
