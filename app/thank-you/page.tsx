@@ -118,16 +118,6 @@ export default function ThankYouPage() {
               </div>
             </div>
 
-            {/* Email Confirmation */}
-            <div className="mb-8 flex items-start gap-4 rounded-xl border border-blue-500/20 bg-blue-500/10 p-4">
-              <Mail className="mt-0.5 h-5 w-5 flex-shrink-0 text-blue-400" />
-              <div>
-                <p className="font-semibold text-blue-200">Check your email</p>
-                <p className="text-sm text-blue-200/80">
-                  We've sent a confirmation email with your download link and receipt. If you don't see it, check your spam folder.
-                </p>
-              </div>
-            </div>
 
             {/* Support Section */}
             <div className="rounded-xl border border-white/10 bg-white/5 p-6 text-center">
