@@ -3,14 +3,14 @@
 import { useState } from 'react';
 import { Lock, Check, Zap } from 'lucide-react';
 
-const STRIPE_PAYMENT_URL = 'https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00';
+const PAYMENT_URL = 'https://whop.com/checkout/plan_rnCcb2x7gSI27?d2c=true';
 
 export default function CheckoutCTA() {
   const [isDisabled, setIsDisabled] = useState(false);
 
   const handleClick = () => {
     setIsDisabled(true);
-    window.open(STRIPE_PAYMENT_URL, '_blank', 'noopener,noreferrer');
+    window.open(PAYMENT_URL, '_blank', 'noopener,noreferrer');
 
     setTimeout(() => {
       setIsDisabled(false);
@@ -67,19 +67,19 @@ export default function CheckoutCTA() {
           {/* Secondary Link */}
           <div className="mb-4 text-center">
             <a
-              href={STRIPE_PAYMENT_URL}
+              href={PAYMENT_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm font-semibold text-blue-400 transition hover:text-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900"
             >
-              Pay with Stripe →
+              Secure Checkout →
             </a>
           </div>
 
           {/* Trust Badge */}
           <div className="flex items-center justify-center gap-2 border-t border-white/10 pt-4 text-xs text-white/60">
             <Lock className="h-3 w-3" />
-            <span>SSL 256-bit • Powered by Stripe</span>
+            <span>SSL 256-bit • Secure Payment</span>
           </div>
         </div>
       </div>

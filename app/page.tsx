@@ -62,7 +62,7 @@ export default function Page() {
           {/* Subheadline + CTAs */}
           <div className="mt-8 text-center">
             <div className="flex flex-col items-center gap-4">
-              <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="group relative w-full max-w-md overflow-hidden rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3.5 text-center text-lg font-bold text-white shadow-2xl shadow-amber-500/40 transition-all hover:scale-105 hover:shadow-amber-500/60">
+              <a href="https://whop.com/checkout/plan_rnCcb2x7gSI27?d2c=true" className="group relative w-full max-w-md overflow-hidden rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3.5 text-center text-lg font-bold text-white shadow-2xl shadow-amber-500/40 transition-all hover:scale-105 hover:shadow-amber-500/60">
                 <span className="relative z-10">Yes! Give Me Instant Access → Only $27</span>
                 <div className="absolute inset-0 -z-0 bg-gradient-to-r from-amber-600 to-orange-600 opacity-0 transition-opacity group-hover:opacity-100"></div>
               </a>
@@ -266,7 +266,7 @@ export default function Page() {
 
                 {/* CTA Button */}
                 <a
-                  href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00"
+                  href="https://whop.com/checkout/plan_rnCcb2x7gSI27?d2c=true"
                   className="block w-full rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 py-3 text-center text-sm font-bold text-white shadow-xl shadow-amber-500/30 transition-all hover:scale-[1.02] hover:shadow-amber-500/50"
                 >
                   Get Instant Access →
@@ -419,7 +419,7 @@ export default function Page() {
           </div>
 
           <div className="mt-8 flex flex-col items-center">
-            <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="group relative w-full max-w-sm overflow-hidden rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-4 text-center text-lg font-bold text-white shadow-2xl shadow-amber-500/40 transition-all hover:scale-105">
+            <a href="https://whop.com/checkout/plan_rnCcb2x7gSI27?d2c=true" className="group relative w-full max-w-sm overflow-hidden rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-4 text-center text-lg font-bold text-white shadow-2xl shadow-amber-500/40 transition-all hover:scale-105">
               <span className="relative z-10">Start Creating Magic Today →</span>
             </a>
             <div className="mt-3 text-center text-sm text-emerald-300">
@@ -478,7 +478,7 @@ export default function Page() {
           </div>
 
           <div className="mt-6 flex flex-col items-center">
-            <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="w-full max-w-sm rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-amber-500/30 transition hover:from-amber-600 hover:to-orange-600">Start Grading Like a Pro &#8212; $27</a>
+            <a href="https://whop.com/checkout/plan_rnCcb2x7gSI27?d2c=true" className="w-full max-w-sm rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-amber-500/30 transition hover:from-amber-600 hover:to-orange-600">Start Grading Like a Pro &#8212; $27</a>
           </div>
         </Container>
       </section>
@@ -528,7 +528,7 @@ export default function Page() {
             </div>
 
             <div className="mt-6 flex justify-center">
-              <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="w-full max-w-sm rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-amber-500/30 transition-all hover:scale-105 hover:shadow-amber-500/50">
+              <a href="https://whop.com/checkout/plan_rnCcb2x7gSI27?d2c=true" className="w-full max-w-sm rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-amber-500/30 transition-all hover:scale-105 hover:shadow-amber-500/50">
                 Get Started Now — $27
               </a>
             </div>
@@ -552,7 +552,7 @@ export default function Page() {
             ))}
           </div>
           <div className="mt-6 flex flex-col items-center">
-            <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="w-full max-w-sm rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-amber-500/30 transition hover:from-amber-600 hover:to-orange-600">Get All 500+ Looks &#8212; $27</a>
+            <a href="https://whop.com/checkout/plan_rnCcb2x7gSI27?d2c=true" className="w-full max-w-sm rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-amber-500/30 transition hover:from-amber-600 hover:to-orange-600">Get All 500+ Looks &#8212; $27</a>
           </div>
         </Container>
       </section>
@@ -641,7 +641,7 @@ export default function Page() {
           </div>
 
           <div className="mt-10 flex flex-col items-center">
-            <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="w-full max-w-sm rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-amber-500/30 transition hover:from-amber-600 hover:to-orange-600">Get EffetPro Now — $27</a>
+            <a href="https://whop.com/checkout/plan_rnCcb2x7gSI27?d2c=true" className="w-full max-w-sm rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-amber-500/30 transition hover:from-amber-600 hover:to-orange-600">Get EffetPro Now — $27</a>
             <div className="mt-3 text-center text-sm text-emerald-300">
               ✅ 30-Day Guarantee • 💳 Secure Checkout • ⚡ Instant Access
             </div>
@@ -767,7 +767,7 @@ export default function Page() {
         <Container>
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold text-white">Ready to Create Cinematic Wedding Films That Clients Will Never Forget?</h2>
-            <a href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00" className="mt-6 inline-flex rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-7 py-3 text-base font-semibold text-white shadow-lg shadow-amber-500/30 transition hover:from-amber-600 hover:to-orange-600">
+            <a href="https://whop.com/checkout/plan_rnCcb2x7gSI27?d2c=true" className="mt-6 inline-flex rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-7 py-3 text-base font-semibold text-white shadow-lg shadow-amber-500/30 transition hover:from-amber-600 hover:to-orange-600">
               Get The Full Pack Now &#8212; Only ${SITE_CONFIG.price} ({SITE_CONFIG.discount} OFF)
             </a>
             <div className="mt-3 text-sm text-white/70">Instant Download &bull; Lifetime Access &bull; Limited Offer</div>

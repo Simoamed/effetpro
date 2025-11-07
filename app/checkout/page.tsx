@@ -17,7 +17,7 @@ export default function CheckoutPage() {
       <noscript>
         <div style={{ padding: '2rem', textAlign: 'center', background: '#0f172a' }}>
           <a
-            href="https://buy.stripe.com/8x2eVc79FdwEfdQ7Dg7Re00"
+            href="https://whop.com/checkout/plan_rnCcb2x7gSI27?d2c=true"
             style={{
               display: 'inline-block',
               padding: '1rem 2rem',
@@ -28,7 +28,7 @@ export default function CheckoutPage() {
               fontWeight: 'bold',
             }}
           >
-            Buy Wedding LUTs - $37
+            Buy Wedding LUTs - $27
           </a>
         </div>
       </noscript>
