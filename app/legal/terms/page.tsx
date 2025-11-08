@@ -88,10 +88,19 @@ export default function Page() {
         {/* Payment & Pricing */}
         <section>
           <h2 className="text-2xl font-semibold text-white">4. Payment & Pricing</h2>
-          <p className="mt-3 text-zinc-300 leading-relaxed">
-            All payments are processed securely through Stripe, a PCI-compliant payment processor. We accept major credit cards, debit cards,
-            and other payment methods supported by Stripe.
+
+          <h3 className="mt-4 text-lg font-semibold text-amber-400">4.1 Payment Processing</h3>
+          <p className="mt-2 text-zinc-300 leading-relaxed">
+            All payments are processed securely through trusted payment processors including Stripe, PayPal, and potentially Payoneer,
+            Mercury, Relay, or other PCI-DSS compliant payment gateways. We accept major credit cards, debit cards, and other payment
+            methods supported by our payment processors.
           </p>
+          <p className="mt-2 text-zinc-300 leading-relaxed">
+            <strong>Security:</strong> Your payment information is encrypted and processed through secure, PCI-compliant channels.
+            We do not store your full credit card details on our servers.
+          </p>
+
+          <h3 className="mt-4 text-lg font-semibold text-amber-400">4.2 Pricing & Currency</h3>
           <p className="mt-2 text-zinc-300 leading-relaxed">
             Prices are listed in USD and are subject to change without notice. The price you pay at checkout is the final price.
             No recurring fees or subscriptions — this is a one-time purchase with lifetime access.
@@ -100,6 +109,31 @@ export default function Page() {
             <strong>Promotional Pricing:</strong> Limited-time discounts may be offered. Once purchased at a promotional price,
             you retain full access regardless of future price changes.
           </p>
+
+          <h3 className="mt-4 text-lg font-semibold text-amber-400">4.3 Taxes & VAT</h3>
+          <p className="mt-2 text-zinc-300 leading-relaxed">
+            Depending on your location, applicable taxes (VAT, GST, sales tax) may be added at checkout. Tax rates are determined
+            by your billing address and local regulations. All displayed prices are exclusive of taxes unless otherwise stated.
+          </p>
+          <p className="mt-2 text-zinc-300 leading-relaxed">
+            For EU customers: VAT will be calculated and charged based on your country's applicable rate in accordance with
+            EU VAT regulations for digital services.
+          </p>
+
+          <h3 className="mt-4 text-lg font-semibold text-amber-400">4.4 Failed or Declined Payments</h3>
+          <p className="mt-2 text-zinc-300 leading-relaxed">
+            If your payment is declined or fails, you will not receive access to the Product. Common reasons for payment failure include:
+          </p>
+          <ul className="mt-2 ml-6 list-disc space-y-1 text-zinc-300">
+            <li>Insufficient funds or credit limit reached</li>
+            <li>Incorrect billing information or card details</li>
+            <li>Card issuer security blocks or fraud prevention measures</li>
+            <li>Expired or invalid payment method</li>
+          </ul>
+          <p className="mt-2 text-zinc-300 leading-relaxed">
+            If your payment fails, please contact your bank or try a different payment method. For assistance, contact us at
+            <a href="mailto:contact@effetpro.com" className="text-amber-400 hover:text-amber-300 underline ml-1">contact@effetpro.com</a>.
+          </p>
         </section>
 
         {/* Refund Policy Reference */}
@@ -107,8 +141,9 @@ export default function Page() {
           <h2 className="text-2xl font-semibold text-white">5. Refunds & Satisfaction Guarantee</h2>
           <p className="mt-3 text-zinc-300 leading-relaxed">
             We offer a <strong>30-day money-back guarantee</strong>. If you are not satisfied with your purchase for any reason,
-            contact us at <a href="mailto:support@effetpro.com" className="text-amber-400 hover:text-amber-300 underline">support@effetpro.com</a> within
-            30 days of purchase for a full refund.
+            contact us at <a href="mailto:contact@effetpro.com" className="text-amber-400 hover:text-amber-300 underline">contact@effetpro.com</a> within
+            30 days of purchase for a full refund. Refunds are processed within 3-5 business days, with an additional 5-10 business days
+            for the refund to appear on your statement depending on your payment provider.
           </p>
           <p className="mt-2 text-zinc-300 leading-relaxed">
             For complete details, please see our <a href="/legal/refund" className="text-amber-400 hover:text-amber-300 underline">Refund Policy</a>.
@@ -176,7 +211,7 @@ export default function Page() {
           <h3 className="mt-4 text-lg font-semibold text-amber-400">9.2 Customer Support</h3>
           <p className="mt-2 text-zinc-300 leading-relaxed">
             We provide email support for technical issues, installation questions, and general inquiries. Support is available at
-            <a href="mailto:support@effetpro.com" className="text-amber-400 hover:text-amber-300 underline ml-1">support@effetpro.com</a>.
+            <a href="mailto:contact@effetpro.com" className="text-amber-400 hover:text-amber-300 underline ml-1">contact@effetpro.com</a>.
           </p>
           <p className="mt-2 text-zinc-300 leading-relaxed">
             We strive to respond within 24-48 hours during business days. Support does not include custom color grading services or
@@ -230,6 +265,47 @@ export default function Page() {
           </p>
         </section>
 
+        {/* Dispute Resolution */}
+        <section>
+          <h2 className="text-2xl font-semibold text-white">13A. Dispute Resolution & Chargebacks</h2>
+
+          <h3 className="mt-4 text-lg font-semibold text-amber-400">13A.1 Informal Resolution</h3>
+          <p className="mt-2 text-zinc-300 leading-relaxed">
+            If you have any dispute, claim, or concern regarding your purchase or these Terms, we strongly encourage you to contact us
+            first at <a href="mailto:contact@effetpro.com" className="text-amber-400 hover:text-amber-300 underline">contact@effetpro.com</a> before
+            initiating any formal legal action or chargeback.
+          </p>
+          <p className="mt-2 text-zinc-300 leading-relaxed">
+            Most issues can be resolved quickly through direct communication. We are committed to working with you in good faith to
+            find a fair resolution.
+          </p>
+
+          <h3 className="mt-4 text-lg font-semibold text-amber-400">13A.2 Chargeback Policy</h3>
+          <p className="mt-2 text-zinc-300 leading-relaxed">
+            If you file a chargeback or payment dispute with your bank or credit card company <strong>without contacting us first</strong>,
+            we will treat it as a breach of these Terms. Chargebacks initiated without prior contact may result in:
+          </p>
+          <ul className="mt-2 ml-6 list-disc space-y-1 text-zinc-300">
+            <li>Immediate termination of your product access and license</li>
+            <li>Account suspension and ban from future purchases</li>
+            <li>Legal action to recover damages, fees, and costs</li>
+            <li>Reporting to fraud prevention databases</li>
+          </ul>
+          <p className="mt-2 text-zinc-300 leading-relaxed">
+            We honor our 30-day money-back guarantee and will process legitimate refund requests promptly. Please contact us first.
+          </p>
+
+          <h3 className="mt-4 text-lg font-semibold text-amber-400">13A.3 Arbitration Agreement (International Customers)</h3>
+          <p className="mt-2 text-zinc-300 leading-relaxed">
+            For disputes that cannot be resolved informally, you agree that any claims or disputes will be resolved through binding
+            arbitration rather than in court, except where prohibited by law. Arbitration will be conducted in accordance with the
+            rules of a recognized arbitration body.
+          </p>
+          <p className="mt-2 text-zinc-300 leading-relaxed">
+            This arbitration agreement does not affect your statutory consumer rights under applicable law, including GDPR or CCPA rights.
+          </p>
+        </section>
+
         {/* Contact Information */}
         <section>
           <h2 className="text-2xl font-semibold text-white">14. Contact Information</h2>
@@ -238,8 +314,9 @@ export default function Page() {
           </p>
           <div className="mt-4 rounded-lg border border-zinc-700 bg-zinc-800/50 p-4">
             <p className="text-zinc-300"><strong>EffetPro</strong></p>
-            <p className="text-zinc-300">Email: <a href="mailto:support@effetpro.com" className="text-amber-400 hover:text-amber-300 underline">support@effetpro.com</a></p>
-            <p className="text-zinc-300">Location: France (Remote)</p>
+            <p className="text-zinc-300">Business Name: EffetPro (Sole Proprietorship)</p>
+            <p className="text-zinc-300">Email: <a href="mailto:contact@effetpro.com" className="text-amber-400 hover:text-amber-300 underline">contact@effetpro.com</a></p>
+            <p className="text-zinc-300">Location: France</p>
           </div>
         </section>
 
@@ -263,7 +340,8 @@ export default function Page() {
         <p className="text-sm text-zinc-400">
           Related legal pages:
           <a href="/legal/privacy" className="ml-2 text-amber-400 hover:text-amber-300 underline">Privacy Policy</a> •
-          <a href="/legal/refund" className="ml-2 text-amber-400 hover:text-amber-300 underline">Refund Policy</a>
+          <a href="/legal/refund" className="ml-2 text-amber-400 hover:text-amber-300 underline">Refund Policy</a> •
+          <a href="/legal/cookies" className="ml-2 text-amber-400 hover:text-amber-300 underline">Cookie Policy</a>
         </p>
         <p className="mt-4 text-sm text-zinc-500">
           By purchasing from EffetPro, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.

@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Lock, Check, Zap } from 'lucide-react';
 
-const PAYMENT_URL = 'https://whop.com/checkout/plan_2IPyBtpb088fz?d2c=true&redirect_url=https://effetpro.com/thank-you';
+const PAYMENT_URL = 'https://whop.com/checkout/plan_2IPyBtpb088fz?redirect_url=https://effetpro.com/thank-you';
 
 export default function CheckoutCTA() {
   const [isDisabled, setIsDisabled] = useState(false);

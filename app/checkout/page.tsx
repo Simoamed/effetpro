@@ -17,7 +17,7 @@ export default function CheckoutPage() {
       <noscript>
         <div style={{ padding: '2rem', textAlign: 'center', background: '#0f172a' }}>
           <a
-            href="https://whop.com/checkout/plan_2IPyBtpb088fz?d2c=true&redirect_url=https://effetpro.com/thank-you"
+            href="https://whop.com/checkout/plan_2IPyBtpb088fz?redirect_url=https://effetpro.com/thank-you"
             style={{
               display: 'inline-block',
               padding: '1rem 2rem',

@@ -142,7 +142,8 @@ export default function Page() {
           </p>
           <ul className="mt-2 ml-6 list-disc space-y-2 text-zinc-300">
             <li>
-              <strong>Payment Processors (Stripe):</strong> To process your payment and complete transactions
+              <strong>Payment Processors:</strong> Stripe, and potentially Payoneer, PayPal, Mercury, Relay, or other payment gateways
+              to process your payment and complete transactions securely
             </li>
             <li>
               <strong>Email Service Providers:</strong> To send purchase confirmations, download links, and product updates
@@ -152,6 +153,9 @@ export default function Page() {
             </li>
             <li>
               <strong>Analytics Services:</strong> To analyze website traffic and improve user experience (e.g., Google Analytics)
+            </li>
+            <li>
+              <strong>Fraud Prevention Services:</strong> To detect and prevent fraudulent transactions and protect your data
             </li>
             <li>
               <strong>Legal Authorities:</strong> When required by law or to protect our legal rights
@@ -218,11 +222,39 @@ export default function Page() {
             <li><strong>Right to Withdraw Consent:</strong> Withdraw consent for data processing at any time</li>
           </ul>
 
-          <h3 className="mt-4 text-lg font-semibold text-amber-400">9.2 How to Exercise Your Rights</h3>
+          <h3 className="mt-4 text-lg font-semibold text-amber-400">9.2 CCPA Rights (California)</h3>
+          <p className="mt-2 text-zinc-300 leading-relaxed">
+            If you are a California resident, you have the following rights under the California Consumer Privacy Act (CCPA):
+          </p>
+          <ul className="mt-2 ml-6 list-disc space-y-1 text-zinc-300">
+            <li><strong>Right to Know:</strong> Request information about personal data we collect, use, and disclose</li>
+            <li><strong>Right to Delete:</strong> Request deletion of personal data we have collected</li>
+            <li><strong>Right to Opt-Out:</strong> Opt-out of the "sale" of personal data (Note: We do NOT sell personal data)</li>
+            <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising your CCPA rights</li>
+          </ul>
+
+          <h3 className="mt-4 text-lg font-semibold text-amber-400">9.3 How to Exercise Your Rights</h3>
           <p className="mt-2 text-zinc-300 leading-relaxed">
             To exercise any of these rights, please contact us at
-            <a href="mailto:support@effetpro.com" className="text-amber-400 hover:text-amber-300 underline ml-1">support@effetpro.com</a> with
-            the subject line "Privacy Request." We will respond within 30 days.
+            <a href="mailto:contact@effetpro.com" className="text-amber-400 hover:text-amber-300 underline ml-1">contact@effetpro.com</a> with
+            the subject line "Privacy Request." We will respond within 30 days (GDPR) or 45 days (CCPA).
+          </p>
+        </section>
+
+        {/* Data Breach Notification */}
+        <section>
+          <h2 className="text-2xl font-semibold text-white">9A. Data Breach Notification</h2>
+          <p className="mt-3 text-zinc-300 leading-relaxed">
+            In the unlikely event of a data breach that affects your personal information, we will:
+          </p>
+          <ul className="mt-2 ml-6 list-disc space-y-1 text-zinc-300">
+            <li>Notify affected users via email within 72 hours of discovering the breach (GDPR requirement)</li>
+            <li>Provide details about the nature of the breach, data affected, and steps we are taking</li>
+            <li>Notify relevant supervisory authorities as required by law</li>
+            <li>Implement immediate measures to contain and remedy the breach</li>
+          </ul>
+          <p className="mt-2 text-zinc-300 leading-relaxed">
+            We maintain incident response procedures and security monitoring to detect and respond to potential breaches promptly.
           </p>
         </section>
 
@@ -300,8 +332,10 @@ export default function Page() {
           </p>
           <div className="mt-4 rounded-lg border border-zinc-700 bg-zinc-800/50 p-4">
             <p className="text-zinc-300"><strong>EffetPro</strong></p>
-            <p className="text-zinc-300">Email: <a href="mailto:support@effetpro.com" className="text-amber-400 hover:text-amber-300 underline">support@effetpro.com</a></p>
-            <p className="text-zinc-300">Location: France (Remote)</p>
+            <p className="text-zinc-300">Business Name: EffetPro (Sole Proprietorship)</p>
+            <p className="text-zinc-300">Email: <a href="mailto:contact@effetpro.com" className="text-amber-400 hover:text-amber-300 underline">contact@effetpro.com</a></p>
+            <p className="text-zinc-300">Location: France</p>
+            <p className="text-zinc-400 text-sm mt-2">Note: For business registration and VAT details, please contact us directly.</p>
           </div>
         </section>
 
@@ -310,7 +344,10 @@ export default function Page() {
           <h2 className="text-2xl font-semibold text-white">16. Data Protection Officer</h2>
           <p className="mt-3 text-zinc-300 leading-relaxed">
             For GDPR-related inquiries or to exercise your privacy rights under GDPR, you may contact our support team at
-            <a href="mailto:support@effetpro.com" className="text-amber-400 hover:text-amber-300 underline ml-1">support@effetpro.com</a>.
+            <a href="mailto:contact@effetpro.com" className="text-amber-400 hover:text-amber-300 underline ml-1">contact@effetpro.com</a>.
+          </p>
+          <p className="mt-2 text-zinc-300 leading-relaxed">
+            For California residents (CCPA/CPRA requests), you can also use the same email address with the subject line "California Privacy Rights Request."
           </p>
         </section>
       </div>
@@ -320,7 +357,8 @@ export default function Page() {
         <p className="text-sm text-zinc-400">
           Related legal pages:
           <a href="/legal/terms" className="ml-2 text-amber-400 hover:text-amber-300 underline">Terms of Service</a> •
-          <a href="/legal/refund" className="ml-2 text-amber-400 hover:text-amber-300 underline">Refund Policy</a>
+          <a href="/legal/refund" className="ml-2 text-amber-400 hover:text-amber-300 underline">Refund Policy</a> •
+          <a href="/legal/cookies" className="ml-2 text-amber-400 hover:text-amber-300 underline">Cookie Policy</a>
         </p>
         <p className="mt-4 text-sm text-zinc-500">
           Your privacy is important to us. If you have any concerns or questions, please don't hesitate to reach out.

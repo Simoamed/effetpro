@@ -49,7 +49,7 @@ export default function Page() {
           <h3 className="mt-4 text-lg font-semibold text-amber-400">3.1 Contact Us</h3>
           <p className="mt-2 text-zinc-300 leading-relaxed">
             To request a refund, send an email to:
-            <a href="mailto:support@effetpro.com" className="text-amber-400 hover:text-amber-300 underline ml-1">support@effetpro.com</a>
+            <a href="mailto:contact@effetpro.com" className="text-amber-400 hover:text-amber-300 underline ml-1">contact@effetpro.com</a>
           </p>
           <p className="mt-2 text-zinc-300 leading-relaxed">
             Please include the following information in your email:
@@ -74,8 +74,13 @@ export default function Page() {
 
           <h3 className="mt-4 text-lg font-semibold text-amber-400">3.3 Refund Method</h3>
           <p className="mt-2 text-zinc-300 leading-relaxed">
-            Refunds are issued to the original payment method used for the purchase. Depending on your bank or credit card provider,
-            it may take an additional 5-10 business days for the refund to appear on your statement.
+            Refunds are issued to the original payment method used for the purchase through our payment processor (Stripe, PayPal,
+            or other gateway used at checkout). Depending on your bank or credit card provider, it may take an additional 5-10 business
+            days for the refund to appear on your statement.
+          </p>
+          <p className="mt-2 text-zinc-300 leading-relaxed">
+            <strong>Important:</strong> Refund processing times are determined by your payment provider and financial institution.
+            While we process refunds within 3-5 business days, we cannot control how long your bank takes to credit your account.
           </p>
         </section>
 
@@ -132,24 +137,30 @@ export default function Page() {
             will be evaluated on a case-by-case basis but are generally not eligible for a refund.
           </p>
 
-          <h3 className="mt-4 text-lg font-semibold text-amber-400">6.2 Chargebacks</h3>
+          <h3 className="mt-4 text-lg font-semibold text-amber-400">6.2 Chargebacks & Payment Disputes</h3>
           <p className="mt-2 text-zinc-300 leading-relaxed">
             If you initiate a chargeback or payment dispute with your bank or credit card company <strong>without first contacting us</strong>,
             we will not be able to assist you with a resolution.
           </p>
           <p className="mt-2 text-zinc-300 leading-relaxed">
             <strong>Please contact us first at</strong>
-            <a href="mailto:support@effetpro.com" className="text-amber-400 hover:text-amber-300 underline ml-1">support@effetpro.com</a>.
+            <a href="mailto:contact@effetpro.com" className="text-amber-400 hover:text-amber-300 underline ml-1">contact@effetpro.com</a>.
             We will work with you to resolve the issue quickly and fairly.
           </p>
           <p className="mt-2 text-zinc-300 leading-relaxed">
             Chargebacks initiated without prior contact may result in:
           </p>
           <ul className="mt-2 ml-6 list-disc space-y-1 text-zinc-300">
-            <li>Immediate revocation of product access</li>
+            <li>Immediate revocation of product access and license termination</li>
             <li>Termination of your account</li>
             <li>Restriction from future purchases</li>
+            <li>Chargeback fees and legal costs may be pursued</li>
+            <li>Reporting to fraud prevention networks</li>
           </ul>
+          <p className="mt-2 text-zinc-300 leading-relaxed">
+            <strong>Payment Gateway Disputes:</strong> If you see an unfamiliar charge from Stripe, PayPal, or another payment processor
+            on your statement, please contact us first. We can verify the transaction and provide receipts to help you identify the charge.
+          </p>
 
           <h3 className="mt-4 text-lg font-semibold text-amber-400">6.3 Abuse Prevention</h3>
           <p className="mt-2 text-zinc-300 leading-relaxed">
@@ -183,7 +194,7 @@ export default function Page() {
           <h3 className="mt-4 text-lg font-semibold text-amber-400">7.2 Contact Support</h3>
           <p className="mt-2 text-zinc-300 leading-relaxed">
             Email us at
-            <a href="mailto:support@effetpro.com" className="text-amber-400 hover:text-amber-300 underline ml-1">support@effetpro.com</a> and
+            <a href="mailto:contact@effetpro.com" className="text-amber-400 hover:text-amber-300 underline ml-1">contact@effetpro.com</a> and
             we'll respond within 24-48 hours with a solution.
           </p>
         </section>
@@ -209,7 +220,7 @@ export default function Page() {
           </p>
           <p className="mt-2 text-zinc-300 leading-relaxed">
             If you see an unexpected charge on your statement, please contact us immediately at
-            <a href="mailto:support@effetpro.com" className="text-amber-400 hover:text-amber-300 underline ml-1">support@effetpro.com</a>.
+            <a href="mailto:contact@effetpro.com" className="text-amber-400 hover:text-amber-300 underline ml-1">contact@effetpro.com</a>.
           </p>
         </section>
 
@@ -221,7 +232,12 @@ export default function Page() {
             exchange rate at the time of the refund, which may differ from the rate at the time of purchase.
           </p>
           <p className="mt-2 text-zinc-300 leading-relaxed">
-            Any currency conversion fees charged by your bank or payment provider are not refundable.
+            Any currency conversion fees charged by your bank, payment provider (Stripe, PayPal, etc.), or financial institution
+            are not refundable and are outside of our control.
+          </p>
+          <p className="mt-2 text-zinc-300 leading-relaxed">
+            <strong>Payment Gateway Fees:</strong> Payment processing fees charged by Stripe, PayPal, or other payment gateways
+            may not be fully recoverable and are subject to the payment processor's refund policies.
           </p>
         </section>
 
@@ -245,8 +261,9 @@ export default function Page() {
           </p>
           <div className="mt-4 rounded-lg border border-zinc-700 bg-zinc-800/50 p-4">
             <p className="text-zinc-300"><strong>EffetPro</strong></p>
-            <p className="text-zinc-300">Email: <a href="mailto:support@effetpro.com" className="text-amber-400 hover:text-amber-300 underline">support@effetpro.com</a></p>
-            <p className="text-zinc-300">Location: France (Remote)</p>
+            <p className="text-zinc-300">Business Name: EffetPro (Sole Proprietorship)</p>
+            <p className="text-zinc-300">Email: <a href="mailto:contact@effetpro.com" className="text-amber-400 hover:text-amber-300 underline">contact@effetpro.com</a></p>
+            <p className="text-zinc-300">Location: France</p>
           </div>
           <p className="mt-4 text-zinc-300 leading-relaxed">
             We typically respond to all inquiries within 24-48 hours during business days (Monday-Friday).
@@ -268,7 +285,11 @@ export default function Page() {
           </ul>
           <p className="mt-2 text-zinc-300 leading-relaxed">
             If you have questions about a charge or need help identifying a transaction, please contact us at
-            <a href="mailto:support@effetpro.com" className="text-amber-400 hover:text-amber-300 underline ml-1">support@effetpro.com</a>.
+            <a href="mailto:contact@effetpro.com" className="text-amber-400 hover:text-amber-300 underline ml-1">contact@effetpro.com</a>.
+          </p>
+          <p className="mt-2 text-zinc-300 leading-relaxed">
+            <strong>Refund Processing:</strong> When we issue a refund, it is processed through the same payment gateway you used
+            for your original purchase. The refund will appear as a credit from Stripe, PayPal, or the respective payment processor.
           </p>
         </section>
 
@@ -304,7 +325,8 @@ export default function Page() {
         <p className="text-sm text-zinc-400">
           Related legal pages:
           <a href="/legal/terms" className="ml-2 text-amber-400 hover:text-amber-300 underline">Terms of Service</a> •
-          <a href="/legal/privacy" className="ml-2 text-amber-400 hover:text-amber-300 underline">Privacy Policy</a>
+          <a href="/legal/privacy" className="ml-2 text-amber-400 hover:text-amber-300 underline">Privacy Policy</a> •
+          <a href="/legal/cookies" className="ml-2 text-amber-400 hover:text-amber-300 underline">Cookie Policy</a>
         </p>
         <p className="mt-4 text-sm text-zinc-500">
           Your satisfaction is our priority. If you have any questions or concerns, please don't hesitate to reach out.
