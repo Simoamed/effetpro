@@ -1,5 +1,6 @@
 export { metadata } from "./wedding-luts/metadata";
 import StickyCTA from "./components/StickyCTA";
+import CTAButton from "./components/CTAButton";
 import ScrollColorTransition from "./components/ScrollColorTransition";
 import ReviewsSection from "./components/ReviewsSection";
 import BeforeAfterSlider from "./components/BeforeAfterSlider";
@@ -60,10 +61,7 @@ export default function Page() {
           {/* Subheadline + CTAs */}
           <div className="mt-8 text-center">
             <div className="flex flex-col items-center gap-4">
-              <a href="https://whop.com/checkout/plan_2IPyBtpb088fz?d2c=true&success_url=https://effetpro.com/thank-you" className="group relative w-full max-w-md overflow-hidden rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3.5 text-center text-lg font-bold text-white shadow-2xl shadow-amber-500/40 transition-all hover:scale-105 hover:shadow-amber-500/60">
-                <span className="relative z-10">Yes! Give Me Instant Access → Only $27</span>
-                <div className="absolute inset-0 -z-0 bg-gradient-to-r from-amber-600 to-orange-600 opacity-0 transition-opacity group-hover:opacity-100"></div>
-              </a>
+              <CTAButton />
 
               <div className="flex items-center gap-2 rounded-full bg-amber-600/10 px-4 py-2 text-sm text-amber-300">
                 <svg className="h-4 w-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">

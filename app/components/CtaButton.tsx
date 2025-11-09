@@ -1,39 +1,25 @@
-"use client";
+'use client';
 
-import React from "react";
-
-type Props = {
-  href: string;
-  children: React.ReactNode;
-  className?: string;
-  ariaLabel?: string;
-  newTab?: boolean;
-  id?: string;
-};
-
-export default function CtaButton({ href, children, className = "", ariaLabel, newTab, id }: Props) {
-  function handleClick() {
-    try {
-      // GA4 event
-      // @ts-ignore
-      if (window.gtag) window.gtag("event", "cta_click", { label: id || href });
-      // Meta Pixel event
-      // @ts-ignore
-      if (window.fbq) window.fbq("trackCustom", "CTA_Click", { label: id || href });
-    } catch {}
-  }
+export default function CTAButton() {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    // Track Meta Pixel event
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'InitiateCheckout', {
+        content_name: 'Wedding LUTs Master Collection',
+        value: 37.00,
+        currency: 'USD'
+      });
+    }
+  };
 
   return (
     <a
+      href="https://whop.com/checkout/plan_2IPyBtpb088fz?d2c=true&success_url=https://effetpro.com/thank-you"
       onClick={handleClick}
-      href={href}
-      target={newTab ? "_blank" : undefined}
-      rel={newTab ? "noopener noreferrer" : undefined}
-      aria-label={ariaLabel}
-      className={className}
+      className="group relative w-full max-w-md overflow-hidden rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3.5 text-center text-lg font-bold text-white shadow-2xl shadow-amber-500/40 transition-all hover:scale-105 hover:shadow-amber-500/60"
     >
-      {children}
+      <span className="relative z-10">Yes! Give Me Instant Access → Only $27</span>
+      <div className="absolute inset-0 -z-0 bg-gradient-to-r from-amber-600 to-orange-600 opacity-0 transition-opacity group-hover:opacity-100"></div>
     </a>
   );
 }
-
