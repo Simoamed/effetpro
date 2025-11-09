@@ -92,6 +92,25 @@ export default function RootLayout({
                 fbq('track', 'PageView');
               `}
             </Script>
+            <Script id="fb-pixel-events" strategy="afterInteractive">
+              {`
+                document.addEventListener('DOMContentLoaded', function() {
+                  // Track all checkout links
+                  const checkoutLinks = document.querySelectorAll('a[href*="whop.com/checkout"]');
+                  checkoutLinks.forEach(function(link) {
+                    link.addEventListener('click', function() {
+                      if (typeof fbq !== 'undefined') {
+                        fbq('track', 'InitiateCheckout', {
+                          content_name: 'Wedding LUTs Master Collection',
+                          value: 37.00,
+                          currency: 'USD'
+                        });
+                      }
+                    });
+                  });
+                });
+              `}
+            </Script>
             <noscript>
               <img
                 height="1"
