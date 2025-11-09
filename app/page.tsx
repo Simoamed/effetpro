@@ -1,6 +1,6 @@
 export { metadata } from "./wedding-luts/metadata";
 import StickyCTA from "./components/StickyCTA";
-import CTAButton from "./components/CtaButton";
+import CheckoutCTA from "./components/CheckoutCTA";
 import ScrollColorTransition from "./components/ScrollColorTransition";
 import ReviewsSection from "./components/ReviewsSection";
 import BeforeAfterSlider from "./components/BeforeAfterSlider";
@@ -61,7 +61,7 @@ export default function Page() {
           {/* Subheadline + CTAs */}
           <div className="mt-8 text-center">
             <div className="flex flex-col items-center gap-4">
-              <CTAButton />
+              <CheckoutCTA />
 
               <div className="flex items-center gap-2 rounded-full bg-amber-600/10 px-4 py-2 text-sm text-amber-300">
                 <svg className="h-4 w-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
@@ -311,7 +311,7 @@ export default function Page() {
 
                 {/* Description */}
                 <p className="mx-auto mb-8 max-w-2xl text-center text-lg leading-relaxed text-white/80">
-                  Try EffetPro risk-free for 30 days. If you're not completely satisfied, we'll refund your purchase. <span className="font-bold text-emerald-400">No questions asked.</span>
+                  Try EffetPro risk-free for 30 days. If you&apos;re not completely satisfied, we&apos;ll refund your purchase. <span className="font-bold text-emerald-400">No questions asked.</span>
                 </p>
 
                 {/* Features Grid */}
@@ -387,19 +387,28 @@ export default function Page() {
             gradient="from-emerald-300 via-teal-200 to-emerald-400"
           />
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-            {BENEFITS.map((benefit) => (
-              <div key={benefit.id} className={`flex flex-col gap-3 rounded-xl border border-${benefit.color}-500/25 bg-${benefit.color}-500/10 p-6`}>
-                <div className="flex items-start gap-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="mt-0.5 h-6 w-6 flex-shrink-0 text-emerald-400" aria-hidden="true">
-                    <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.28a.75.75 0 0 0-1.06-1.06l-4.22 4.22-1.53-1.53a.75.75 0 1 0-1.06 1.06l2.06 2.06a.75.75 0 0 0 1.06 0l4.75-4.75Z" clipRule="evenodd"/>
-                  </svg>
-                  <div className="flex-1">
-                    <h3 className="font-bold text-white text-lg">{benefit.title}</h3>
-                    <p className="mt-2 text-sm text-white/70">{benefit.description}</p>
+            {BENEFITS.map((benefit) => {
+              const colorClasses = {
+                rose: "border-rose-500/25 bg-rose-500/10",
+                amber: "border-amber-500/25 bg-amber-500/10",
+                emerald: "border-emerald-500/25 bg-emerald-500/10",
+                orange: "border-orange-500/25 bg-orange-500/10"
+              };
+
+              return (
+                <div key={benefit.id} className={`flex flex-col gap-3 rounded-xl border p-6 ${colorClasses[benefit.color as keyof typeof colorClasses]}`}>
+                  <div className="flex items-start gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="mt-0.5 h-6 w-6 flex-shrink-0 text-emerald-400" aria-hidden="true">
+                      <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.28a.75.75 0 0 0-1.06-1.06l-4.22 4.22-1.53-1.53a.75.75 0 1 0-1.06 1.06l2.06 2.06a.75.75 0 0 0 1.06 0l4.75-4.75Z" clipRule="evenodd"/>
+                    </svg>
+                    <div className="flex-1">
+                      <h3 className="font-bold text-white text-lg">{benefit.title}</h3>
+                      <p className="mt-2 text-sm text-white/70">{benefit.description}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* Trust Badges */}
@@ -587,7 +596,7 @@ export default function Page() {
                 </div>
                 <h3 className="text-3xl font-bold text-white mb-3">30-Day Money-Back Guarantee</h3>
                 <p className="text-lg text-white/80 max-w-2xl mx-auto mb-6">
-                  Try EffetPro risk-free for 30 days. If you're not completely satisfied, we'll refund your purchase. <span className="font-bold text-emerald-300">No questions asked.</span>
+                  Try EffetPro risk-free for 30 days. If you&apos;re not completely satisfied, we&apos;ll refund your purchase. <span className="font-bold text-emerald-300">No questions asked.</span>
                 </p>
                 <div className="flex flex-wrap justify-center gap-4 text-sm text-emerald-200">
                   <div className="flex items-center gap-2">

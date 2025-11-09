@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Play } from 'lucide-react';
+import Image from 'next/image';
 
 interface VideoPlayerProps {
   src: string;
@@ -42,10 +43,12 @@ export default function VideoPlayer({ src, thumbnail, ariaLabel }: VideoPlayerPr
           onClick={handlePlay}
         >
           {/* Thumbnail Image */}
-          <img
+          <Image
             src={thumbnail}
             alt="Video thumbnail"
-            className="h-full w-full object-cover"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
           />
 
           {/* Play Button Overlay */}

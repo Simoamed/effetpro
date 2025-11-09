@@ -34,11 +34,6 @@ export default function BeforeAfterSlider({ beforeImage, afterImage, alt = "Befo
     setIsDragging(false);
   };
 
-  const handleMouseMove = (e: MouseEvent) => {
-    if (!isDragging) return;
-    handleMove(e.clientX);
-  };
-
   const handleTouchMove = (e: React.TouchEvent) => {
     if (e.touches.length > 0) {
       handleMove(e.touches[0].clientX);
@@ -46,6 +41,11 @@ export default function BeforeAfterSlider({ beforeImage, afterImage, alt = "Befo
   };
 
   useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!isDragging) return;
+      handleMove(e.clientX);
+    };
+
     if (isDragging) {
       document.addEventListener("mousemove", handleMouseMove);
       document.addEventListener("mouseup", handleMouseUp);
