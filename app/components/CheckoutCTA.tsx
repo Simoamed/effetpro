@@ -3,13 +3,23 @@
 import { useState } from 'react';
 import { Lock, Check, Zap } from 'lucide-react';
 
-const PAYMENT_URL = 'https://whop.com/checkout/plan_2IPyBtpb088fz?redirect_url=https://effetpro.com/thank-you';
+const PAYMENT_URL = 'https://whop.com/checkout/plan_2IPyBtpb088fz?d2c=true&success_url=https://effetpro.com/thank-you';
 
 export default function CheckoutCTA() {
   const [isDisabled, setIsDisabled] = useState(false);
 
   const handleClick = () => {
     setIsDisabled(true);
+
+    // Track Meta Pixel event
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'InitiateCheckout', {
+        content_name: 'Wedding LUTs Master Collection',
+        value: 37.00,
+        currency: 'USD'
+      });
+    }
+
     window.open(PAYMENT_URL, '_blank', 'noopener,noreferrer');
 
     setTimeout(() => {
