@@ -1,6 +1,6 @@
 export { metadata } from "./wedding-luts/metadata";
 import StickyCTA from "./components/StickyCTA";
-import CTAButton from "./components/CTAButton";
+import CTAButton from "./components/CtaButton";
 import ScrollColorTransition from "./components/ScrollColorTransition";
 import ReviewsSection from "./components/ReviewsSection";
 import BeforeAfterSlider from "./components/BeforeAfterSlider";
