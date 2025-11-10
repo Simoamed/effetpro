@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import { Suspense } from "react";
 import FacebookPixel from "./components/FacebookPixel";
 
 const geistSans = Geist({
@@ -77,7 +78,9 @@ export default function RootLayout({
           </Script>
         )}
         {/* Meta Pixel */}
-        <FacebookPixel />
+        <Suspense fallback={null}>
+          <FacebookPixel />
+        </Suspense>
         {children}
         {/* JSON-LD schema.org Product + FAQ */}
         <Script id="ld-product" type="application/ld+json" strategy="afterInteractive">
