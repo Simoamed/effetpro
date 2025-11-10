@@ -1,0 +1,14 @@
+# robots.txt for effetpro.com
+User-agent: *
+Allow: /
+Allow: /thank-you
+
+# Allow Facebook and social media crawlers
+User-agent: facebookexternalhit/1.1
+Allow: /
+
+User-agent: Facebot
+Allow: /
+
+# Sitemap
+Sitemap: https://www.effetpro.com/sitemap.xml
