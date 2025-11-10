@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
-import FacebookPixel from "./components/FacebookPixel";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -75,6 +74,16 @@ export default function RootLayout({
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <a href="#cta" className="skip-link">Skip to main content</a>
+        {/* Facebook Pixel noscript fallback */}
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
+            src="https://www.facebook.com/tr?id=640702059123669&ev=PageView&noscript=1"
+            alt=""
+          />
+        </noscript>
         {/* GA4 (conditionally injected) */}
         {process.env.NEXT_PUBLIC_GA_ID && (
           <Script
@@ -93,8 +102,6 @@ export default function RootLayout({
             `}
           </Script>
         )}
-        {/* Meta Pixel Component */}
-        <FacebookPixel />
         {children}
         {/* JSON-LD schema.org Product + FAQ */}
         <Script id="ld-product" type="application/ld+json" strategy="afterInteractive">
