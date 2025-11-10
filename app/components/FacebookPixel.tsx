@@ -14,7 +14,9 @@ export default function FacebookPixel() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const pixelId = process.env.NEXT_PUBLIC_FB_PIXEL;
+    // Use environment variable or fallback to hardcoded ID
+    const pixelId = process.env.NEXT_PUBLIC_FB_PIXEL || '640702059123669';
+
     if (!pixelId) {
       console.warn('⚠️ Facebook Pixel ID not configured');
       return;
