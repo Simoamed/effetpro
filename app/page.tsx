@@ -9,6 +9,7 @@ import SectionTitle from "./components/UI/SectionTitle";
 import VideoBg from "./components/UI/VideoBg";
 import VideoPlayer from "./components/VideoPlayer";
 import Image from "next/image";
+import PageViewTracker from "./components/PageViewTracker";
 import {
   MAIN_OFFER,
   EXCLUSIVE_BONUSES,
@@ -28,6 +29,7 @@ export default function Page() {
 
   return (
     <main className="min-h-screen text-white relative">
+      <PageViewTracker />
       <ScrollColorTransition />
       <StickyCTA />
 

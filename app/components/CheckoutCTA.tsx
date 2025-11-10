@@ -12,12 +12,23 @@ export default function CheckoutCTA() {
   const handleClick = () => {
     setIsDisabled(true);
 
-    // Track Meta Pixel event
-    trackEvent('InitiateCheckout', {
+    // Track AddToCart event first
+    trackEvent('AddToCart', {
       content_name: 'Wedding LUTs Master Collection',
+      content_type: 'product',
       value: 27.00,
       currency: 'USD'
     });
+
+    // Then track InitiateCheckout event
+    setTimeout(() => {
+      trackEvent('InitiateCheckout', {
+        content_name: 'Wedding LUTs Master Collection',
+        content_type: 'product',
+        value: 27.00,
+        currency: 'USD'
+      });
+    }, 100);
 
     window.open(PAYMENT_URL, '_blank', 'noopener,noreferrer');
 

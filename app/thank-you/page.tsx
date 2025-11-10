@@ -3,12 +3,21 @@
 import { useState, useEffect } from 'react';
 import Container from "../components/UI/Container";
 import { CheckCircle, Download, Mail, Heart, Sparkles } from 'lucide-react';
+import { trackEvent } from '../components/FacebookPixel';
 
 export default function ThankYouPage() {
   const [isDownloading, setIsDownloading] = useState(false);
   const [confetti, setConfetti] = useState(true);
 
   useEffect(() => {
+    // Track Purchase event for Facebook Pixel
+    trackEvent('Purchase', {
+      content_name: 'Wedding LUTs Master Collection',
+      content_type: 'product',
+      value: 27.00,
+      currency: 'USD'
+    });
+
     // Hide confetti after 5 seconds
     const timer = setTimeout(() => setConfetti(false), 5000);
     return () => clearTimeout(timer);

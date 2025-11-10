@@ -26,11 +26,23 @@ export default function StickyCTA() {
         <a
           href="https://whop.com/checkout/plan_2IPyBtpb088fz?d2c=true&success_url=https://effetpro.com/thank-you"
           onClick={() => {
-            trackEvent('InitiateCheckout', {
+            // Track AddToCart first
+            trackEvent('AddToCart', {
               content_name: 'Wedding LUTs Master Collection',
+              content_type: 'product',
               value: 27.00,
               currency: 'USD'
             });
+
+            // Then track InitiateCheckout
+            setTimeout(() => {
+              trackEvent('InitiateCheckout', {
+                content_name: 'Wedding LUTs Master Collection',
+                content_type: 'product',
+                value: 27.00,
+                currency: 'USD'
+              });
+            }, 100);
           }}
           className="rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-amber-500/40 transition-all hover:scale-105 hover:shadow-amber-500/60"
         >
