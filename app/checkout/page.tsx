@@ -3,10 +3,10 @@ import CheckoutCTA from '../components/CheckoutCTA';
 import Container from "../components/UI/Container";
 
 export const metadata: Metadata = {
-  title: 'Wedding LUTs Master Collection - $37 (92% OFF)',
+  title: 'Wedding LUTs Master Collection - $27 (94% OFF)',
   description: '500+ professional wedding LUTs, drone LUTs, 120 emotional music tracks, and Golden Love presets. Instant download, lifetime access.',
   openGraph: {
-    title: 'Wedding LUTs Master Collection - $37 (92% OFF)',
+    title: 'Wedding LUTs Master Collection - $27 (94% OFF)',
     description: '500+ professional wedding LUTs, drone LUTs, 120 emotional music tracks, and Golden Love presets.',
   },
 };

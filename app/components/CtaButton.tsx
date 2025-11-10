@@ -1,15 +1,15 @@
 'use client';
 
+import { trackEvent } from './FacebookPixel';
+
 export default function CTAButton() {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     // Track Meta Pixel event
-    if (typeof window !== 'undefined' && (window as any).fbq) {
-      (window as any).fbq('track', 'InitiateCheckout', {
-        content_name: 'Wedding LUTs Master Collection',
-        value: 37.00,
-        currency: 'USD'
-      });
-    }
+    trackEvent('InitiateCheckout', {
+      content_name: 'Wedding LUTs Master Collection',
+      value: 27.00,
+      currency: 'USD'
+    });
   };
 
   return (

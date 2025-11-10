@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import FacebookPixel from "./components/FacebookPixel";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -75,53 +76,8 @@ export default function RootLayout({
             `}
           </Script>
         )}
-        {/* Meta Pixel (conditionally injected) */}
-        {process.env.NEXT_PUBLIC_FB_PIXEL && (
-          <>
-            <Script id="fb-pixel" strategy="afterInteractive">
-              {`
-                !function(f,b,e,v,n,t,s)
-                {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-                n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-                if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-                n.queue=[];t=b.createElement(e);t.async=!0;
-                t.src=v;s=b.getElementsByTagName(e)[0];
-                s.parentNode.insertBefore(t,s)}(window, document,'script',
-                'https://connect.facebook.net/en_US/fbevents.js');
-                fbq('init', '${process.env.NEXT_PUBLIC_FB_PIXEL}');
-                fbq('track', 'PageView');
-              `}
-            </Script>
-            <Script id="fb-pixel-events" strategy="afterInteractive">
-              {`
-                document.addEventListener('DOMContentLoaded', function() {
-                  // Track all checkout links
-                  const checkoutLinks = document.querySelectorAll('a[href*="whop.com/checkout"]');
-                  checkoutLinks.forEach(function(link) {
-                    link.addEventListener('click', function() {
-                      if (typeof fbq !== 'undefined') {
-                        fbq('track', 'InitiateCheckout', {
-                          content_name: 'Wedding LUTs Master Collection',
-                          value: 37.00,
-                          currency: 'USD'
-                        });
-                      }
-                    });
-                  });
-                });
-              `}
-            </Script>
-            <noscript>
-              <img
-                height="1"
-                width="1"
-                style={{ display: 'none' }}
-                src={`https://www.facebook.com/tr?id=${process.env.NEXT_PUBLIC_FB_PIXEL}&ev=PageView&noscript=1`}
-                alt=""
-              />
-            </noscript>
-          </>
-        )}
+        {/* Meta Pixel */}
+        <FacebookPixel />
         {children}
         {/* JSON-LD schema.org Product + FAQ */}
         <Script id="ld-product" type="application/ld+json" strategy="afterInteractive">

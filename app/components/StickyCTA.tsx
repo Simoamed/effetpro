@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useCountdown } from "../hooks/useCountdown";
+import { trackEvent } from "./FacebookPixel";
 
 export default function StickyCTA() {
   const time = useCountdown(14, "promoEnd14v1");
@@ -25,13 +26,11 @@ export default function StickyCTA() {
         <a
           href="https://whop.com/checkout/plan_2IPyBtpb088fz?d2c=true&success_url=https://effetpro.com/thank-you"
           onClick={() => {
-            if (typeof window !== 'undefined' && (window as any).fbq) {
-              (window as any).fbq('track', 'InitiateCheckout', {
-                content_name: 'Wedding LUTs Master Collection',
-                value: 37.00,
-                currency: 'USD'
-              });
-            }
+            trackEvent('InitiateCheckout', {
+              content_name: 'Wedding LUTs Master Collection',
+              value: 27.00,
+              currency: 'USD'
+            });
           }}
           className="rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-amber-500/40 transition-all hover:scale-105 hover:shadow-amber-500/60"
         >
