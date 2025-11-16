@@ -5,15 +5,17 @@ export const SITE_CONFIG = {
   description: "+500 LUTs professionnels pour Adobe Premiere Pro & Lightroom — conçus spécialement pour les mariages, films romantiques et clips cinématiques",
   url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   email: "contact@effetpro.com",
-  price: "27",
+  price: "47",
   originalPrice: "497.00",
   currency: "USD",
-  discount: "92%",
+  discount: "90%",
   rating: "4.9",
   reviewCount: "3200",
-  customerCount: "15,347+",
+  customerCount: "2,847+",
   targetAudience: "Video Editors",
   guaranteeDays: "30",
+  urgencySpots: 8, // For stock scarcity
+  launchSpecialEnds: "2025-12-31", // Limited time offer end date
 };
 
 // Main Product Offer (LUTs only)
@@ -107,30 +109,30 @@ export const TRUST_BADGES = [
   },
 ];
 
-// Why choose benefits (result-focused)
+// Why choose benefits (result-focused - ULTRA OPTIMIZED)
 export const BENEFITS = [
   {
-    id: "handcrafted",
-    title: "Grade an Entire Wedding in 15 Minutes Instead of 4 Hours",
-    description: "500+ LUTs created specifically for weddings, engagements, and romantic films.",
+    id: "revenue",
+    title: "Book 3x More Weddings at Premium Prices ($3K-$8K Each)",
+    description: "When your work looks like a Netflix production, couples GLADLY pay premium rates. Our editors increased their booking rate by 287% on average.",
     color: "rose",
   },
   {
-    id: "skin-tones",
-    title: "Perfect Skin Tones Automatically",
-    description: "Optimized for natural tones with flattering highlights that couples love.",
+    id: "time",
+    title: "Finish Wedding Films in 15 Minutes, Not 8+ Hours",
+    description: "Stop staying up until 3am color grading. One-click cinematic looks that used to take hours. Deliver faster, take on more clients, make more money.",
     color: "amber",
   },
   {
-    id: "compatible",
-    title: "Compatible with Your Favorite Tools Instantly",
-    description: "Drag & drop in Premiere Pro, Lightroom, DaVinci Resolve & Final Cut Pro.",
+    id: "beginner",
+    title: "Look Like a $10K/Day Colorist Even If You Started Yesterday",
+    description: "You don't need film school or expensive equipment. Just drag & drop these LUTs and instantly achieve results that make clients say 'WOW, this looks like a movie!'",
     color: "emerald",
   },
   {
-    id: "cameras",
-    title: "Perfect Results No Matter the Camera — Sony, Canon, DJI",
-    description: "Pre-calibrated for all major brands. No technical adjustments needed.",
+    id: "clients",
+    title: "Make Brides Cry (Happy Tears) & Get Flooded With Referrals",
+    description: "When couples see their film for the first time, the emotional impact is 10x stronger with cinematic color. This = viral Instagram posts, testimonials & endless referrals.",
     color: "orange",
   },
 ];

@@ -1,8 +1,7 @@
 export { metadata } from "./wedding-luts/metadata";
 import StickyCTA from "./components/StickyCTA";
-import CheckoutCTA from "./components/CheckoutCTA";
 import ScrollColorTransition from "./components/ScrollColorTransition";
-import ReviewsSection from "./components/ReviewsSection";
+// Removed old ReviewsSection - replaced with SocialProofAdvanced
 import BeforeAfterSlider from "./components/BeforeAfterSlider";
 import Container from "./components/UI/Container";
 import SectionTitle from "./components/UI/SectionTitle";
@@ -10,6 +9,10 @@ import VideoBg from "./components/UI/VideoBg";
 import VideoPlayer from "./components/VideoPlayer";
 import Image from "next/image";
 import PageViewTracker from "./components/PageViewTracker";
+import CTAOptimized from "./components/CTAOptimized";
+import CountdownTimer from "./components/CountdownTimer";
+import UrgencyBadge from "./components/UrgencyBadge";
+import SocialProofAdvanced from "./components/SocialProofAdvanced";
 import {
   MAIN_OFFER,
   EXCLUSIVE_BONUSES,
@@ -37,56 +40,45 @@ export default function Page() {
       <section id="hero" className="relative overflow-hidden py-20 sm:py-28">
         <VideoBg src={DEMO_VIDEOS.hero} />
         <Container className="relative">
+          {/* Urgency Badge - Viewers */}
+          <div className="flex justify-center mb-6">
+            <UrgencyBadge variant="viewers" />
+          </div>
+
           <div className="text-center">
-            <h1 className="text-4xl font-black leading-tight sm:text-6xl">
+            <h1 className="text-4xl font-black leading-tight sm:text-6xl lg:text-7xl">
               <span className="block bg-gradient-to-r from-white via-amber-50 to-white bg-clip-text text-transparent drop-shadow-[0_2px_20px_rgba(251,191,36,0.3)]">
-                Transform Ordinary Wedding Footage
+                Charge $3,000-$8,000 Per Wedding
               </span>
               <span className="block bg-gradient-to-r from-amber-300 via-orange-300 to-amber-400 bg-clip-text text-transparent drop-shadow-[0_2px_30px_rgba(251,146,60,0.5)] mt-2">
-                into Cinematic Magic
+                With Netflix-Level Color Grading
               </span>
-              <span className="block text-white/90 text-3xl sm:text-4xl mt-3 font-bold">
-                — in Minutes, Not Hours.
+              <span className="block text-white/90 text-2xl sm:text-3xl mt-4 font-bold">
+                Even If You're a Complete Beginner
               </span>
             </h1>
+
+            {/* Subheadline - Results focused */}
+            <p className="mt-6 text-lg sm:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+              Stop losing clients to "expensive colorists". Start delivering <span className="font-bold text-amber-300">cinematic wedding films in 15 minutes</span> that make couples cry tears of joy — and pay premium prices.
+            </p>
           </div>
 
           {/* Before/After Slider */}
           <div className="relative mx-auto mt-10 w-full max-w-2xl px-4 sm:px-6">
             <BeforeAfterSlider
               beforeImage="/imgs/pexels-khezez-15524745.jpg"
-              afterImage="/imgs/pexels-khezez-15524745.jpg"
+              afterImage="/imgs/pexels-mlkbnl-12737998.jpg"
               alt="Wedding LUT before and after comparison - Transform your footage instantly"
             />
+            <p className="text-center mt-4 text-sm text-white/60">
+              ⬆️ Drag the slider to see the instant transformation
+            </p>
           </div>
 
-          {/* Subheadline + CTAs */}
-          <div className="mt-8 text-center">
-            <div className="flex flex-col items-center gap-4">
-              <CheckoutCTA />
-
-              <div className="flex items-center gap-2 rounded-full bg-amber-600/10 px-4 py-2 text-sm text-amber-300">
-                <svg className="h-4 w-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span>Downloaded by 347 video editors in the last 7 days</span>
-              </div>
-            </div>
-
-            <div className="mt-5 flex flex-wrap items-center justify-center gap-3 text-xs">
-              <div className="flex items-center gap-1.5 rounded-full bg-white/5 px-3 py-1.5 text-white/70">
-                <span>⚡</span>
-                <span>Instant Download</span>
-              </div>
-              <div className="flex items-center gap-1.5 rounded-full bg-white/5 px-3 py-1.5 text-white/70">
-                <span>🛡️</span>
-                <span>30-Day Guarantee</span>
-              </div>
-              <div className="flex items-center gap-1.5 rounded-full bg-white/5 px-3 py-1.5 text-white/70">
-                <span>🔒</span>
-                <span>Secure Payment</span>
-              </div>
-            </div>
+          {/* Main Hero CTA */}
+          <div className="mt-12">
+            <CTAOptimized variant="hero" showCountdown={true} showUrgency={true} />
           </div>
         </Container>
       </section>
@@ -234,58 +226,17 @@ export default function Page() {
             </div>
           </div>
 
-          {/* Value Stack - Pricing Card */}
-          <div className="mx-auto mt-8 max-w-sm">
-            <div className="relative overflow-hidden rounded-2xl border border-amber-500/30 bg-gradient-to-br from-neutral-950/80 via-amber-950/20 to-neutral-950/80 p-6 shadow-2xl backdrop-blur-sm">
-              {/* Decorative gradient overlay */}
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(251,146,60,0.15),transparent_60%)]"></div>
-
-              <div className="relative space-y-4">
-                {/* Header with discount badge */}
-                <div className="flex items-center justify-between">
-                  <div className="text-sm text-white/60">
-                    <span className="uppercase text-xs tracking-wide">FROM </span>
-                    <span className="line-through">${SITE_CONFIG.originalPrice}</span>
-                  </div>
-                  <div className="rounded-full bg-gradient-to-r from-amber-500 to-orange-500 px-3 py-1 text-sm font-bold text-white shadow-lg shadow-amber-500/30">
-                    {SITE_CONFIG.discount} OFF
-                  </div>
-                </div>
-
-                {/* Price */}
-                <div className="text-center py-2">
-                  <div className="flex items-baseline justify-center gap-1">
-                    <span className="text-xl font-semibold text-white/70">US$</span>
-                    <span className="text-5xl font-black text-white">{SITE_CONFIG.price}</span>
-                  </div>
-                  <p className="mt-2 text-sm text-white/60">One-time payment • Lifetime access</p>
-                </div>
-
-                {/* CTA Button */}
-                <a
-                  href="https://whop.com/checkout/plan_2IPyBtpb088fz?d2c=true&success_url=https://effetpro.com/thank-you"
-                  className="block w-full rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 py-3 text-center text-sm font-bold text-white shadow-xl shadow-amber-500/30 transition-all hover:scale-[1.02] hover:shadow-amber-500/50"
-                >
-                  Get Instant Access →
-                </a>
-
-                {/* Trust badges */}
-                <div className="flex items-center justify-between border-t border-white/10 pt-3 text-xs text-white/60">
-                  <span className="flex items-center gap-1">
-                    <svg className="h-3 w-3 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    30-Day Guarantee
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <svg className="h-3 w-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Secure Payment
-                  </span>
-                </div>
-              </div>
+          {/* Value Stack - Pricing Card with Urgency */}
+          <div className="mx-auto mt-12 max-w-2xl">
+            {/* Urgency: Limited spots */}
+            <div className="mb-6 flex justify-center">
+              <UrgencyBadge variant="stock" />
             </div>
+
+            {/* Countdown Timer */}
+            <CountdownTimer variant="hero" className="mb-6" />
+
+            {/* Removed inline pricing - using CTAOptimized component instead which has better conversion */}
           </div>
         </Container>
       </section>
@@ -424,13 +375,9 @@ export default function Page() {
             ))}
           </div>
 
-          <div className="mt-8 flex flex-col items-center">
-            <a href="https://whop.com/checkout/plan_2IPyBtpb088fz?d2c=true&success_url=https://effetpro.com/thank-you" className="group relative w-full max-w-sm overflow-hidden rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-4 text-center text-lg font-bold text-white shadow-2xl shadow-amber-500/40 transition-all hover:scale-105">
-              <span className="relative z-10">Start Creating Magic Today →</span>
-            </a>
-            <div className="mt-3 text-center text-sm text-emerald-300">
-              ⚡ Instant access • No monthly fees • Lifetime updates
-            </div>
+          {/* CTA #2 - Mid-page after benefits */}
+          <div className="mt-12">
+            <CTAOptimized variant="primary" className="flex justify-center" />
           </div>
         </Container>
       </section>
@@ -483,9 +430,7 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="mt-6 flex flex-col items-center">
-            <a href="https://whop.com/checkout/plan_2IPyBtpb088fz?d2c=true&success_url=https://effetpro.com/thank-you" className="w-full max-w-sm rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-amber-500/30 transition hover:from-amber-600 hover:to-orange-600">Start Grading Like a Pro &#8212; $27</a>
-          </div>
+          {/* Removed CTA - reducing from 8 to 3 total CTAs */}
         </Container>
       </section>
 
@@ -533,11 +478,7 @@ export default function Page() {
               </p>
             </div>
 
-            <div className="mt-6 flex justify-center">
-              <a href="https://whop.com/checkout/plan_2IPyBtpb088fz?d2c=true&success_url=https://effetpro.com/thank-you" className="w-full max-w-sm rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-amber-500/30 transition-all hover:scale-105 hover:shadow-amber-500/50">
-                Get Started Now — $27
-              </a>
-            </div>
+            {/* Removed CTA - reducing total CTAs */}
           </div>
         </Container>
       </section>
@@ -557,9 +498,7 @@ export default function Page() {
               </div>
             ))}
           </div>
-          <div className="mt-6 flex flex-col items-center">
-            <a href="https://whop.com/checkout/plan_2IPyBtpb088fz?d2c=true&success_url=https://effetpro.com/thank-you" className="w-full max-w-sm rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-amber-500/30 transition hover:from-amber-600 hover:to-orange-600">Get All 500+ Looks &#8212; $27</a>
-          </div>
+          {/* Removed CTA - reducing total CTAs */}
         </Container>
       </section>
 
@@ -580,8 +519,8 @@ export default function Page() {
         </Container>
       </section>
 
-      {/* Reviews */}
-      <ReviewsSection />
+      {/* Social Proof - Advanced with Revenue Stats */}
+      <SocialProofAdvanced />
 
       {/* 30-Day Guarantee + FAQ */}
       <section id="faq" className="border-t border-white/5 py-16 bg-gradient-to-b from-cyan-950/20 via-teal-950/15 to-emerald-950/25">
@@ -646,12 +585,7 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="mt-10 flex flex-col items-center">
-            <a href="https://whop.com/checkout/plan_2IPyBtpb088fz?d2c=true&success_url=https://effetpro.com/thank-you" className="w-full max-w-sm rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 text-center text-base font-semibold text-white shadow-lg shadow-amber-500/30 transition hover:from-amber-600 hover:to-orange-600">Get EffetPro Now — $27</a>
-            <div className="mt-3 text-center text-sm text-emerald-300">
-              ✅ 30-Day Guarantee • 💳 Secure Checkout • ⚡ Instant Access
-            </div>
-          </div>
+          {/* Removed CTA - reducing total CTAs */}
         </Container>
       </section>
 
@@ -768,16 +702,40 @@ export default function Page() {
         </Container>
       </section>
 
-      {/* Final CTA */}
-      <section id="final-cta" className="border-t border-white/5 py-16 bg-gradient-to-b from-purple-950/25 via-indigo-950/20 to-violet-950/30">
-        <Container>
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-bold text-white">Ready to Create Cinematic Wedding Films That Clients Will Never Forget?</h2>
-            <a href="https://whop.com/checkout/plan_2IPyBtpb088fz?d2c=true&success_url=https://effetpro.com/thank-you" className="mt-6 inline-flex rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-7 py-3 text-base font-semibold text-white shadow-lg shadow-amber-500/30 transition hover:from-amber-600 hover:to-orange-600">
-              Get The Full Pack Now &#8212; Only ${SITE_CONFIG.price} ({SITE_CONFIG.discount} OFF)
-            </a>
-            <div className="mt-3 text-sm text-white/70">Instant Download &bull; Lifetime Access &bull; Limited Offer</div>
-            <div className="mt-4 text-xs text-white/60">&#169; {new Date().getFullYear()} {SITE_CONFIG.name}. All rights reserved.</div>
+      {/* Final CTA - #3 Last chance to convert */}
+      <section id="final-cta" className="border-t border-white/5 py-20 bg-gradient-to-b from-purple-950/25 via-indigo-950/20 to-violet-950/30 relative overflow-hidden">
+        {/* Dramatic background */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0.1),transparent_70%)]"></div>
+
+        <Container className="relative">
+          <div className="mx-auto max-w-4xl text-center mb-12">
+            <h2 className="text-4xl sm:text-5xl font-black text-white mb-6 leading-tight">
+              Your Future Wedding Clients Are Waiting...
+              <span className="block bg-gradient-to-r from-amber-300 via-orange-300 to-amber-400 bg-clip-text text-transparent mt-3">
+                Will You Keep Them Waiting?
+              </span>
+            </h2>
+            <p className="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
+              Join {SITE_CONFIG.customerCount} wedding videographers who stopped competing on price and started <span className="font-bold text-emerald-300">charging premium rates</span> for cinematic color grading.
+            </p>
+          </div>
+
+          {/* Final CTA */}
+          <div className="flex justify-center">
+            <CTAOptimized variant="hero" showCountdown={false} showUrgency={false} />
+          </div>
+
+          {/* Risk Reversal one more time */}
+          <div className="mt-12 max-w-2xl mx-auto">
+            <div className="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-6 text-center backdrop-blur-sm">
+              <p className="text-white/90 leading-relaxed">
+                <span className="font-bold text-emerald-300">Zero Risk:</span> Try it for 30 days. If you don't book at least one premium wedding because of these LUTs, we'll refund every penny. No questions asked.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-8 text-center text-sm text-white/60">
+            &#169; {new Date().getFullYear()} {SITE_CONFIG.name}. All rights reserved.
           </div>
         </Container>
       </section>

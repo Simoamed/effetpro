@@ -1,68 +1,27 @@
 'use client';
 
-import { useState, useEffect, Suspense } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useState, useEffect } from 'react';
 import Container from "../components/UI/Container";
 import { CheckCircle, Download, Mail, Heart, Sparkles } from 'lucide-react';
-import { trackEventWithUserData } from '../lib/fbPixelHelpers';
+import { trackEvent } from '../components/FacebookPixel';
 
-function ThankYouContent() {
+export default function ThankYouPage() {
   const [isDownloading, setIsDownloading] = useState(false);
   const [confetti, setConfetti] = useState(true);
-  const searchParams = useSearchParams();
 
   useEffect(() => {
-    // Récupérer les données utilisateur depuis les paramètres URL (Whop)
-    const email = searchParams.get('email');
-    const firstName = searchParams.get('first_name') || searchParams.get('firstname');
-    const lastName = searchParams.get('last_name') || searchParams.get('lastname');
-    const phone = searchParams.get('phone');
-    const city = searchParams.get('city');
-    const state = searchParams.get('state');
-    const zip = searchParams.get('zip') || searchParams.get('postal_code');
-    const country = searchParams.get('country');
-
-    // Track Purchase event avec données utilisateur pour améliorer la qualité de correspondance
-    trackEventWithUserData(
-      'Purchase',
-      {
-        content_name: 'Wedding LUTs Master Collection',
-        content_type: 'product',
-        content_ids: ['plan_2IPyBtpb088fz'],
-        value: 27.00,
-        currency: 'USD',
-        num_items: 1
-      },
-      {
-        email: email || undefined,
-        firstName: firstName || undefined,
-        lastName: lastName || undefined,
-        phone: phone || undefined,
-        city: city || undefined,
-        state: state || undefined,
-        zip: zip || undefined,
-        country: country || undefined
-      }
-    );
-
-    // Log en développement pour vérifier les données reçues
-    if (process.env.NODE_ENV !== 'production') {
-      console.log('🔍 Données utilisateur reçues de Whop:', {
-        email,
-        firstName,
-        lastName,
-        phone,
-        city,
-        state,
-        zip,
-        country
-      });
-    }
+    // Track Purchase event for Facebook Pixel
+    trackEvent('Purchase', {
+      content_name: 'Wedding LUTs Master Collection',
+      content_type: 'product',
+      value: 27.00,
+      currency: 'USD'
+    });
 
     // Hide confetti after 5 seconds
     const timer = setTimeout(() => setConfetti(false), 5000);
     return () => clearTimeout(timer);
-  }, [searchParams]);
+  }, []);
 
   const handleDownload = () => {
     setIsDownloading(true);
@@ -213,13 +172,5 @@ function ThankYouContent() {
         }
       `}</style>
     </main>
-  );
-}
-
-export default function ThankYouPage() {
-  return (
-    <Suspense fallback={<div className="flex min-h-screen items-center justify-center bg-slate-950 text-white">Loading...</div>}>
-      <ThankYouContent />
-    </Suspense>
   );
 }
