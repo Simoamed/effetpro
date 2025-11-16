@@ -30,7 +30,7 @@ export default function StickyCTA() {
             trackEvent('AddToCart', {
               content_name: 'Wedding LUTs Master Collection',
               content_type: 'product',
-              value: 27.00,
+              value: 47.00,
               currency: 'USD'
             });
 
@@ -39,14 +39,14 @@ export default function StickyCTA() {
               trackEvent('InitiateCheckout', {
                 content_name: 'Wedding LUTs Master Collection',
                 content_type: 'product',
-                value: 27.00,
+                value: 47.00,
                 currency: 'USD'
               });
             }, 100);
           }}
           className="rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-amber-500/40 transition-all hover:scale-105 hover:shadow-amber-500/60"
         >
-          $27 Instant Download
+          $47 Instant Download
         </a>
       </div>
     </div>

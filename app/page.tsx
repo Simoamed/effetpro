@@ -68,11 +68,11 @@ export default function Page() {
           <div className="relative mx-auto mt-10 w-full max-w-2xl px-4 sm:px-6">
             <BeforeAfterSlider
               beforeImage="/imgs/pexels-khezez-15524745.jpg"
-              afterImage="/imgs/pexels-mlkbnl-12737998.jpg"
+              afterImage="/imgs/pexels-khezez-15524745.jpg"
               alt="Wedding LUT before and after comparison - Transform your footage instantly"
             />
             <p className="text-center mt-4 text-sm text-white/60">
-              ⬆️ Drag the slider to see the instant transformation
+              👆 Drag the slider to see the instant transformation
             </p>
           </div>
 
