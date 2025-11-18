@@ -41,15 +41,6 @@ export const MAIN_OFFER = [
 // Exclusive Bonuses
 export const EXCLUSIVE_BONUSES = [
   {
-    id: "lifetime",
-    title: "Lifetime Access + Free Updates",
-    description: "All future LUTs added to the pack at no extra cost",
-    value: "$22",
-    color: "emerald",
-    icon: "🔄",
-    mockup: "/imgs/Generated Image November 03, 2025 - 8_44PM.png",
-  },
-  {
     id: "music",
     title: "120 Emotional Royalty-Free Music Tracks",
     description: "Perfect for wedding videos, storytelling, and romantic moments",
@@ -96,10 +87,10 @@ export const TRUST_BADGES = [
     description: "100% satisfaction guaranteed",
   },
   {
-    id: "support",
-    icon: "💬",
-    title: "24/7 Support",
-    description: "We're here to help anytime",
+    id: "lifetime",
+    icon: "🔄",
+    title: "Lifetime Access",
+    description: "Free updates forever",
   },
   {
     id: "secure",
