@@ -95,7 +95,7 @@ export default function Page() {
           />
 
           {/* Main Offer + Bonuses - Unified Grid */}
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
             {/* Main Offer Items */}
             {MAIN_OFFER.map((item, index) => {
               const gradients = [
@@ -106,22 +106,22 @@ export default function Page() {
               return (
                 <div
                   key={item.id}
-                  className="group relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] p-6 backdrop-blur-xl transition-all duration-500 hover:scale-[1.03] hover:border-amber-500/30 hover:shadow-2xl hover:shadow-amber-500/30"
+                  className="group relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] p-5 backdrop-blur-xl transition-all duration-300 hover:border-amber-500/30 hover:shadow-2xl hover:shadow-amber-500/20"
                 >
-                  <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index]} opacity-0 transition-opacity duration-500 group-hover:opacity-10`}></div>
+                  <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index]} opacity-0 transition-opacity duration-300 group-hover:opacity-10`}></div>
 
                   <div className="relative">
                     {/* Mockup Image */}
                     {item.mockup && (
-                      <div className="mb-4 -mt-2 relative flex justify-center">
+                      <div className="mb-4 relative flex justify-center h-52 items-center">
                         <Image
                           src={item.mockup}
                           alt={item.title}
-                          width={280}
-                          height={280}
-                          className="w-auto h-64 object-contain transition-transform duration-500 group-hover:scale-105"
+                          width={240}
+                          height={240}
+                          className="w-auto max-h-52 object-contain transition-transform duration-300 group-hover:scale-105"
                           style={{
-                            filter: 'drop-shadow(0 15px 40px rgba(0,0,0,0.6))',
+                            filter: 'drop-shadow(0 10px 30px rgba(0,0,0,0.5))',
                           }}
                         />
                       </div>
@@ -164,9 +164,9 @@ export default function Page() {
               return (
                 <div
                   key={bonus.id}
-                  className="group relative overflow-hidden rounded-3xl border border-purple-500/20 bg-gradient-to-br from-purple-500/10 to-purple-500/5 p-6 backdrop-blur-xl transition-all duration-500 hover:scale-[1.03] hover:border-purple-500/40 hover:shadow-2xl hover:shadow-purple-500/20"
+                  className="group relative overflow-hidden rounded-3xl border border-purple-500/20 bg-gradient-to-br from-purple-500/10 to-purple-500/5 p-5 backdrop-blur-xl transition-all duration-300 hover:border-purple-500/40 hover:shadow-2xl hover:shadow-purple-500/20"
                 >
-                  <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index]} opacity-0 transition-opacity duration-500 group-hover:opacity-10`}></div>
+                  <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index]} opacity-0 transition-opacity duration-300 group-hover:opacity-10`}></div>
 
                   <div className="relative">
                     {/* Free Gift Badge */}
@@ -179,15 +179,15 @@ export default function Page() {
 
                     {/* Mockup Image */}
                     {bonus.mockup && (
-                      <div className="mb-4 -mt-2 relative flex justify-center">
+                      <div className="mb-4 relative flex justify-center h-52 items-center">
                         <Image
                           src={bonus.mockup}
                           alt={bonus.title}
-                          width={280}
-                          height={280}
-                          className="w-auto h-64 object-contain transition-transform duration-500 group-hover:scale-105"
+                          width={240}
+                          height={240}
+                          className="w-auto max-h-52 object-contain transition-transform duration-300 group-hover:scale-105"
                           style={{
-                            filter: 'drop-shadow(0 15px 40px rgba(0,0,0,0.4))',
+                            filter: 'drop-shadow(0 10px 30px rgba(0,0,0,0.4))',
                           }}
                         />
                       </div>
