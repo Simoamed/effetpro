@@ -94,9 +94,8 @@ export default function Page() {
             gradient="from-amber-200 via-orange-200 to-amber-200"
           />
 
-          {/* Main Offer + Bonuses - Unified Grid */}
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
-            {/* Main Offer Items */}
+          {/* Main Offer - 2 Columns */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-5xl mx-auto">
             {MAIN_OFFER.map((item, index) => {
               const gradients = [
                 "from-rose-500 to-pink-600",
@@ -106,43 +105,43 @@ export default function Page() {
               return (
                 <div
                   key={item.id}
-                  className="group relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] p-5 backdrop-blur-xl transition-all duration-300 hover:border-amber-500/30 hover:shadow-2xl hover:shadow-amber-500/20"
+                  className="group relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.02] p-6 backdrop-blur-xl transition-all duration-300 hover:border-amber-500/30 hover:shadow-2xl hover:shadow-amber-500/20"
                 >
                   <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index]} opacity-0 transition-opacity duration-300 group-hover:opacity-10`}></div>
 
                   <div className="relative">
                     {/* Mockup Image */}
                     {item.mockup && (
-                      <div className="mb-4 relative flex justify-center h-52 items-center">
+                      <div className="mb-6 relative flex justify-center h-64 items-center">
                         <Image
                           src={item.mockup}
                           alt={item.title}
-                          width={240}
-                          height={240}
-                          className="w-auto max-h-52 object-contain transition-transform duration-300 group-hover:scale-105"
+                          width={300}
+                          height={300}
+                          className="w-auto max-h-64 object-contain transition-transform duration-300 group-hover:scale-105"
                           style={{
-                            filter: 'drop-shadow(0 10px 30px rgba(0,0,0,0.5))',
+                            filter: 'drop-shadow(0 15px 40px rgba(0,0,0,0.6))',
                           }}
                         />
                       </div>
                     )}
 
                     <div className="flex items-center justify-between mb-4">
-                      <div className={`h-2 w-16 rounded-full bg-gradient-to-r ${gradients[index]} shadow-lg`}></div>
+                      <div className={`h-2 w-20 rounded-full bg-gradient-to-r ${gradients[index]} shadow-lg`}></div>
                       <div className="flex flex-col items-end">
                         <span className="text-[10px] font-bold uppercase tracking-wider text-white/50">Value</span>
-                        <span className="text-lg font-extrabold text-white/40 line-through">{item.value}</span>
+                        <span className="text-xl font-extrabold text-white/40 line-through">{item.value}</span>
                       </div>
                     </div>
 
-                    <h3 className="text-lg font-extrabold text-white leading-tight mb-2 group-hover:text-amber-200 transition-colors duration-300">
+                    <h3 className="text-xl font-extrabold text-white leading-tight mb-3 group-hover:text-amber-200 transition-colors duration-300">
                       {item.title}
                     </h3>
-                    <p className="text-sm text-white/70 leading-relaxed mb-4">{item.description}</p>
+                    <p className="text-sm text-white/70 leading-relaxed mb-5">{item.description}</p>
 
                     <div className="flex items-center gap-2 text-sm">
-                      <div className="flex items-center justify-center w-5 h-5 rounded-full bg-gradient-to-br from-emerald-400 to-teal-500 shadow-lg shadow-emerald-500/30">
-                        <svg className="h-3 w-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <div className="flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-emerald-400 to-teal-500 shadow-lg shadow-emerald-500/30">
+                        <svg className="h-3.5 w-3.5 text-white" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
                       </div>
@@ -152,63 +151,75 @@ export default function Page() {
                 </div>
               );
             })}
+          </div>
 
-            {/* Exclusive Bonuses */}
-            {EXCLUSIVE_BONUSES.map((bonus, index) => {
-              const gradients = [
-                "from-purple-500 to-fuchsia-600",
-                "from-amber-500 to-yellow-600",
-                "from-blue-500 to-cyan-600"
-              ];
+          {/* Exclusive Bonuses Section */}
+          <div className="mt-16">
+            <div className="text-center mb-10">
+              <div className="inline-flex items-center gap-2 rounded-full border border-purple-500/30 bg-purple-500/10 px-6 py-2.5 mb-4">
+                <span className="text-2xl">🎁</span>
+                <span className="text-sm font-bold uppercase tracking-wider text-purple-300">Exclusive Bonuses</span>
+              </div>
+              <h3 className="text-2xl font-bold text-white">Plus, you receive for free</h3>
+            </div>
 
-              return (
-                <div
-                  key={bonus.id}
-                  className="group relative overflow-hidden rounded-3xl border border-purple-500/20 bg-gradient-to-br from-purple-500/10 to-purple-500/5 p-5 backdrop-blur-xl transition-all duration-300 hover:border-purple-500/40 hover:shadow-2xl hover:shadow-purple-500/20"
-                >
-                  <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index]} opacity-0 transition-opacity duration-300 group-hover:opacity-10`}></div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              {EXCLUSIVE_BONUSES.map((bonus, index) => {
+                const gradients = [
+                  "from-purple-500 to-fuchsia-600",
+                  "from-amber-500 to-yellow-600",
+                  "from-blue-500 to-cyan-600"
+                ];
 
-                  <div className="relative">
-                    {/* Free Gift Badge */}
-                    <div className="absolute -top-2 -right-2 z-10">
-                      <div className="flex items-center gap-1 rounded-full border border-purple-400/50 bg-gradient-to-r from-purple-500 to-fuchsia-500 px-3 py-1 shadow-lg">
-                        <span className="text-xs">🎁</span>
-                        <span className="text-[10px] font-bold uppercase tracking-wide text-white">Free Gift</span>
+                return (
+                  <div
+                    key={bonus.id}
+                    className="group relative overflow-hidden rounded-3xl border border-purple-500/20 bg-gradient-to-br from-purple-500/10 to-purple-500/5 p-5 backdrop-blur-xl transition-all duration-300 hover:border-purple-500/40 hover:shadow-2xl hover:shadow-purple-500/20"
+                  >
+                    <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index]} opacity-0 transition-opacity duration-300 group-hover:opacity-10`}></div>
+
+                    <div className="relative">
+                      {/* Free Gift Badge */}
+                      <div className="absolute -top-2 -right-2 z-10">
+                        <div className="flex items-center gap-1 rounded-full border border-purple-400/50 bg-gradient-to-r from-purple-500 to-fuchsia-500 px-3 py-1 shadow-lg">
+                          <span className="text-xs">🎁</span>
+                          <span className="text-[10px] font-bold uppercase tracking-wide text-white">Free Gift</span>
+                        </div>
                       </div>
+
+                      {/* Mockup Image */}
+                      {bonus.mockup && (
+                        <div className="mb-4 relative flex justify-center h-48 items-center">
+                          <Image
+                            src={bonus.mockup}
+                            alt={bonus.title}
+                            width={220}
+                            height={220}
+                            className="w-auto max-h-48 object-contain transition-transform duration-300 group-hover:scale-105"
+                            style={{
+                              filter: 'drop-shadow(0 10px 30px rgba(0,0,0,0.4))',
+                            }}
+                          />
+                        </div>
+                      )}
+
+                      <div className="flex items-center justify-between mb-3">
+                        <div className="text-2xl">{bonus.icon}</div>
+                        <div className="flex flex-col items-end">
+                          <span className="text-[10px] font-bold uppercase tracking-wider text-purple-300/60">Bonus</span>
+                          <span className="text-lg font-extrabold text-purple-300/50 line-through">{bonus.value}</span>
+                        </div>
+                      </div>
+
+                      <h3 className="text-base font-extrabold text-white leading-tight mb-2 group-hover:text-purple-200 transition-colors duration-300">
+                        {bonus.title}
+                      </h3>
+                      <p className="text-sm text-white/70 leading-relaxed">{bonus.description}</p>
                     </div>
-
-                    {/* Mockup Image */}
-                    {bonus.mockup && (
-                      <div className="mb-4 relative flex justify-center h-52 items-center">
-                        <Image
-                          src={bonus.mockup}
-                          alt={bonus.title}
-                          width={240}
-                          height={240}
-                          className="w-auto max-h-52 object-contain transition-transform duration-300 group-hover:scale-105"
-                          style={{
-                            filter: 'drop-shadow(0 10px 30px rgba(0,0,0,0.4))',
-                          }}
-                        />
-                      </div>
-                    )}
-
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="text-2xl">{bonus.icon}</div>
-                      <div className="flex flex-col items-end">
-                        <span className="text-[10px] font-bold uppercase tracking-wider text-purple-300/60">Bonus</span>
-                        <span className="text-lg font-extrabold text-purple-300/50 line-through">{bonus.value}</span>
-                      </div>
-                    </div>
-
-                    <h3 className="text-lg font-extrabold text-white leading-tight mb-2 group-hover:text-purple-200 transition-colors duration-300">
-                      {bonus.title}
-                    </h3>
-                    <p className="text-sm text-white/70 leading-relaxed mb-4">{bonus.description}</p>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
 
           {/* Value Stack - Pricing Card with Urgency */}
