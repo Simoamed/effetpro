@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useCountdown } from '../hooks/useCountdown';
 
 interface CountdownTimerProps {
   className?: string;
@@ -8,39 +8,7 @@ interface CountdownTimerProps {
 }
 
 export default function CountdownTimer({ className = '', variant = 'hero' }: CountdownTimerProps) {
-  const [timeLeft, setTimeLeft] = useState({
-    hours: 2,
-    minutes: 47,
-    seconds: 30
-  });
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(prev => {
-        let { hours, minutes, seconds } = prev;
-
-        if (seconds > 0) {
-          seconds--;
-        } else if (minutes > 0) {
-          minutes--;
-          seconds = 59;
-        } else if (hours > 0) {
-          hours--;
-          minutes = 59;
-          seconds = 59;
-        } else {
-          // Reset to 2:47:30 when it hits 0
-          hours = 2;
-          minutes = 47;
-          seconds = 30;
-        }
-
-        return { hours, minutes, seconds };
-      });
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, []);
+  const timeLeft = useCountdown(14, "promoEnd14v1");
 
   if (variant === 'inline') {
     return (
