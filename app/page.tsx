@@ -71,9 +71,6 @@ export default function Page() {
               afterImage="/imgs/pexels-khezez-15524745.jpg"
               alt="Wedding LUT before and after comparison - Transform your footage instantly"
             />
-            <p className="text-center mt-4 text-sm text-white/60">
-              👆 Drag the slider to see the instant transformation
-            </p>
           </div>
 
           {/* Main Hero CTA */}
